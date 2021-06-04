@@ -1,0 +1,164 @@
+/* GLOBAL */
+html {
+  font-size: 100%;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+img {
+  display: block;
+}
+
+.inner {
+  width: 1100px;
+  margin: auto;
+}
+
+
+
+
+header {
+  position: fixed;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+.logo-box {
+  color: #FFF;
+  font-size: 1.5rem;
+  width: 1000px;
+  height: 50px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  padding-top: 15px;
+}
+
+.logo-box .logo {
+  display: flex;
+  align-items: center;
+
+}
+
+.logo-box .logo img {
+  width: 50px;
+  height: 35px;
+}
+
+.logo-box .logo span {
+  margin-left: 15px;
+}
+
+.logo-box .hambuger {
+  display: block;
+  border-top: 1px solid #FFF;
+  height: 30px;
+  width: 20px;
+  margin: 5px 10px 0 10px;
+}
+
+.logo-box .hambuger::before,
+.logo-box .hambuger::after {
+  display: block;
+  content: "";
+  border-top: 1px solid #FFF;
+  height: 1px;
+  width: inherit;
+  margin-top: 10px;
+}
+
+
+
+
+/* MAIN */
+.main {
+  background-color: #505A66;
+}
+
+.main .inner {
+  display: flex;
+  min-height: 500px;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  gap: 50px;
+}
+
+.main .inner .img {
+  flex: 1;
+  background-image: url("../images/sky.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main .inner .login {
+  padding-top: 50px;
+  flex: 1;
+  font-size: 2rem;
+  color: #FFF;
+  font-weight: bold;
+}
+
+.main .inner .login li input {
+  display: block;
+  margin: 20px 0;
+  height: 1.875rem;
+  width: 13.75rem;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #505A66;
+  color: #000;
+  letter-spacing: .1rem;
+}
+
+.main .inner .login li button {
+  display: inline-block;
+  height: 2rem;
+  width: 14.7rem;
+  background-color: #01527E;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  position: relative;
+}
+
+.main .inner .login li button::before {
+  display: block;
+  content: "";
+  width: 0px;
+  height: 1px;
+  border-top: 1px solid #FFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  margin-left: 20px;
+  transition: .5s;
+}
+
+.main .inner .login li button:active,
+.main .inner .login li button:hover {
+  background-color: rgba(1, 82, 126, .7);
+  border: 1px solid #01527E;
+}
+
+.main .inner .login li button:hover::before {
+  width: 40px;
+}
+
+/* MAIN-2 */
+.main-2{}
+.main-2 .inner{padding: 50px 0;}
+.main-2 .inner h3{font-size: 2rem; text-align: center; font-weight: bold;letter-spacing: .09rem;padding: 25px 0;}
+.main-2 .inner .btn{text-align: center; padding-top: 50px;} 
+.main-2 .inner .btn button{transition: .5s; height: 40px; width: 150px; letter-spacing: 0.09rem; font-size: 1rem; color: #FFF; font-weight: bold; background-color:#01527E; border: none; border-radius: 5px; cursor: pointer;} 
+.main-2 .inner .btn button:hover{  background-color: rgba(1, 82, 126, .7);border: 1px solid #01527E;}
+.main-2 .inner .context{display: flex;}
+.main-2 .inner .context div{flex: 1; text-align: center; letter-spacing: .09rem; box-sizing: border-box; padding: 15px;}
+.main-2 .inner .context div h1{ font-size: 1.5rem; font-weight: bold; padding: 20px 0;}
+.main-2 .inner .context div p{ font-size: 1rem; line-height: 1.5rem;} 
