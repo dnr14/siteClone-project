@@ -1,11 +1,20 @@
 class Slider {
-  constructor() {
-    this.$as = Array.from([...document.querySelectorAll('.slider>a')]);
-    this.$spanIcon = document.querySelector('span.icon');
-    this.$spanIconRight = document.querySelector('span#right');
-    this.$spanIconLeft = document.querySelector('span#left');
-    this.$sliderBox = document.querySelector('.slider_bar .bar');
-    this.$drag = document.querySelector('.slider_bar .bar .drag');
+  constructor(obj) {
+    this.$as = Array.from([...document.querySelectorAll(obj.sliderliName)]);
+
+    this.$spanIconRight = document.querySelector(obj.sliderRightClickName);
+    this.$spanIconLeft = document.querySelector(obj.sliderLeftClickName);
+    console.log(this.$spanIconRight, this.$spanIconLeft);
+
+    this.$sliderBox = document.querySelector(obj.sliderBarBoxName);
+    this.$drag = document.querySelector(obj.sliderBarDragName);
+
+    this.x = obj.x;
+    this.y = obj.y;
+    this.z = obj.z;
+    this._600down = obj._offsetWidth._600down;
+    this._900down = obj._offsetWidth._900down;
+    this._900up = obj._offsetWidth._900up;
 
 
     this.$aWidth = this.$as[0].offsetWidth;
@@ -13,6 +22,7 @@ class Slider {
     this.innerWidth = window.innerWidth;
 
     this.fullWidth = this.$as.reduce((l, r) => l + r.offsetWidth, 0);
+
     this.$drag.style.width = `${(this.$sliderBox.offsetWidth / this.fullWidth) * this.$aWidth}px`;
 
     this.init();
@@ -25,11 +35,11 @@ class Slider {
 
   set_1퍼센트() {
     if (this.innerWidth < 600) {
-      this._1퍼센드 = (this.fullWidth - this.$aWidth) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
+      this._1퍼센드 = (this.fullWidth - this.$aWidth * this.x) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
     } else if (this.innerWidth < 900) {
-      this._1퍼센드 = (this.fullWidth - (this.$aWidth * 2)) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
+      this._1퍼센드 = (this.fullWidth - (this.$aWidth * this.y)) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
     } else if (this.innerWidth > 900) {
-      this._1퍼센드 = (this.fullWidth - (this.$aWidth * 3)) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
+      this._1퍼센드 = (this.fullWidth - (this.$aWidth * this.z)) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
     }
   }
 
@@ -81,29 +91,37 @@ class Slider {
 
     const $a = this.$as[0];
     const { offsetWidth } = $a;
+    const { direction } = target.dataset;
 
     // RIGHT
-    if (target.id === 'right') {
+    if (direction === 'right') {
       let fullWidth = 0;
 
       if (this.innerWidth < 600) {
-        fullWidth = $a.offsetWidth * 4;
+        fullWidth = $a.offsetWidth * this._600down.widthNum;
       } else if (this.innerWidth < 900) {
-        fullWidth = $a.offsetWidth * 3;
+        fullWidth = $a.offsetWidth * this._900down.widthNum;
       } else if (this.innerWidth >= 900) {
-        fullWidth = $a.offsetWidth * 2;
+        fullWidth = $a.offsetWidth * this._900up.widthNum;
       }
 
       if ($a.style.transform === `translateX(-${fullWidth}px)`) return;
 
       if (this.innerWidth < 600) {
-        this.currentTransformX += offsetWidth;
+        this.currentTransformX += offsetWidth * this._600down.offset;
+
       } else if (this.innerWidth < 900) {
-        $a.style.transform === `translateX(-${offsetWidth * 2}px)`
-          ? this.currentTransformX += offsetWidth
-          : this.currentTransformX += offsetWidth * 2;
+
+        if (this._900down.offset === true) {
+          $a.style.transform === `translateX(-${offsetWidth * 2}px)`
+            ? this.currentTransformX += offsetWidth
+            : this.currentTransformX += offsetWidth * 2;
+        } else {
+          this.currentTransformX += offsetWidth * this._900down.offset;
+        }
+
       } else if (this.innerWidth >= 900) {
-        this.currentTransformX += offsetWidth * 2;
+        this.currentTransformX += offsetWidth * this._900up.offset;
       }
 
       if (this.currentTransformX > fullWidth) this.currentTransformX = fullWidth;
@@ -111,26 +129,33 @@ class Slider {
     }
 
     // LEFT
-    if (target.id === "left") {
+    if (direction === "left") {
 
       if ($a.style.transform === `translateX(0px)` || $a.style.transform === '') return;
 
       if (this.innerWidth < 600) {
-        this.currentTransformX += -offsetWidth;
+        this.currentTransformX += -offsetWidth * this._600down.offset;
       } else if (this.innerWidth < 900) {
-        $a.style.transform === `translateX(${-offsetWidth * 2}px)`
-          ? this.currentTransformX += -offsetWidth * 2
-          : this.currentTransformX += -offsetWidth;
+
+        if (this._900down._swich === true) {
+          $a.style.transform === `translateX(${-offsetWidth * 2}px)`
+            ? this.currentTransformX += -offsetWidth * 2
+            : this.currentTransformX += -offsetWidth;
+        } else {
+          this.currentTransformX += -offsetWidth * this._900down.offset;
+        }
+
       } else if (this.innerWidth >= 900) {
-        this.currentTransformX += -offsetWidth * 2;
+        this.currentTransformX += -offsetWidth * this._900up.offset;
       }
+
+      if (this.currentTransformX < 0) this.currentTransformX = 0;
 
     }
 
     this.$as.forEach(a => a.style.transform = `translateX(-${this.currentTransformX}px)`);
     this.$drag.style.left = `${Math.round(this.currentTransformX / this._1퍼센드)}px`;
   }
-
 
 
   dragMouseDown = (e) => {
@@ -166,7 +191,42 @@ class Slider {
   }
 }
 
+const slider = {
+  sliderliName: '.slider>a',
+  sliderRightClickName: 'span#right',
+  sliderLeftClickName: 'span#left',
+  sliderBarBoxName: '#slider_bar .bar',
+  sliderBarDragName: '#slider_bar .bar .drag',
+  x: 1,
+  y: 2,
+  z: 3,
+  _offsetWidth: {
+    _600down: { widthNum: 4, offset: 1 },
+    _900down: { widthNum: 3, offset: 2, _swich: true },
+    _900up: { widthNum: 2, offset: 2 },
+  }
+}
+
+const reSlider = {
+  sliderliName: '.re-slider-wrap .slider .item',
+  sliderRightClickName: 'span#re-right',
+  sliderLeftClickName: 'span#re-left',
+  sliderBarBoxName: '#re-slider_bar .bar',
+  sliderBarDragName: '#re-slider_bar .bar .drag',
+  x: 2,
+  y: 3,
+  z: 4,
+  _offsetWidth: {
+    // offset 한번클릭시 아이템 몇개를 넘길지 정하는 변수
+    // widthNum 클릭이 가능한 최대 너비
+    _600down: { widthNum: 10, offset: 2 },
+    _900down: { widthNum: 9, offset: 3 },
+    _900up: { widthNum: 8, offset: 4 },
+  }
+}
+
 
 window.onload = () => {
-  new Slider();
+  new Slider(slider);
+  new Slider(reSlider);
 }

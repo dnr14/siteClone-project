@@ -133,7 +133,7 @@
           <div class="content">
 
             <div class="content__60">
-              <img src="./images/image1.webp" alt="image1">
+              <img src="./images/promotion/image1.webp" alt="image1">
             </div>
 
             <div class="content__40">
@@ -154,12 +154,12 @@
       <div class="row">
 
         <div class="arrow">
-          <span class="icon" id="right">
+          <span class="icon" id="right" data-direction="right">
             <img src="./images/chevron_right_white_24dp.svg" alt="arrow">
           </span>
         </div>
         <div class="arrow">
-          <span class="icon" id="left">
+          <span class="icon" id="left" data-direction="left">
             <img src="./images/chevron_left_white_24dp.svg" alt="arrow">
           </span>
         </div>
@@ -173,7 +173,7 @@
 
               <li class="item">
 
-                <img src="./images/image2.webp" alt="" class="item__img">
+                <img src="./images/promotion/image2.webp" alt="" class="item__img">
                 <div class="slider__contnet">
                   <div class="content__title">
                     <h1>
@@ -196,7 +196,7 @@
 
               <li class="item">
 
-                <img src="./images/image3.webp" alt="" class="item__img">
+                <img src="./images/promotion/image3.webp" alt="" class="item__img">
                 <div class="slider__contnet">
                   <div class="content__title">
                     <h1>
@@ -219,7 +219,7 @@
 
               <li class="item">
 
-                <img src="./images/image4.webp" alt="" class="item__img">
+                <img src="./images/promotion/image4.webp" alt="" class="item__img">
                 <div class="slider__contnet">
                   <div class="content__title">
                     <h1>
@@ -242,7 +242,7 @@
 
               <li class="item">
 
-                <img src="./images/image5.webp" alt="" class="item__img">
+                <img src="./images/promotion/image5.webp" alt="" class="item__img">
                 <div class="slider__contnet">
                   <div class="content__title">
                     <h1>
@@ -265,7 +265,7 @@
 
               <li class="item">
 
-                <img src="./images/image6.webp" alt="" class="item__img">
+                <img src="./images/promotion/image6.webp" alt="" class="item__img">
                 <div class="slider__contnet">
                   <div class="content__title">
                     <h1>
@@ -287,7 +287,7 @@
 
           </ul>
         </div>
-        <div class="slider_bar">
+        <div class="slider_bar" id="slider_bar">
           <div class="bar">
             <span class="drag"></span>
           </div>
@@ -300,16 +300,28 @@
     <div class="inner">
       <div class="row">
 
+        <div class="arrow">
+          <span class="icon" id="re-right" data-direction="right">
+            <img src="./images/chevron_right_white_24dp.svg" alt="arrow">
+          </span>
+        </div>
+        <div class="arrow">
+          <span class="icon" id="re-left" data-direction="left">
+            <img src="./images/chevron_left_white_24dp.svg" alt="arrow">
+          </span>
+        </div>
+
         <h1 class="recommendation">추천 제품</h1>
 
         <div class="re-slider-wrap">
+
           <ul class="slider">
             <!-- 1 -->
             <li class="item">
               <img class="item__heart" src="./images/favorite_border_black_24dp.svg" alt="heart">
               <a href="javascript:void(0)">
-                <img class="item__img" src="./images/risatorp2.webp" alt="risatorp">
-                <img class="item__supimg" src="./images/risatorp1.webp" alt="risatorp">
+                <img class="item__img" src="./images/recommendation/risatorp2.webp" alt="risatorp">
+                <img class="item__supimg" src="./images/recommendation/risatorp1.webp" alt="risatorp">
                 <div class="item__red_title"><span>더 낮은 새로운 가격</span></div>
                 <div class="item__title"><span>RISATORP 리사토르프</span></div>
                 <div class="item__subTitle"><span>바구니, 25x26x18 cm</span></div>
@@ -335,8 +347,8 @@
             <li class="item">
               <img class="item__heart" src="./images/favorite_border_black_24dp.svg" alt="heart">
               <a href="javascript:void(0)">
-                <img class="item__img" src="./images/risatorp4.webp" alt="risatorp">
-                <img class="item__supimg" src="./images/risatorp3.webp" alt="risatorp">
+                <img class="item__img" src="./images/recommendation/risatorp4.webp" alt="risatorp">
+                <img class="item__supimg" src="./images/recommendation/risatorp3.webp" alt="risatorp">
                 <div class="item__red_title"><span>&nbsp&nbsp</span></div>
                 <div class="item__title"><span>KUNGSFORS 쿵스포르스</span></div>
                 <div class="item__subTitle"><span>자석클립</span></div>
@@ -347,8 +359,8 @@
                   <span class="star"></span>
                   <span class="star"></span>
                   <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="reple">(38)</span>
+                  <span class="star_half"></span>
+                  <span class="reple">(24)</span>
                 </div>
                 <div class="item__basket">
                   <span>
@@ -362,20 +374,20 @@
             <li class="item">
               <img class="item__heart" src="./images/favorite_border_black_24dp.svg" alt="heart">
               <a href="javascript:void(0)">
-                <img class="item__img" src="./images/risatorp4.webp" alt="risatorp">
-                <img class="item__supimg" src="./images/risatorp3.webp" alt="risatorp">
+                <img class="item__img" src="./images/recommendation/risatorp5.webp" alt="risatorp">
+                <img class="item__supimg" src="./images/recommendation/risatorp6.webp" alt="risatorp">
                 <div class="item__red_title"><span>&nbsp&nbsp</span></div>
                 <div class="item__title"><span>KUNGSFORS 쿵스포르스</span></div>
-                <div class="item__subTitle"><span>자석클립</span></div>
+                <div class="item__subTitle"><span>네트가방 2종</span></div>
                 <div class="item__subPrice"></div>
-                <div class="item__price"><span>₩ 5,000</span>/ 3개</div>
+                <div class="item__price"><span>₩ 5,900</span></div>
                 <div class="item__star">
                   <span class="star"></span>
                   <span class="star"></span>
                   <span class="star"></span>
                   <span class="star"></span>
                   <span class="star"></span>
-                  <span class="reple">(38)</span>
+                  <span class="reple">(31)</span>
                 </div>
                 <div class="item__basket">
                   <span>
@@ -389,20 +401,20 @@
             <li class="item">
               <img class="item__heart" src="./images/favorite_border_black_24dp.svg" alt="heart">
               <a href="javascript:void(0)">
-                <img class="item__img" src="./images/risatorp4.webp" alt="risatorp">
-                <img class="item__supimg" src="./images/risatorp3.webp" alt="risatorp">
+                <img class="item__img" src="./images/recommendation/risatorp7.webp" alt="risatorp">
+                <img class="item__supimg" src="./images/recommendation/risatorp8.webp" alt="risatorp">
                 <div class="item__red_title"><span>&nbsp&nbsp</span></div>
-                <div class="item__title"><span>KUNGSFORS 쿵스포르스</span></div>
-                <div class="item__subTitle"><span>자석클립</span></div>
+                <div class="item__title"><span>RINNIG 린니그</span></div>
+                <div class="item__subTitle"><span>행주, 45x60 cm</span></div>
                 <div class="item__subPrice"></div>
-                <div class="item__price"><span>₩ 5,000</span>/ 3개</div>
+                <div class="item__price"><span>₩ 3,900</span>/ 4개</div>
                 <div class="item__star">
                   <span class="star"></span>
                   <span class="star"></span>
                   <span class="star"></span>
                   <span class="star"></span>
-                  <span class="star"></span>
-                  <span class="reple">(38)</span>
+                  <span class="star_half"></span>
+                  <span class="reple">(80)</span>
                 </div>
                 <div class="item__basket">
                   <span>
@@ -416,20 +428,20 @@
             <li class="item">
               <img class="item__heart" src="./images/favorite_border_black_24dp.svg" alt="heart">
               <a href="javascript:void(0)">
-                <img class="item__img" src="./images/risatorp4.webp" alt="risatorp">
-                <img class="item__supimg" src="./images/risatorp3.webp" alt="risatorp">
+                <img class="item__img" src="./images/recommendation/risatorp9.webp" alt="risatorp">
+                <img class="item__supimg" src="./images/recommendation/risatorp10.webp" alt="risatorp">
                 <div class="item__red_title"><span>&nbsp&nbsp</span></div>
-                <div class="item__title"><span>KUNGSFORS 쿵스포르스</span></div>
-                <div class="item__subTitle"><span>자석클립</span></div>
+                <div class="item__title"><span>RASKOG 로스코그</span></div>
+                <div class="item__subTitle"><span>카트, 35x45x78 cm</span></div>
                 <div class="item__subPrice"></div>
-                <div class="item__price"><span>₩ 5,000</span>/ 3개</div>
+                <div class="item__price"><span>₩ 34,900</span></div>
                 <div class="item__star">
                   <span class="star"></span>
                   <span class="star"></span>
                   <span class="star"></span>
                   <span class="star"></span>
                   <span class="star"></span>
-                  <span class="reple">(38)</span>
+                  <span class="reple">(175)</span>
                 </div>
                 <div class="item__basket">
                   <span>
@@ -439,8 +451,204 @@
               </a>
             </li>
 
+            <!-- 6 -->
+            <li class="item">
+              <img class="item__heart" src="./images/favorite_border_black_24dp.svg" alt="heart">
+              <a href="javascript:void(0)">
+                <img class="item__img" src="./images/recommendation/risatorp11.webp" alt="risatorp">
+                <img class="item__supimg" src="./images/recommendation/risatorp12.webp" alt="risatorp">
+                <div class="item__red_title"><span>더 낮은 새로운 가격</span></div>
+                <div class="item__title"><span>NIKKEBY 니케뷔</span></div>
+                <div class="item__subTitle"><span>4칸 서랍자, 84x70 cm</span></div>
+                <div class="item__subPrice">₩ 99,900</div>
+                <div class="item__price"><span>₩ 89,000</span></div>
+                <div class="item__star">
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="reple">(25)</span>
+                </div>
+                <div class="item__basket">
+                  <span>
+                    <img src="./images/shopping_basket_white_24dp.svg" alt="basket">
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <!-- 7 -->
+            <li class="item">
+              <img class="item__heart" src="./images/favorite_border_black_24dp.svg" alt="heart">
+              <a href="javascript:void(0)">
+                <img class="item__img" src="./images/recommendation/risatorp13.webp" alt="risatorp">
+                <img class="item__supimg" src="./images/recommendation/risatorp14.webp" alt="risatorp">
+                <div class="item__red_title"><span>&nbsp&nbsp</span></div>
+                <div class="item__title"><span>VARIERA 바리에라</span></div>
+                <div class="item__subTitle"><span>선반인서트, 32x28x16 cm</span></div>
+                <div class="item__subPrice"></div>
+                <div class="item__price"><span>₩ 5,900</span></div>
+                <div class="item__star">
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star_half"></span>
+                  <span class="reple">(43)</span>
+                </div>
+                <div class="item__basket">
+                  <span>
+                    <img src="./images/shopping_basket_white_24dp.svg" alt="basket">
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <!-- 8 -->
+            <li class="item">
+              <img class="item__heart" src="./images/favorite_border_black_24dp.svg" alt="heart">
+              <a href="javascript:void(0)">
+                <img class="item__img" src="./images/recommendation/risatorp15.webp" alt="risatorp">
+                <img class="item__supimg" src="./images/recommendation/risatorp16.webp" alt="risatorp">
+                <div class="item__red_title"><span>더 낮은 새로운 가격</span></div>
+                <div class="item__title"><span>KLUBBSPORRE 클룹스포레</span></div>
+                <div class="item__subTitle"><span>인체공학적 베개, 여러 자세용, 41x70 cm</span></div>
+                <div class="item__subPrice">₩ 49,900</div>
+                <div class="item__price"><span>₩ 39,900</span></div>
+                <div class="item__star">
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star_half"></span>
+                  <span class="reple">(65)</span>
+                </div>
+                <div class="item__basket">
+                  <span>
+                    <img src="./images/shopping_basket_white_24dp.svg" alt="basket">
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <!-- 9 -->
+            <li class="item">
+              <img class="item__heart" src="./images/favorite_border_black_24dp.svg" alt="heart">
+              <a href="javascript:void(0)">
+                <img class="item__img" src="./images/recommendation/risatorp17.webp" alt="risatorp">
+                <img class="item__supimg" src="./images/recommendation/risatorp18.webp" alt="risatorp">
+                <div class="item__red_title"><span>&nbsp&nbsp</span></div>
+                <div class="item__title"><span>TOKIG 토키그</span></div>
+                <div class="item__subTitle"><span>채소탈수기</span></div>
+                <div class="item__subPrice"></div>
+                <div class="item__price"><span>₩ 4,900</span></div>
+                <div class="item__star">
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star_half"></span>
+                  <span class="reple">(58)</span>
+                </div>
+                <div class="item__basket">
+                  <span>
+                    <img src="./images/shopping_basket_white_24dp.svg" alt="basket">
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <!-- 10 -->
+            <li class="item">
+              <img class="item__heart" src="./images/favorite_border_black_24dp.svg" alt="heart">
+              <a href="javascript:void(0)">
+                <img class="item__img" src="./images/recommendation/risatorp19.webp" alt="risatorp">
+                <img class="item__supimg" src="./images/recommendation/risatorp20.webp" alt="risatorp">
+                <div class="item__red_title"><span>더 낮은 새로운 가격</span></div>
+                <div class="item__title"><span>TISKEN 티스켄</span></div>
+                <div class="item__subTitle"><span>흡착식 후크</span></div>
+                <div class="item__subPrice">₩ 7,900/ 4개</div>
+                <div class="item__price"><span>₩ 5,900</span>/ 4개</div>
+                <div class="item__star">
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star_half"></span>
+                  <span class="reple">(26)</span>
+                </div>
+                <div class="item__basket">
+                  <span>
+                    <img src="./images/shopping_basket_white_24dp.svg" alt="basket">
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <!-- 11 -->
+            <li class="item">
+              <img class="item__heart" src="./images/favorite_border_black_24dp.svg" alt="heart">
+              <a href="javascript:void(0)">
+                <img class="item__img" src="./images/recommendation/risatorp21.webp" alt="risatorp">
+                <img class="item__supimg" src="./images/recommendation/risatorp22.webp" alt="risatorp">
+                <div class="item__red_title"><span>더 낮은 새로운 가격</span></div>
+                <div class="item__title"><span>ÖVERMÄTT 외베르메트</span></div>
+                <div class="item__subTitle"><span>음식덮개3종</span></div>
+                <div class="item__subPrice">₩ 4,900</div>
+                <div class="item__price"><span>₩ 5,000</span></div>
+                <div class="item__star">
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star_rate"></span>
+                  <span class="reple">(33)</span>
+                </div>
+                <div class="item__basket">
+                  <span>
+                    <img src="./images/shopping_basket_white_24dp.svg" alt="basket">
+                  </span>
+                </div>
+              </a>
+            </li>
+
+            <!-- 12 -->
+            <li class="item">
+              <img class="item__heart" src="./images/favorite_border_black_24dp.svg" alt="heart">
+              <a href="javascript:void(0)">
+                <img class="item__img" src="./images/recommendation/risatorp23.webp" alt="risatorp">
+                <img class="item__supimg" src="./images/recommendation/risatorp24.webp" alt="risatorp">
+                <div class="item__red_title"><span>NEW</span></div>
+                <div class="item__title"><span>PÅDRAG 포드라그</span></div>
+                <div class="item__subTitle"><span>꽃병, 17cm</span></div>
+                <div class="item__subPrice"></div>
+                <div class="item__price">
+                  <span style="background-color: #ffdb00; box-shadow: .125rem 0.125rem #e00751;">₩1,700</span>
+                </div>
+                <div class="item__star">
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="star"></span>
+                  <span class="reple">(3)</span>
+                </div>
+                <div class="item__basket">
+                  <span>
+                    <img src="./images/shopping_basket_white_24dp.svg" alt="basket">
+                  </span>
+                </div>
+              </a>
+            </li>
 
           </ul>
+
+        </div>
+        <div class="slider_bar" id="re-slider_bar">
+          <div class="bar">
+            <span class="drag"></span>
+          </div>
         </div>
 
       </div>

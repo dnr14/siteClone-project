@@ -521,6 +521,7 @@ section .inner .row .re-slider-wrap .slider .item {
   padding-top: 2.5rem;
   padding-bottom: 1rem;
   position: relative;
+  transition: 0.5s;
 }
 section .inner .row .re-slider-wrap .slider .item .item__heart {
   position: absolute;
@@ -603,6 +604,18 @@ section .inner .row .re-slider-wrap .slider .item > a .item__star .star {
   height: 1.125rem;
   background-image: url("../images/star_black_18dp.svg");
 }
+section .inner .row .re-slider-wrap .slider .item > a .item__star .star_half {
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+  background-image: url("../images/star_half_black_18dp.svg");
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__star .star_rate {
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+  background-image: url("../images/star_rate_black_18dp.svg");
+}
 section .inner .row .re-slider-wrap .slider .item > a .item__star .reple {
   font-size: 0.75rem;
   font-weight: 200;
@@ -646,6 +659,11 @@ section .inner .row .re-slider-wrap .slider .item > a .item__star .reple {
   section .inner .row .slider-wrap .slider .item .slider__contnet .content__title h1 {
     font-size: 1.5rem;
   }
+
+  section .inner .row .recommendation {
+    font-size: 1.5rem;
+  }
+
   section .inner .row .re-slider-wrap .slider .item > a .item__img {
     width: 23vw;
   }
@@ -665,6 +683,7 @@ section .inner .row .re-slider-wrap .slider .item > a .item__star .reple {
     font-weight: 900;
   }
 }
+
 @media screen and (min-width: 700px) {
   section {
     margin-top: 4.563rem;
@@ -689,12 +708,16 @@ section .inner .row .re-slider-wrap .slider .item > a .item__star .reple {
   section .inner .row .re-slider-wrap .slider .item > a .item__img {
     width: 18vw;
   }
+}
+@media screen and (min-width: 950px) {
   section .inner .row .re-slider-wrap .slider .item > a:hover .item__basket span {
     opacity: 1;
-    transition: 0.5;
   }
   section .inner .row .re-slider-wrap .slider .item > a .item__basket span {
+    position: absolute;
     opacity: 0;
+    right: 0;
+    bottom: 5px;
   }
 }
 
