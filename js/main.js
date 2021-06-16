@@ -2,6 +2,8 @@ class Slider {
   constructor() {
     this.$as = Array.from([...document.querySelectorAll('.slider>a')]);
     this.$spanIcon = document.querySelector('span.icon');
+    this.$spanIconRight = document.querySelector('span#right');
+    this.$spanIconLeft = document.querySelector('span#left');
     this.$sliderBox = document.querySelector('.slider_bar .bar');
     this.$drag = document.querySelector('.slider_bar .bar .drag');
 
@@ -16,6 +18,11 @@ class Slider {
     this.init();
   }
 
+  init() {
+    this.eventHanlder();
+    this.set_1퍼센트();
+  }
+
   set_1퍼센트() {
     if (this.innerWidth < 600) {
       this._1퍼센드 = (this.fullWidth - this.$aWidth) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
@@ -26,10 +33,14 @@ class Slider {
     }
   }
 
-  init() {
-    this.eventHanlder();
-    this.set_1퍼센트();
+  eventHanlder() {
+    window.addEventListener('resize', this.event);
+    this.$drag.addEventListener('mousedown', this.dragMouseDown);
+    this.$sliderBox.addEventListener('click', this.sliderBarClick);
+    this.$spanIconRight.addEventListener('click', this.sliderMove);
+    this.$spanIconLeft.addEventListener('click', this.sliderMove);
   }
+
 
   event = () => {
 
@@ -65,57 +76,62 @@ class Slider {
     });
   }
 
-  sliderMove = () => {
+  sliderMove = (e) => {
+    const target = e.currentTarget;
+
     const $a = this.$as[0];
+    const { offsetWidth } = $a;
 
-    if (this.innerWidth < 600) {
-      const fullWidth = $a.offsetWidth * 4;
+    // RIGHT
+    if (target.id === 'right') {
+      let fullWidth = 0;
+
+      if (this.innerWidth < 600) {
+        fullWidth = $a.offsetWidth * 4;
+      } else if (this.innerWidth < 900) {
+        fullWidth = $a.offsetWidth * 3;
+      } else if (this.innerWidth >= 900) {
+        fullWidth = $a.offsetWidth * 2;
+      }
+
       if ($a.style.transform === `translateX(-${fullWidth}px)`) return;
 
-      const { offsetWidth } = $a;
-      this.currentTransformX += offsetWidth;
-
-      if (this.currentTransformX > fullWidth) this.currentTransformX = fullWidth;
-
-      // this.$as.forEach(a => a.style.transform = `translateX(-${this.currentTransformX}px)`);
-      // this.$drag.style.left = `${Math.round(this.currentTransformX / this._1퍼센드)}px`;
-    }
-    else if (this.innerWidth < 900) {
-
-      const fullWidth = $a.offsetWidth * 3;
-      if ($a.style.transform === `translateX(-${fullWidth}px)`) return;
-
-      const { offsetWidth } = $a;
-
-      $a.style.transform === `translateX(-${offsetWidth * 2}px)`
-        ? this.currentTransformX += offsetWidth
-        : this.currentTransformX += offsetWidth * 2;
-
-      if (this.currentTransformX > fullWidth) this.currentTransformX = fullWidth;
-
-      // this.$as.forEach(a => a.style.transform = `translateX(-${this.currentTransformX}px)`);
-      // this.$drag.style.left = `${Math.round(this.currentTransformX / this._1퍼센드)}px`;
-    }
-    else if (this.innerWidth >= 900) {
-      const fullWidth = $a.offsetWidth * 2;
-      if ($a.style.transform === `translateX(-${fullWidth}px)`) return;
-
-      const { offsetWidth } = $a;
-      this.currentTransformX += offsetWidth * 2;
+      if (this.innerWidth < 600) {
+        this.currentTransformX += offsetWidth;
+      } else if (this.innerWidth < 900) {
+        $a.style.transform === `translateX(-${offsetWidth * 2}px)`
+          ? this.currentTransformX += offsetWidth
+          : this.currentTransformX += offsetWidth * 2;
+      } else if (this.innerWidth >= 900) {
+        this.currentTransformX += offsetWidth * 2;
+      }
 
       if (this.currentTransformX > fullWidth) this.currentTransformX = fullWidth;
 
     }
+
+    // LEFT
+    if (target.id === "left") {
+
+      if ($a.style.transform === `translateX(0px)` || $a.style.transform === '') return;
+
+      if (this.innerWidth < 600) {
+        this.currentTransformX += -offsetWidth;
+      } else if (this.innerWidth < 900) {
+        $a.style.transform === `translateX(${-offsetWidth * 2}px)`
+          ? this.currentTransformX += -offsetWidth * 2
+          : this.currentTransformX += -offsetWidth;
+      } else if (this.innerWidth >= 900) {
+        this.currentTransformX += -offsetWidth * 2;
+      }
+
+    }
+
     this.$as.forEach(a => a.style.transform = `translateX(-${this.currentTransformX}px)`);
     this.$drag.style.left = `${Math.round(this.currentTransformX / this._1퍼센드)}px`;
   }
 
-  eventHanlder() {
-    window.addEventListener('resize', this.event);
-    this.$drag.addEventListener('mousedown', this.dragMouseDown);
-    this.$sliderBox.addEventListener('click', this.sliderBarClick);
-    this.$spanIcon.addEventListener('click', this.sliderMove);
-  }
+
 
   dragMouseDown = (e) => {
     let pos1 = 0, pos3 = 0, pos4 = 0;

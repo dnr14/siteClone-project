@@ -362,10 +362,10 @@ section .inner .row .slider-wrap {
 section .inner .row:hover .arrow {
   display: block;
 }
+
 section .inner .row .arrow {
   position: absolute;
   display: none;
-  right: -10px;
   top: 0;
   bottom: 0;
   margin: auto;
@@ -373,19 +373,27 @@ section .inner .row .arrow {
   cursor: pointer;
   z-index: 1;
 }
+section .inner .row .arrow:nth-child(1) {
+  right: -10px;
+}
+section .inner .row .arrow:nth-child(2) {
+  left: -10px;
+}
+
 section .inner .row .arrow .icon {
   padding: 7.5px;
-  display: block;
+  display: inline-block;
   border-radius: 50%;
   background-color: #000;
 }
+
 section .inner .row .slider-wrap .slider {
   display: flex;
 }
 section .inner .row .slider-wrap .slider > a {
   color: #000;
   padding-right: 1.25rem;
-  transition: 0.5s;
+  transition: 0.2s;
   max-height: 1000px;
   max-width: 500px;
 }
@@ -469,6 +477,7 @@ section .inner .row .slider_bar {
   width: 100%;
   height: 1.25rem;
   align-items: center;
+  cursor: pointer;
 }
 section .inner .row .slider_bar .bar {
   width: 100%;
@@ -477,8 +486,10 @@ section .inner .row .slider_bar .bar {
   border-radius: 3rem;
   position: relative;
 }
-section .inner .row .slider_bar .bar .drag:active,
-section .inner .row .slider_bar .bar .drag:hover {
+section .inner .row .slider_bar .bar .drag:active {
+  height: 7px;
+}
+section .inner .row .slider_bar .bar:hover {
   height: 5px;
 }
 
@@ -492,6 +503,111 @@ section .inner .row .slider_bar .bar .drag {
   border-radius: 3rem;
   height: 100%;
   cursor: pointer;
+}
+
+section .inner .row .recommendation {
+  color: #000;
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+section .inner .row .re-slider-wrap {
+  overflow: hidden;
+}
+section .inner .row .re-slider-wrap .slider {
+  display: flex;
+}
+section .inner .row .re-slider-wrap .slider .item {
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  position: relative;
+}
+section .inner .row .re-slider-wrap .slider .item .item__heart {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+section .inner .row .re-slider-wrap .slider .item > a {
+  margin: 0 0.65rem;
+  display: block;
+  color: #000;
+  position: relative;
+}
+section .inner .row .re-slider-wrap .slider .item > a > div {
+  margin-bottom: 5px;
+  line-height: 1rem;
+  font-weight: 800;
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__img {
+  max-width: 34.5vw;
+  min-width: 100%;
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__supimg {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  transition: 0.2s;
+}
+section .inner .row .re-slider-wrap .slider .item > a:hover .item__supimg {
+  opacity: 1;
+}
+
+section .inner .row .re-slider-wrap .slider .item > a .item__red_title {
+  color: #ed022a;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__title {
+  color: #111;
+  font-size: 0.75rem;
+}
+section .inner .row .re-slider-wrap .slider .item > a:hover .item__title {
+  text-decoration: underline;
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__subTitle {
+  font-size: 0.7rem;
+  font-weight: 200;
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__subPrice {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  font-weight: 200;
+  text-decoration: line-through;
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__price {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__star {
+  display: flex;
+  align-items: center;
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__basket {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__basket span {
+  display: inline-block;
+  padding: 0.5rem;
+  background-color: #0058a3;
+  border-radius: 50%;
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__basket span:hover {
+  background-color: rgba(0, 88, 163, 0.9);
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__star .star {
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+  background-image: url("../images/star_black_18dp.svg");
+}
+section .inner .row .re-slider-wrap .slider .item > a .item__star .reple {
+  font-size: 0.75rem;
+  font-weight: 200;
+  margin-left: 0.7rem;
+  display: inline-block;
 }
 
 @media screen and (max-width: 600px) {
@@ -530,12 +646,31 @@ section .inner .row .slider_bar .bar .drag {
   section .inner .row .slider-wrap .slider .item .slider__contnet .content__title h1 {
     font-size: 1.5rem;
   }
+  section .inner .row .re-slider-wrap .slider .item > a .item__img {
+    width: 23vw;
+  }
+
+  section .inner .row .re-slider-wrap .slider .item > a .item__red_title,
+  section .inner .row .re-slider-wrap .slider .item > a .item__title {
+    font-size: 0.9rem;
+  }
+  section .inner .row .re-slider-wrap .slider .item > a .item__subTitle {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #484848;
+  }
+  section .inner .row .re-slider-wrap .slider .item > a .item__price {
+    font-size: 1.3rem;
+    line-height: 1.3rem;
+    font-weight: 900;
+  }
 }
 @media screen and (min-width: 700px) {
   section {
     margin-top: 4.563rem;
   }
 }
+
 @media screen and (min-width: 900px) {
   section .inner .row .message {
     padding: 5rem;
@@ -550,7 +685,19 @@ section .inner .row .slider_bar .bar .drag {
   section .inner .row .slider-wrap .slider > a {
     padding-right: 1.25rem;
   }
+
+  section .inner .row .re-slider-wrap .slider .item > a .item__img {
+    width: 18vw;
+  }
+  section .inner .row .re-slider-wrap .slider .item > a:hover .item__basket span {
+    opacity: 1;
+    transition: 0.5;
+  }
+  section .inner .row .re-slider-wrap .slider .item > a .item__basket span {
+    opacity: 0;
+  }
 }
+
 @media screen and (min-width: 1270px) {
   section .inner .row .message {
     padding: 3rem;
@@ -569,10 +716,18 @@ section .inner .row .slider_bar .bar .drag {
   section .inner .row .slider-wrap .slider .item .item__img {
     width: 28vw;
   }
-  section .inner .row .arrow {
+  section .inner .row .arrow:nth-child(1) {
     right: -20px;
   }
+  section .inner .row .arrow:nth-child(2) {
+    left: -20px;
+  }
+  section .inner .row .re-slider-wrap .slider .item > a .item__img {
+    width: 19vw;
+    max-width: 300px;
+  }
 }
+
 @media screen and (max-width: 1200px) {
   section .inner .row {
     margin: 0;
