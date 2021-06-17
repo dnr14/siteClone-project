@@ -80,9 +80,7 @@ class Slider {
   }
 
   sliderBarMove(x) {
-    console.log(1);
     const result = Math.round(this._1퍼센드 * x);
-    console.log(result);
     this.currentTransformX = result;
     this.$as.forEach(a => {
       a.removeAttribute('style');
@@ -107,8 +105,6 @@ class Slider {
         fullWidth = $a.offsetWidth * this._900down.widthNum;
       } else if (this.innerWidth >= 900) {
         fullWidth = $a.offsetWidth * this._900up.widthNum;
-        console.log(this._600down.widthNum);
-        console.log(fullWidth);
       }
 
       if ($a.style.transform === `translateX(-${fullWidth}px)`) return;

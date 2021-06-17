@@ -3,9 +3,6 @@ html {
   font-size: 100%;
   font-family: "Nanum Gothic", sans-serif;
 }
-body {
-  height: 9000px;
-}
 
 img {
   display: block;
@@ -14,6 +11,7 @@ a {
   list-style: none;
   outline: none;
   text-decoration: none;
+  color: #000;
 }
 .inner {
   padding: 0 2.5rem 0 1.25rem;
@@ -760,6 +758,7 @@ section .inner .new-product .products .product .view-product > a > span:hover {
 
 section .inner .row .solution-slider-wrap {
   overflow: hidden;
+  padding-bottom: 1.5rem;
 }
 section .inner .row .solution-slider-wrap .slider {
   display: flex;
@@ -795,6 +794,9 @@ section .inner .row .solution-slider-wrap .slider .item > a .item__btn {
   border-radius: 50%;
   background-color: #fff;
 }
+section .inner .row .solution-slider-wrap .slider .item > a .item__btn:hover {
+  background-color: rgb(239, 239, 239);
+}
 section .inner .row .solution-slider-wrap .slider .item > a .item__btn_ab {
   position: absolute;
   padding: 0 1.5rem;
@@ -822,6 +824,83 @@ section .inner .row .solution-slider-wrap .slider .item > a .item__btn_ab:hover 
 section .inner .row .solution-slider-wrap .slider .item > a > .item__img {
   max-width: 100%;
   height: 100%;
+}
+
+section .inner .row .catalogue {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+section .inner .row .catalogue .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+section .inner .row .catalogue .content > img {
+  max-width: 100%;
+  height: 100%;
+}
+
+section .inner .row .catalogue .content .btn > span {
+  border-radius: 64px;
+  padding: 0.9rem 1.5rem;
+  font-size: 0.7rem;
+  font-weight: 900;
+  color: #000;
+  border: 1px solid rgb(223, 223, 223);
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+}
+
+section .inner .row .catalogue .content .btn > span:hover {
+  border: 1px solid rgb(146, 146, 146);
+}
+
+section .inner .row .service {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+section .inner .row .service .content {
+  background-color: #f5f5f5;
+  padding: 2rem;
+}
+section .inner .row .service .content span {
+  text-align: start;
+  display: inline-block;
+}
+section .inner .row .service .content div {
+  font-size: 1rem;
+  font-weight: 900;
+  line-height: 2rem;
+}
+section .inner .row .service .content > a {
+  color: #000;
+}
+section .inner .row .service .content p {
+  font-size: 0.85rem;
+  font-weight: 700;
+  line-height: 1.7rem;
+}
+section .inner .row .service .content p:last-child {
+  text-decoration: underline;
+  font-weight: 200;
+}
+
+section .inner .row .scrollTop {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  border-top: 1px solid #f5f5f5;
+}
+section .inner .row .scrollTop span {
+  color: rgb(17, 17, 17);
+  font-size: 0.9rem;
+  font-weight: 900;
+  line-height: 1.8rem;
+  cursor: pointer;
+  padding: 10px;
 }
 
 /* 신제품 상품 설명 절대 좌표 */
@@ -1113,6 +1192,21 @@ section .inner .row .solution-slider-wrap .slider .item > a > .item__img {
     line-height: 1.3rem;
     font-weight: 900;
   }
+
+  section .inner .row .catalogue {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  section .inner .row .service {
+    flex-direction: row;
+  }
+  section .inner .row .service .content {
+    flex: 1;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 @media screen and (min-width: 700px) {
@@ -1163,6 +1257,15 @@ section .inner .row .solution-slider-wrap .slider .item > a > .item__img {
     bottom: 5px;
   }
 }
+@media screen and (min-width: 1200px) {
+  section .inner .row .scrollTop {
+    display: none;
+  }
+
+  section .inner .row .catalogue .content {
+    gap: 2.5rem;
+  }
+}
 
 @media screen and (min-width: 1270px) {
   section .inner .row .message {
@@ -1204,4 +1307,206 @@ section .inner .row .solution-slider-wrap .slider .item > a > .item__img {
   section .inner .row .slider-wrap .slider .item .item__img {
     width: 27vw;
   }
+}
+
+/* FOOTER */
+footer {
+  padding-top: 4rem;
+  background-color: #f5f5f5;
+}
+
+footer .inner .contents {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .inner .contents .items {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+footer .inner .contents .items .item:nth-child(1) {
+  margin-bottom: 2.5rem;
+}
+
+footer .inner .contents .items .item:nth-child(1) > div {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  margin-bottom: 10px;
+  font-weight: 900;
+}
+
+footer .inner .contents .items .item:nth-child(1) > p {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+  margin-bottom: 15px;
+}
+footer .inner .contents .items .item:nth-child(1) > p > a {
+  font-size: 0.8rem;
+  text-decoration: underline;
+}
+
+footer .inner .contents .items .item:nth-child(1) .item__btn {
+  color: #dfdfdf;
+  font-size: 0.8rem;
+}
+
+footer .inner .contents .items .item:nth-child(1) .item__btn > span {
+  padding: 12px 20px;
+  border-radius: 4rem;
+  background-color: #000;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1rem;
+}
+
+footer .inner .contents .items .item:nth-child(1) .item__btn > span:hover {
+  background-color: rgba(00, 00, 00, 0.8);
+}
+
+footer .inner .contents .items .item:nth-child(2) {
+  margin-bottom: 2.5rem;
+}
+
+footer .inner .contents .items .item:nth-child(2) > ul {
+}
+footer .inner .contents .items .item:nth-child(2) > ul > li {
+  padding: 2rem 0;
+  border-top: 1px solid rgb(223, 223, 223);
+}
+footer .inner .contents .items .item:nth-child(2) > ul > li:last-child {
+  border-bottom: 1px solid rgb(223, 223, 223);
+}
+footer .inner .contents .items .item:nth-child(2) > ul > li > h2 {
+  font-size: 0.9rem;
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+footer .inner .contents .items .item:nth-child(2) > ul > li .item__toggle {
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+footer .inner .contents .items .item:nth-child(2) > ul > li .item__toggle.item__toggle_clicked {
+  margin-top: 2rem;
+  padding-top: 1.25rem;
+  height: auto;
+  overflow: auto;
+}
+
+footer .inner .contents .items .item:nth-child(2) > ul > li .item__toggle > li {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 19px;
+}
+
+footer .inner .contents .items .item:nth-child(2) > ul > li .item__toggle > li > a:hover {
+  text-decoration: underline;
+}
+
+footer .inner .contents .items .icons {
+  display: flex;
+  margin-bottom: 2rem;
+}
+footer .inner .contents .items .icons .icon {
+  display: flex;
+  align-items: center;
+  margin: 0 20px 12px 0;
+}
+
+footer .inner .contents .items .icons .icon > a {
+  padding: 4px;
+  display: block;
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 50%;
+}
+footer .inner .contents .items .icons .icon > a > img {
+  width: 24px;
+  height: 24px;
+}
+footer .inner .contents .items .icons .icon:nth-child(2) > a {
+  padding: 6px;
+}
+footer .inner .contents .items .icons .icon:nth-child(2) > a > img {
+  width: 20px;
+  height: 20px;
+}
+
+footer .inner .contents .items .language {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 20px;
+}
+footer .inner .contents .items .language .world {
+  display: inline-block;
+}
+footer .inner .contents .items .language .world > a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 40px;
+  position: relative;
+  /* border: 1px solid rgb(146, 146, 146); */
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 4rem;
+  font-size: 0.7rem;
+  font-weight: 900;
+  line-height: 1.1rem;
+}
+footer .inner .contents .items .language .select:hover,
+footer .inner .contents .items .language .world > a:hover {
+  border: 1px solid rgb(146, 146, 146);
+}
+
+footer .inner .contents .items .language .world > a > img {
+  width: 20;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  left: 11%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+footer .inner .contents .items .language .select {
+  padding: 10px 2rem 10px 20px;
+  border-radius: 4rem;
+  background-color: #f5f5f5;
+  border: 1px solid rgb(223, 223, 223);
+  outline: none;
+}
+
+footer .inner .contents .items .text1 {
+  font-size: 12px;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
+}
+footer .inner .contents .items .text2 {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+footer .inner .contents .items .text2 > a {
+  text-decoration: underline;
+  font-weight: 700;
+}
+footer .inner .contents .items .info {
+  display: flex;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+footer .inner .contents .items .info > li {
+  padding: 8px 0;
+  margin-right: 28px;
 }
