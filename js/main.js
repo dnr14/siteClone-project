@@ -4,17 +4,18 @@ class Slider {
 
     this.$spanIconRight = document.querySelector(obj.sliderRightClickName);
     this.$spanIconLeft = document.querySelector(obj.sliderLeftClickName);
-    console.log(this.$spanIconRight, this.$spanIconLeft);
 
     this.$sliderBox = document.querySelector(obj.sliderBarBoxName);
     this.$drag = document.querySelector(obj.sliderBarDragName);
 
-    this.x = obj.x;
-    this.y = obj.y;
-    this.z = obj.z;
+    this._600downX = obj.x;
+    this._900downY = obj.y;
+    this._900upZ = obj.z;
+
     this._600down = obj._offsetWidth._600down;
     this._900down = obj._offsetWidth._900down;
     this._900up = obj._offsetWidth._900up;
+
 
 
     this.$aWidth = this.$as[0].offsetWidth;
@@ -35,12 +36,13 @@ class Slider {
 
   set_1퍼센트() {
     if (this.innerWidth < 600) {
-      this._1퍼센드 = (this.fullWidth - this.$aWidth * this.x) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
+      this._1퍼센드 = (this.fullWidth - this.$aWidth * this._600downX) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
     } else if (this.innerWidth < 900) {
-      this._1퍼센드 = (this.fullWidth - (this.$aWidth * this.y)) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
+      this._1퍼센드 = (this.fullWidth - (this.$aWidth * this._900downY)) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
     } else if (this.innerWidth > 900) {
-      this._1퍼센드 = (this.fullWidth - (this.$aWidth * this.z)) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
+      this._1퍼센드 = (this.fullWidth - (this.$aWidth * this._900upZ)) / (this.$sliderBox.offsetWidth - this.$drag.offsetWidth);
     }
+
   }
 
   eventHanlder() {
@@ -78,7 +80,9 @@ class Slider {
   }
 
   sliderBarMove(x) {
+    console.log(1);
     const result = Math.round(this._1퍼센드 * x);
+    console.log(result);
     this.currentTransformX = result;
     this.$as.forEach(a => {
       a.removeAttribute('style');
@@ -103,6 +107,8 @@ class Slider {
         fullWidth = $a.offsetWidth * this._900down.widthNum;
       } else if (this.innerWidth >= 900) {
         fullWidth = $a.offsetWidth * this._900up.widthNum;
+        console.log(this._600down.widthNum);
+        console.log(fullWidth);
       }
 
       if ($a.style.transform === `translateX(-${fullWidth}px)`) return;
@@ -219,14 +225,39 @@ const reSlider = {
   _offsetWidth: {
     // offset 한번클릭시 아이템 몇개를 넘길지 정하는 변수
     // widthNum 클릭이 가능한 최대 너비
-    _600down: { widthNum: 10, offset: 2 },
+    _600down: { widthNum: 5, offset: 2 },
     _900down: { widthNum: 9, offset: 3 },
     _900up: { widthNum: 8, offset: 4 },
   }
 }
 
 
+const solutionSlider = {
+  sliderliName: '.solution-slider-wrap .slider .item',
+  sliderRightClickName: 'span#solution-right',
+  sliderLeftClickName: 'span#solution-left',
+  sliderBarBoxName: '#solution-slider_bar .bar',
+  sliderBarDragName: '#solution-slider_bar .bar .drag',
+  //드래그 1px당 transrateX값 계산
+  // x : 600아래
+  // y : 900아래
+  // z : 900위
+  x: 1.85,
+  y: 2.4,
+  z: 3.3,
+  _offsetWidth: {
+    // offset 한번클릭시 아이템 몇개를 넘길지 정하는 변수
+    // widthNum 클릭이 가능한 최대 너비
+    _600down: { widthNum: 7.15, offset: 1 },
+    _900down: { widthNum: 6.6, offset: 3 },
+    _900up: { widthNum: 5.7, offset: 3 },
+  }
+}
+
+
+
 window.onload = () => {
   new Slider(slider);
   new Slider(reSlider);
+  new Slider(solutionSlider);
 }
