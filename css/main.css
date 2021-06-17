@@ -107,9 +107,9 @@ header .inner .row .hamburger > span::after {
   left: 0;
   right: 0;
   margin: auto;
-  background-color: rgba(17, 17, 17, 0.1);
+  background-color: rgba(245, 245, 245, 0.5);
   border-radius: 50%;
-  z-index: -1;
+  z-index: 1;
 }
 header .inner .row .hamburger > span:hover::after {
   display: block;
@@ -164,6 +164,10 @@ header .inner .row .icon > span {
   position: relative;
   padding: 10px 10px;
 }
+header .inner .row .icon > span > a {
+  display: block;
+}
+
 header .inner .row .icon > span::after {
   content: " ";
   display: none;
@@ -175,8 +179,9 @@ header .inner .row .icon > span::after {
   right: 0;
   margin: auto;
   border-radius: 50%;
-  z-index: -1;
-  background-color: rgba(17, 17, 17, 0.1);
+  z-index: 1;
+  background-color: rgba(245, 245, 245, 0.5);
+  cursor: pointer;
 }
 header .inner .row .icon > span:hover::after {
   display: block;
@@ -888,13 +893,13 @@ section .inner .row .service .content p:last-child {
   font-weight: 200;
 }
 
-section .inner .row .scrollTop {
+.inner .row .scrollTop {
   display: flex;
   justify-content: center;
   padding: 1rem 0;
   border-top: 1px solid #f5f5f5;
 }
-section .inner .row .scrollTop span {
+.inner .row .scrollTop span {
   color: rgb(17, 17, 17);
   font-size: 0.9rem;
   font-weight: 900;
@@ -1258,7 +1263,7 @@ section .inner .row .scrollTop span {
   }
 }
 @media screen and (min-width: 1200px) {
-  section .inner .row .scrollTop {
+  .inner .row .scrollTop {
     display: none;
   }
 
@@ -1313,6 +1318,10 @@ section .inner .row .scrollTop span {
 footer {
   padding-top: 4rem;
   background-color: #f5f5f5;
+}
+footer .inner .row {
+  margin-left: 7.5rem;
+  position: relative;
 }
 
 footer .inner .contents {
@@ -1476,11 +1485,28 @@ footer .inner .contents .items .language .world > a > img {
 }
 
 footer .inner .contents .items .language .select {
+  appearance: none;
   padding: 10px 2rem 10px 20px;
   border-radius: 4rem;
   background-color: #f5f5f5;
   border: 1px solid rgb(223, 223, 223);
   outline: none;
+  width: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.7rem;
+  height: 100%;
+}
+footer .inner .contents .items .language > div {
+  position: relative;
+}
+footer .inner .contents .items .language > div .down {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 15%;
+  cursor: pointer;
 }
 
 footer .inner .contents .items .text1 {
@@ -1509,4 +1535,88 @@ footer .inner .contents .items .info {
 footer .inner .contents .items .info > li {
   padding: 8px 0;
   margin-right: 28px;
+}
+
+#flex_box {
+  display: flex;
+  flex-direction: column;
+}
+#flex_box2 {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 900px) {
+  footer .inner .contents .items:nth-child(1) {
+    flex-direction: row;
+    margin-top: 20px;
+  }
+
+  footer .inner .contents .items .item:nth-child(1) {
+    flex: 2.5;
+    padding-right: 7.9rem;
+  }
+  footer .inner .contents .items .item:nth-child(2) {
+    flex: 8;
+  }
+  footer .inner .contents .items .item:nth-child(2) > ul {
+    display: flex;
+  }
+  footer .inner .contents .items .item:nth-child(2) > ul > li {
+    padding-left: 20px;
+    padding-top: 0;
+    flex: 1;
+    border: none;
+  }
+  footer .inner .contents .items .item:nth-child(2) > ul > li .item__toggle {
+    height: auto;
+    overflow: auto;
+  }
+  footer .inner .contents .items .item:nth-child(2) > ul > li > h2 {
+    padding-bottom: 1rem;
+    line-height: 2rem;
+  }
+  footer .inner .contents .items .item:nth-child(2) > ul > li > h2 > span:nth-child(2) {
+    display: none;
+  }
+
+  footer .inner .contents .items .item:nth-child(2) > ul > li .item__toggle > li {
+    margin-bottom: 12px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  footer .inner .contents .items .item:nth-child(2) > ul > li:last-child {
+    border: none;
+  }
+  #flex_box {
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(223, 223, 223);
+  }
+  #flex_box2 {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 1.5rem;
+  }
+  footer .inner .contents .items .info,
+  footer .inner .contents .items .text1 {
+    margin: 0;
+  }
+  footer .inner .contents .items .info > li:last-child {
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 1270px) {
+  footer {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  footer .inner .row {
+    margin: 0;
+  }
 }
