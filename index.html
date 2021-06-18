@@ -1128,7 +1128,7 @@
 
   <div class="inner">
     <div class="row">
-      <div class="scrollTop" id="scrollTop">
+      <div class="scrollTop" id="scrollTop1">
         <span>맨 위로 이동</span>
       </div>
     </div>
@@ -1159,7 +1159,7 @@
                   <h2 id="btn0">
                     <span>고객문의</span>
                     <span>
-                      <img src="./images/east_black_24dp.svg" alt="">
+                      <img src="./images/expand_more_black_24dp.svg" alt="">
                     </span>
                   </h2>
 
@@ -1216,7 +1216,7 @@
                   <h2 id="btn1">
                     <span>쇼핑하기</span>
                     <span>
-                      <img src="./images/east_black_24dp.svg" alt="">
+                      <img src="./images/expand_more_black_24dp.svg" alt="">
                     </span>
                   </h2>
 
@@ -1273,7 +1273,7 @@
                   <h2 id="btn2">
                     <span>서비스</span>
                     <span>
-                      <img src="./images/east_black_24dp.svg" alt="">
+                      <img src="./images/expand_more_black_24dp.svg" alt="">
                     </span>
                   </h2>
 
@@ -1327,7 +1327,7 @@
                   <h2 id="btn3">
                     <span>IKEA 이야기</span>
                     <span>
-                      <img src="./images/east_black_24dp.svg" alt="">
+                      <img src="./images/expand_more_black_24dp.svg" alt="">
                     </span>
                   </h2>
 
@@ -1438,30 +1438,85 @@
     </div>
   </footer>
 
+  <div class="scrollTop" id="scrollTop2">
+    <div class="inner">
+      <span class="up" id="scrollTop2_btn2">
+        <img src="./images/expand_less_white_24dp.svg" alt="up">
+      </span>
+      <span class="up">
+        <img src="./images/expand_less_black_24dp.svg" alt="up">
+      </span>
+    </div>
+  </div>
 
   <script>
 
 
-    document.querySelector('#btn0').addEventListener('click', () => {
-
-      if (window.innerWidth < 900) {
+    document.querySelector('#btn0').addEventListener('click', (e) => {
+      if (window.innerWidth < 900)
         document.querySelector('#toggle0').classList.toggle('item__toggle_clicked');
-      }
+      e.currentTarget.children[1].classList.toggle('item__rotate');
     });
-    document.querySelector('#btn1').addEventListener('click', () => {
+
+    document.querySelector('#btn1').addEventListener('click', (e) => {
+      var isTrue = false;
       if (window.innerWidth < 900)
         document.querySelector('#toggle1').classList.toggle('item__toggle_clicked');
+      e.currentTarget.children[1].classList.toggle('item__rotate');
     });
 
-    document.querySelector('#btn2').addEventListener('click', () => {
+    document.querySelector('#btn2').addEventListener('click', (e) => {
+      var isTrue = false;
       if (window.innerWidth < 900)
         document.querySelector('#toggle2').classList.toggle('item__toggle_clicked');
+      e.currentTarget.children[1].classList.toggle('item__rotate');
     });
 
-    document.querySelector('#btn3').addEventListener('click', () => {
+    document.querySelector('#btn3').addEventListener('click', (e) => {
+      var isTrue = false;
       if (window.innerWidth < 900)
         document.querySelector('#toggle3').classList.toggle('item__toggle_clicked');
+      e.currentTarget.children[1].classList.toggle('item__rotate');
     });
+
+    document.querySelector('#scrollTop1').addEventListener('click', scrollToTop);
+    document.querySelector('#scrollTop2').addEventListener('click', scrollToTop);
+
+    let timeOut;
+    function scrollToTop() {
+      if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0) {
+        window.scrollBy(0, -150);
+        timeOut = setTimeout('scrollToTop()', 10);
+      } else {
+        clearTimeout(timeOut);
+      }
+    }
+
+
+    function optimizeAnimation(callback) {
+      let ticking = false;
+      return () => {
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(() => {
+            callback();
+            ticking = false;
+          });
+        }
+      };
+    }
+
+    function colorChange() {
+      const { offsetTop } = document.getElementsByTagName('footer')[0].offsetTop;
+      const result = parseInt(window.pageYOffset + document.getElementById('scrollTop2').getBoundingClientRect().top);
+      console.log(result, offsetTop);
+      result > offsetTop
+        ? document.getElementById('scrollTop2_btn2').classList.add('tt')
+        : document.getElementById('scrollTop2_btn2').classList.remove('tt')
+    }
+
+    window.addEventListener("scroll", optimizeAnimation(colorChange), { passive: true });
+
   </script>
 
 </body>
