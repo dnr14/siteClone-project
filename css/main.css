@@ -3,6 +3,9 @@ html {
   font-size: 100%;
   font-family: "Nanum Gothic", sans-serif;
 }
+html.noscroll {
+  overflow: hidden;
+}
 
 img {
   display: block;
@@ -75,9 +78,10 @@ a {
 
 /* HEADER */
 header {
-  /* position: fixed; */
-  /* width: 100%; */
+  position: sticky;
+  top: 0;
   background-color: #fff;
+  z-index: 2;
 }
 header .inner .row {
   display: flex;
@@ -898,6 +902,7 @@ section .inner .row .service .content p:last-child {
   justify-content: center;
   padding: 1rem 0;
   border-top: 1px solid #f5f5f5;
+  cursor: pointer;
 }
 .inner .row .scrollTop span {
   color: rgb(17, 17, 17);
@@ -1632,19 +1637,19 @@ footer .inner .contents .items .info > li {
 }
 
 /* 스크롤 */
-#scrollTop2 {
+#scrollTopButton {
   display: none;
   position: fixed;
   width: 100%;
   height: 50px;
   bottom: 5%;
 }
-#scrollTop2 .inner {
+#scrollTopButton .inner {
   height: 100%;
   position: relative;
 }
 
-#scrollTop2 .inner .up {
+#scrollTopButton .inner .up {
   position: absolute;
   display: flex;
   cursor: pointer;
@@ -1652,15 +1657,266 @@ footer .inner .contents .items .info > li {
   border-radius: 50%;
   background-color: #f5f5f5;
   left: 3%;
+  transform: translateY(100px);
+  transition: 0.5s;
+  overflow: hidden;
 }
 
-#scrollTop2 .inner .tt {
+#scrollTopButton .inner .up:hover {
+  width: 120px;
+  border-radius: 4rem;
+}
+#scrollTopButton .inner .up:hover::after {
+  display: flex;
+  align-items: center;
+}
+#scrollTopButton .inner .up::after {
+  content: "맨 위로 이동";
+  display: none;
+  position: absolute;
+  height: 25px;
+  margin: auto;
+  right: 15%;
+  top: 0;
+  bottom: 0;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+#scrollTopButton .inner .fadeon {
+  transform: translateY(-20px);
+}
+
+#scrollTopButton .inner .on {
   background-color: #000;
   z-index: 1;
+  color: #fff;
 }
 
 @media screen and (min-width: 1200px) {
-  #scrollTop2 {
+  #scrollTopButton {
     display: block;
   }
+}
+
+/* ASIDE */
+#aside {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 8000;
+  background-color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: translateX(-100%);
+  transition: 0.5s;
+}
+#aside.aside100 {
+  transform: translateX(0);
+}
+
+#aside::-webkit-scrollbar {
+  display: none;
+  width: 0 !important;
+}
+
+#aside .inner {
+  padding: 0 1.25rem;
+  width: 100%;
+  min-height: 820px;
+  position: relative;
+}
+#aside .inner .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3.875rem;
+}
+#aside .inner .header > a:nth-child(1) > img {
+  height: 30px;
+}
+#aside .inner .header > a:nth-child(2) > img {
+  padding: 10px;
+  border-radius: 50%;
+}
+#aside .inner .header > a:nth-child(2):hover > img {
+  background-color: rgba(245, 245, 245, 0.7);
+}
+
+#aside .inner .content {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+}
+#aside .inner .content > h1 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 2.125rem;
+}
+#aside .inner .content > h1 > a:hover {
+  text-decoration: underline;
+}
+
+#aside .inner .content > h1:nth-child(2) {
+  margin-top: 1.25rem;
+}
+
+#aside .inner .content .manu_bar1 {
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+#aside .inner .content .manu_bar1 > li {
+  margin-top: 20px;
+  line-height: 1.188rem;
+}
+#aside .inner .content .manu_bar1 > li > a {
+  display: block;
+}
+
+#aside .inner .content .manu_bar1 > li > a:hover {
+  text-decoration: underline;
+}
+#aside .inner .content .manu_bar2 {
+  margin-top: 2.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+#aside .inner .content .manu_bar2 > li {
+  padding: 12px 0;
+  line-height: 1.313rem;
+}
+#aside .inner .content .manu_bar2 > li > a {
+  display: block;
+}
+#aside .inner .content .manu_bar2 > li > a:hover {
+  text-decoration: underline;
+}
+
+#aside .inner .footer {
+  position: relative;
+  padding: 48px 0 16px 0;
+  margin-top: 100px;
+}
+#aside .inner .footer .language {
+  display: flex;
+  gap: 10px;
+}
+#aside .inner .footer .language .world {
+  display: inline-block;
+}
+
+#aside .inner .footer .language .world > a {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 40px;
+  position: relative;
+  /* border: 1px solid rgb(146, 146, 146); */
+  border: 1px solid rgb(223, 223, 223);
+  border-radius: 4rem;
+  font-size: 0.7rem;
+  font-weight: 900;
+  line-height: 1.1rem;
+}
+
+#aside .inner .footer .language .select:hover,
+#aside .inner .footer .language .world > a:hover {
+  border: 1px solid rgb(146, 146, 146);
+}
+
+#aside .inner .footer .language .world > a > img {
+  width: 20;
+  height: 20px;
+  display: inline-block;
+  position: absolute;
+  left: 11%;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+#aside .inner .footer .language .select {
+  appearance: none;
+  padding: 10px 2rem 10px 20px;
+  border-radius: 4rem;
+  background-color: transparent;
+  border: 1px solid rgb(223, 223, 223);
+  outline: none;
+  width: 100px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.7rem;
+  line-height: 1.1rem;
+}
+#aside .inner .footer .language > div {
+  position: relative;
+}
+#aside .inner .footer .language > div .down {
+  position: absolute;
+  top: 22%;
+  right: 15%;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  #aside .inner {
+    padding: 0 2rem;
+  }
+  #aside .inner .content > h1 {
+    font-size: 2.25rem;
+    line-height: 3rem;
+  }
+  #aside .inner .content .manu_bar2 > li {
+    padding: 0.375rem 0;
+  }
+  #aside .inner .footer {
+    margin-top: 120px;
+  }
+}
+@media screen and (min-width: 900px) {
+  #aside {
+    width: 30rem;
+  }
+  #aside .inner {
+    padding: 0 32px 0 150px;
+  }
+  #aside .inner .header {
+    height: 94px;
+  }
+  #aside .inner .content {
+    margin: 0;
+  }
+  #aside .inner .header > a:nth-child(1) > img {
+    width: 90px;
+    height: 36px;
+  }
+  #aside .inner .footer {
+    padding: 2rem 0;
+    margin-top: 130px;
+    position: absolute;
+    bottom: 0;
+  }
+  #aside .inner {
+    height: 100vh;
+  }
+}
+
+#back {
+  display: none;
+  position: fixed;
+  z-index: 7999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  opacity: 0;
+}
+#back.on {
+  opacity: 0.25;
+  display: block;
 }

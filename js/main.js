@@ -256,4 +256,89 @@ window.onload = () => {
   new Slider(slider);
   new Slider(reSlider);
   new Slider(solutionSlider);
+
+  const scrollToTop = (() => {
+    let timeOut;
+    return () => {
+      if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0) {
+        window.scrollBy(0, -150);
+        timeOut = setTimeout(scrollToTop, 10);
+      } else {
+        clearTimeout(timeOut);
+      }
+    }
+  })();
+
+
+
+  const optimizeAnimation = (callback) => {
+    let ticking = false;
+    return () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          callback();
+          ticking = false;
+        });
+      }
+    };
+  }
+
+  const ulHideOff = e => {
+    if (window.innerWidth < 900)
+      e.currentTarget.nextElementSibling.classList.toggle('item__toggle_clicked');
+    e.currentTarget.children[1].classList.toggle('item__rotate');
+  }
+
+  const scrollTopBtnColorChange = (() => {
+
+    let bodyH_Half = document.body.clientHeight / 3;
+
+    return () => {
+
+      const $btn1 = document.querySelectorAll('.scrollTop')[1];
+      const $btn2 = document.querySelectorAll('.scrollTop')[2];
+      const { offsetTop } = document.getElementById('footer');
+      const { top } = $btn1.getBoundingClientRect();
+      const { pageYOffset } = window;
+      const result = parseInt(pageYOffset + top);
+      result > offsetTop
+        ? $btn1.classList.add('on')
+        : $btn1.classList.remove('on')
+
+      if (bodyH_Half < pageYOffset) {
+        $btn1.classList.add('fadeon');
+        $btn2.classList.add('fadeon');
+      } else {
+        $btn1.classList.remove('fadeon');
+        $btn2.classList.remove('fadeon');
+      }
+    }
+
+  })();
+
+  const asideClickEv = (() => {
+    const $aside = document.getElementById('aside')
+    const $back = document.getElementById('back')
+    const $html = document.querySelector('html')
+    return () => {
+      $aside.classList.toggle('aside100');
+      $back.classList.toggle('on');
+      $html.classList.toggle('noscroll');
+    }
+  })();
+
+  const $asideBtns = document.querySelectorAll('.aside_open');
+  $asideBtns.forEach(el => {
+    el.addEventListener('click', asideClickEv);
+  })
+
+
+
+
+  const $footerBtns = document.querySelectorAll('.footerBtn');
+  const $scrollTopBtns = document.querySelectorAll('.scrollTop');
+  $footerBtns.forEach(el => el.addEventListener('click', ulHideOff));
+  $scrollTopBtns.forEach(el => el.addEventListener('click', optimizeAnimation(scrollToTop)));
+  window.addEventListener("scroll", optimizeAnimation(scrollTopBtnColorChange), { passive: true });
 }
