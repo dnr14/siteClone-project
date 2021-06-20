@@ -254,8 +254,8 @@ const ideaSlider = {
   sliderliName: '.idea-wrap .slider .item',
   sliderRightClickName: 'div#idea-arrow-right',
   sliderLeftClickName: 'div#idea-arrow-left',
-  sliderBarBoxName: '#solution-slider_bar .bar',
-  sliderBarDragName: '#solution-slider_bar .bar .drag',
+  sliderBarBoxName: '#idea-slider_bar .bar',
+  sliderBarDragName: '#idea-slider_bar .bar .drag',
   //드래그 1px당 transrateX값 계산
   // x : 600아래
   // y : 900아래
