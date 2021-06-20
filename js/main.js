@@ -250,12 +250,35 @@ const solutionSlider = {
   }
 }
 
+const ideaSlider = {
+  sliderliName: '.idea-wrap .slider .item',
+  sliderRightClickName: 'div#idea-arrow-right',
+  sliderLeftClickName: 'div#idea-arrow-left',
+  sliderBarBoxName: '#solution-slider_bar .bar',
+  sliderBarDragName: '#solution-slider_bar .bar .drag',
+  //드래그 1px당 transrateX값 계산
+  // x : 600아래
+  // y : 900아래
+  // z : 900위
+  x: 1.85,
+  y: 2.4,
+  z: 3.3,
+  _offsetWidth: {
+    // offset 한번클릭시 아이템 몇개를 넘길지 정하는 변수
+    // widthNum 클릭이 가능한 최대 너비
+    _600down: { widthNum: 7.15, offset: 1 },
+    _900down: { widthNum: 6.6, offset: 3 },
+    _900up: { widthNum: 5.7, offset: 3 },
+  }
+}
+
 
 
 window.onload = () => {
   new Slider(slider);
   new Slider(reSlider);
   new Slider(solutionSlider);
+  new Slider(ideaSlider);
 
   const scrollToTop = (() => {
     let timeOut;
@@ -328,17 +351,18 @@ window.onload = () => {
     }
   })();
 
+
+
+
+
   const $asideBtns = document.querySelectorAll('.aside_open');
-  $asideBtns.forEach(el => {
-    el.addEventListener('click', asideClickEv);
-  })
-
-
-
-
   const $footerBtns = document.querySelectorAll('.footerBtn');
   const $scrollTopBtns = document.querySelectorAll('.scrollTop');
+  const $back = document.getElementById('back');
+
+  $back.addEventListener('click', asideClickEv);
   $footerBtns.forEach(el => el.addEventListener('click', ulHideOff));
   $scrollTopBtns.forEach(el => el.addEventListener('click', optimizeAnimation(scrollToTop)));
+  $asideBtns.forEach(el => el.addEventListener('click', asideClickEv));
   window.addEventListener("scroll", optimizeAnimation(scrollTopBtnColorChange), { passive: true });
 }
