@@ -1,0 +1,37 @@
+img { display: block; }
+
+a { text-decoration: none; color: #111; display: block; }
+
+.container { max-width: 1400px; margin: auto; }
+
+#header .container .row .flex-box { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+#header .container .row .flex-box .item-top { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; padding: 0 1.25rem; }
+
+#header .container .row .flex-box .item-top .menu-bar { font-size: 1rem; }
+
+#header .container .row .flex-box .item-top .menu-bar .items { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+#header .container .row .flex-box .item-top .menu-bar .items .item { padding-right: 1.875rem; }
+
+#header .container .row .flex-box .item-top .menu-bar .items .item a { line-height: 2.5rem; }
+
+#header .container .row .flex-box .item-top .menu-bar .items .item a span { color: #0060a9; }
+
+#header .container .row .flex-box .item-top .menu-bar .items .item a:hover, #header .container .row .flex-box .item-top .menu-bar .items .item a:focus { text-decoration: underline; }
+
+#header .container .row .flex-box .item-top .menu-bar .items .item a:hover span, #header .container .row .flex-box .item-top .menu-bar .items .item a:focus span { color: #00355d; }
+
+#header .container .row .flex-box .item-top .menu-bar .items .item.language { margin-right: 1.25rem; padding: 0; width: 67px; }
+
+#header .container .row .flex-box .item-top .menu-bar .items .item.country { margin-right: 1.25rem; padding: 0; width: 150px; }
+
+#header .container .row .flex-box .item-bottom { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+#header .container .row .flex-box .item-bottom .logoBox { -webkit-box-flex: 2.5; -ms-flex: 2.5; flex: 2.5; }
+
+#header .container .row .flex-box .item-bottom .logoBox img { max-width: 81%; margin-bottom: 23.1px; }
+
+#header .container .row .flex-box .item-bottom .searchBox { -webkit-box-flex: 6; -ms-flex: 6; flex: 6; }
+
+#header .container .row .flex-box .item-bottom .loginBox { -webkit-box-flex: 2; -ms-flex: 2; flex: 2; }
