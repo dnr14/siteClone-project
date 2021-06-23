@@ -8,9 +8,13 @@
   <title>코스트코 온라인몰</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="stylesheet" href="/css/header.css">
+  <link rel="stylesheet" href="/css/nav.css">
+  <link rel="stylesheet" href="/css/section1.css">
+  <script src="./js/slider.js" defer></script>
 </head>
 
 <body>
+  <!-- HEADER -->
   <header id="header">
     <div class="container">
       <div class="row">
@@ -97,6 +101,83 @@
       </div>
     </div>
   </header>
+
+  <!-- NAV -->
+  <Nav id="nav">
+    <div class="container">
+      <div class="manu">
+        <div class="kategorie">
+          <a href="javascript:void(0)">
+            <span class="hamburger"><img src="./images/header/menu_white_24dp.svg" alt="menu"></span>
+            <span>카테고리 전체보기</span>
+          </a>
+        </div>
+
+        <ul class="items">
+          <li class="item"><a href="javascript:void(0)"><span>비즈니스 딜리버리</span></a></li>
+          <li class="item"><a href="javascript:void(0)"><span>스페셜 할인</span></a></li>
+          <li class="item"><a href="javascript:void(0)"><span>바이어추천상품</span></a></li>
+          <li class="item"><a href="javascript:void(0)"><span>신상품</span></a></li>
+          <li class="item"><a href="javascript:void(0)"><span>커클랜드 시그니춰</span></a></li>
+          <li class="item"><a href="javascript:void(0)"><span>인기상품</span></a></li>
+        </ul>
+      </div>
+
+    </div>
+  </Nav>
+
+  <section id="section1">
+    <div class="container">
+      <div class="slider-wrap" id="slider-wrap">
+        <div class="slider" id="slider">
+          <div class="item">
+            <img src="./images/slider/sliderMImg1.jpg" alt="img">
+          </div>
+          <div class="item">
+            <img src="./images/slider/sliderMImg2.jpg" alt="img">
+          </div>
+          <div class="item">
+            <img src="./images/slider/sliderMImg3.jpg" alt="img">
+          </div>
+          <div class="item">
+            <img src="./images/slider/sliderMImg4.jpg" alt="img">
+          </div>
+          <div class="item">
+            <img src="./images/slider/sliderMImg5.jpg" alt="img">
+          </div>
+          <div class="item">
+            <img src="./images/slider/sliderMImg6.jpg" alt="img">
+          </div>
+          <div class="item">
+            <img src="./images/slider/sliderMImg7.jpg" alt="img">
+          </div>
+          <div class="item">
+            <img src="./images/slider/sliderMImg8.jpg" alt="img">
+          </div>
+        </div>
+
+        <div class="rightBtn" id="rightBtn">
+          <span>
+            <img src="./images/slider/arrow_right_white_36dp.svg" alt="right">
+          </span>
+        </div>
+        <div class="leftBtn" id="leftBtn">
+          <span>
+            <img src="./images/slider/arrow_left_white_36dp.svg" alt="left">
+          </span>
+        </div>
+
+      </div>
+      <div class="sliderBar">
+        <ul class="bar"></ul>
+      </div>
+  </section>
+
+
+
+
+
+
 
 
 

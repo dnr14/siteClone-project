@@ -54,6 +54,21 @@ $_10pxisRem: 0.625rem;
   }
 }
 
+@mixin _1400 {
+  @media (min-width: #{$breakpoint-desktop1400px}) {
+    @content;
+  }
+}
+
+html {
+  height: 5000px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+}
+
 img {
   display: block;
 }

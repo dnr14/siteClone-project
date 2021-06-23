@@ -1,0 +1,37 @@
+html { height: 5000px; -ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */ }
+
+html::-webkit-scrollbar { display: none; /* Chrome, Safari, Opera*/ }
+
+img { display: block; }
+
+a { text-decoration: none; color: #111; display: block; }
+
+.container { max-width: 1400px; margin: auto; }
+
+@media (min-width: 1024px) and (max-width: 1399px) { .container { max-width: 100%; margin: auto; padding: 0 20px; } }
+
+@media (min-width: 906px) and (max-width: 1024px) { .container { padding: 0 10px; } }
+
+@media (max-width: 1024px) { #section1 .container { padding: 0; } }
+
+#section1 .container .slider-wrap { width: 100%; position: relative; overflow: hidden; }
+
+#section1 .container .slider-wrap .slider { position: relative; overflow: hidden; -webkit-transition: 0.5s; transition: 0.5s; }
+
+#section1 .container .slider-wrap .slider .item { float: left; }
+
+#section1 .container .slider-wrap .slider .item img { max-width: 100%; width: 100%; max-height: 400px; }
+
+#section1 .container .slider-wrap .rightBtn { position: absolute; top: 0; bottom: 0; right: 2%; height: 50px; padding: 15px; margin: auto; cursor: pointer; border-radius: 50%; }
+
+#section1 .container .slider-wrap .rightBtn:hover, #section1 .container .slider-wrap .rightBtn :focus { -webkit-box-shadow: 5px 5px 5px #111; box-shadow: 5px 5px 5px #111; }
+
+#section1 .container .slider-wrap .leftBtn { position: absolute; top: 0; bottom: 0; left: 2%; height: 50px; padding: 15px; margin: auto; cursor: pointer; border-radius: 50%; }
+
+#section1 .container .slider-wrap .leftBtn:hover, #section1 .container .slider-wrap .leftBtn :focus { -webkit-box-shadow: 5px 5px 5px #111; box-shadow: 5px 5px 5px #111; }
+
+#section1 .container .sliderBar .bar { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 30px; padding: 10px 0; }
+
+#section1 .container .sliderBar .bar .barBtn { margin: 5px 5px; padding: 5px; height: 2.5px; width: 2.5px; border-radius: 50%; background-color: #dfdfdf; cursor: pointer; }
+
+#section1 .container .sliderBar .bar .clicked { background-color: red; }
