@@ -8,6 +8,8 @@ class Slider {
     this.$leftBtn = document.getElementById(leftBtnId);
 
     this.$bar = document.querySelector('.sliderBar>.bar');
+    this.$play = document.getElementById('play');
+    this.$pause = document.getElementById('pause');
 
     this.item_leng = this.$items.length;
     this.loop = isloop;
@@ -22,13 +24,10 @@ class Slider {
   }
   init() {
     try {
-
-
       this.drawBar();
       this.resize();
       this.evnethandler();
       this.setLoop();
-
     } catch (error) {
       console.error(error)
     }
@@ -54,6 +53,22 @@ class Slider {
     this.$rightBtn.addEventListener('click', this.rightMove);
     this.$leftBtn.addEventListener('click', this.leftMove);
     this.$lis.forEach(el => el.addEventListener('click', this.liClickEvent));
+    this.$play.addEventListener('click', this.loopClick);
+    this.$pause.addEventListener('click', this.loopClick);
+  }
+
+  loopClick = (e) => {
+    let target = e.currentTarget;
+    let [sibling] = this.siblings(target);
+    target.style.display = `none`;
+    sibling.style.display = `block`;
+    target.id === 'play'
+      ? this.setLoop()
+      : clearInterval(this.timer);
+  }
+
+  siblings = (t) => {
+    return [...t.parentElement.children].filter(e => e != t);
   }
 
   drawBar() {
@@ -63,6 +78,7 @@ class Slider {
       li.dataset.index = i;
       this.$bar.appendChild(li);
     }
+
     this.$lis = document.querySelectorAll('.barBtn');
     this.libackground();
   }
@@ -155,5 +171,5 @@ class Slider {
 }
 
 window.onload = () => {
-  new Slider("slider-wrap", 'slider', 'rightBtn', 'leftBtn', true, 3000);
+  new Slider("slider-wrap", 'slider', 'rightBtn', 'leftBtn', false, 3000);
 }

@@ -1,0 +1,34 @@
+@import "./global";
+
+#section6 {
+  .container {
+    @include _767px() {
+      padding: 0 10px 10px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: row;
+      @include _767px() {
+        flex-direction: column;
+      }
+
+      .img {
+        @include _1024px() {
+          &:nth-child(odd) {
+            padding-right: 10px;
+          }
+          &:nth-child(even) {
+            padding-left: 10px;
+          }
+        }
+        img {
+          @include _767px() {
+            padding: 10px 0;
+          }
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

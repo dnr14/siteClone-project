@@ -55,6 +55,7 @@
     }
     .sliderBar {
       .bar {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -71,6 +72,21 @@
         }
         .clicked {
           background-color: red;
+        }
+        .loopBtn {
+          // position: relative;
+          span {
+            padding: 2.5px;
+            display: block;
+            // position: absolute;
+            cursor: pointer;
+            img {
+              display: inline;
+            }
+          }
+          #play {
+            display: none;
+          }
         }
       }
     }

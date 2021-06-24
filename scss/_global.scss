@@ -89,3 +89,16 @@ a {
     padding: 0 10px;
   }
 }
+
+.m_line {
+  display: block;
+  height: 7px;
+  border-top: 1px solid #ccc;
+  background-color: #e6e6e6;
+  content: "";
+  margin: 10px -10px;
+  @include _1024px() {
+    margin: 10px 0;
+    height: 1px;
+  }
+}

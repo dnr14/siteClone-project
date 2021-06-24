@@ -12,6 +12,10 @@ a { text-decoration: none; color: #111; display: block; }
 
 @media (min-width: 906px) and (max-width: 1024px) { .container { padding: 0 10px; } }
 
+.m_line { display: block; height: 7px; border-top: 1px solid #ccc; background-color: #e6e6e6; content: ""; margin: 10px -10px; }
+
+@media (min-width: 1024px) { .m_line { margin: 10px 0; height: 1px; } }
+
 #header { background-color: #efefef; }
 
 @media (min-width: 1024px) and (max-width: 1399px) { #header .container .row { margin: 0 0 -0.625rem; } }
