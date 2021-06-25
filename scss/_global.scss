@@ -1,4 +1,5 @@
 $breakpoint-mobile: 335px;
+$breakpoint-tablet668px: 668px;
 $breakpoint-tablet767px: 767px;
 $breakpoint-desktop1400px: 1399px;
 $breakpoint-desktop1200px: 1200px;
@@ -47,6 +48,11 @@ $_10pxisRem: 0.625rem;
     @content;
   }
 }
+@mixin _668px {
+  @media (max-width: #{$breakpoint-tablet668px}) {
+    @content;
+  }
+}
 
 @mixin _1024pxMax {
   @media (max-width: #{$breakpoint-desktop1024px}) {
@@ -61,7 +67,7 @@ $_10pxisRem: 0.625rem;
 }
 
 html {
-  height: 5000px;
+  height: 10000px;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   &::-webkit-scrollbar {

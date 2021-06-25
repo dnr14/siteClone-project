@@ -1,0 +1,71 @@
+@import "./global";
+
+#section10 {
+  .container {
+    @include _767px() {
+      padding: 0 10px 0;
+    }
+  }
+  .title {
+    margin-top: $_20pxisRem;
+    text-align: center;
+    & > h1 {
+      font-size: 1.8rem;
+      line-height: 2.3rem;
+      margin-top: 3px;
+    }
+    & > p {
+      font-size: 1rem;
+      margin-top: 10px;
+    }
+  }
+
+  .content-Box {
+    padding-top: $_30pxisRem;
+    display: flex;
+    flex-wrap: wrap;
+    .content {
+      width: 25%;
+      box-sizing: border-box;
+      padding: 0 10px;
+      position: relative;
+      @include _767px() {
+        width: 50%;
+      }
+      .img {
+        img {
+          max-width: 100%;
+        }
+      }
+      .text {
+        text-align: center;
+        margin: 2.1px 0;
+        font-size: 0.9rem;
+        height: 60px;
+        & > h1,
+        & > p {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          line-height: 1.2rem;
+        }
+        & > p {
+          font-weight: bold;
+          color: red;
+        }
+      }
+
+      & > img {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        right: 10px;
+        width: 42px;
+        @include _668px() {
+          right: 1%;
+          width: 30px;
+        }
+      }
+    }
+  }
+}

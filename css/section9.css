@@ -16,6 +16,6 @@ a { text-decoration: none; color: #111; display: block; }
 
 @media (min-width: 1024px) { .m_line { margin: 10px 0; height: 1px; } }
 
-@media (max-width: 767px) { #section5 .container { padding: 0 10px 10px; } }
+@media (max-width: 767px) { #section9 .container { padding: 0 10px 0; } }
 
-#section5 .container .content .img img { max-width: 100%; }
+#section9 .container .content .img img { max-width: 100%; }
