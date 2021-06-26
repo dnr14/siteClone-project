@@ -1,4 +1,4 @@
-html { height: 10000px; -ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */ }
+html { -ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */ }
 
 html::-webkit-scrollbar { display: none; /* Chrome, Safari, Opera*/ }
 
