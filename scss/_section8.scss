@@ -1,0 +1,173 @@
+@import "./media";
+
+#section8 {
+  .container {
+    .title {
+      margin-top: $_20pxisRem;
+      text-align: center;
+      & > h1 {
+        font-size: 1.8rem;
+        line-height: 2.3rem;
+        margin-top: 3px;
+      }
+      & > p {
+        font-size: 1rem;
+        margin-top: 10px;
+      }
+    }
+
+    @include _767px() {
+      padding: 0 10px 10px;
+    }
+    .slider-wrap {
+      margin-top: 20px;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      .slider {
+        position: relative;
+        overflow: hidden;
+        transition: 0.5s;
+        .item {
+          float: left;
+          .content {
+            position: relative;
+            padding: 10px 0;
+            margin: 0 15px;
+            @include _767px() {
+              margin: 0 10px;
+            }
+            cursor: pointer;
+            .logo {
+              position: absolute;
+              top: 0;
+              right: 0;
+              width: 45px;
+              height: 45px;
+              & > img {
+                max-width: 100%;
+              }
+            }
+
+            .img,
+            .delibary {
+              & > img {
+                max-width: 100%;
+                width: 100%;
+                max-height: 400px;
+              }
+            }
+            .price {
+              margin-top: 3px;
+              & > p {
+                line-height: 28px;
+                font-size: 1.3rem;
+              }
+            }
+            .promotion {
+              font-size: 0.8rem;
+              font-weight: 600;
+              height: 68px;
+              padding-bottom: 5px;
+              color: #008000;
+              box-sizing: border-box;
+              & > span {
+                display: inline-block;
+                line-height: 20px;
+              }
+              & > p {
+                line-height: 20px;
+                color: red;
+                font-size: 0.9rem;
+                font-weight: 800;
+              }
+            }
+            .text {
+              color: #0060a9;
+              font-size: 1rem;
+              cursor: pointer;
+              .usa {
+                line-height: 20px;
+                font-weight: 500;
+                font-size: 14px;
+              }
+              .korea {
+                line-height: 20px;
+                font-weight: 500;
+              }
+              .usa:hover,
+              .korea:hover {
+                text-decoration: underline;
+              }
+            }
+            .star {
+              margin-top: 10px;
+              display: flex;
+              & > li {
+                width: 14px;
+                height: 14px;
+              }
+            }
+          }
+        }
+      }
+      .rightBtn,
+      .leftBtn {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        cursor: pointer;
+        background-color: rgba($color: #fff, $alpha: 0.8);
+        transition: 0.5s;
+        & > span {
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          & > img {
+            width: 24px;
+            filter: invert(25%) sepia(69%) saturate(1552%) hue-rotate(182deg) brightness(98%) contrast(105%);
+          }
+        }
+        &:hover {
+          background-color: rgba($color: #fff, $alpha: 1);
+        }
+      }
+
+      .leftBtn {
+        left: 0;
+      }
+
+      .rightBtn {
+        right: 0;
+      }
+
+      .sliderBar {
+        .bar {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 30px;
+          padding: 10px 0;
+          .barBtn {
+            margin: 5px 5px;
+            padding: 5px;
+            height: 2.5px;
+            width: 2.5px;
+            border-radius: 50%;
+            background-color: #dfdfdf;
+            cursor: pointer;
+          }
+          .clicked {
+            background-color: red;
+          }
+        }
+      }
+    }
+  }
+}

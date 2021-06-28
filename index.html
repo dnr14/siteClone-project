@@ -7,23 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>코스트코 온라인몰</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
-  <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/nav.css">
-  <link rel="stylesheet" href="/css/section1.css">
-  <link rel="stylesheet" href="/css/section2.css">
-  <link rel="stylesheet" href="/css/section3.css">
-  <link rel="stylesheet" href="/css/section4.css">
-  <link rel="stylesheet" href="/css/section5.css">
-  <link rel="stylesheet" href="/css/section6.css">
-  <link rel="stylesheet" href="/css/section7.css">
-  <link rel="stylesheet" href="/css/section9.css">
-  <link rel="stylesheet" href="/css/section10.css">
-  <link rel="stylesheet" href="/css/section11.css">
-  <link rel="stylesheet" href="/css/section13.css">
-  <link rel="stylesheet" href="/css/section14.css">
-  <link rel="stylesheet" href="/css/section15.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/global.css">
+  <link rel="stylesheet" href="/css/main.css">
   <script src="./js/slider.js" defer></script>
+  <script src="./js/index.js" defer></script>
 </head>
 
 <body>
@@ -185,10 +172,10 @@
       <div class="sliderBar">
         <ul class="bar">
           <li class="loopBtn">
-            <span id="play">
+            <span id="play" class="play">
               <img src="./images/slider/play_arrow_black_24dp.svg" alt="play">
             </span>
-            <span id="pause">
+            <span id="pause" class="pause">
               <img src="./images/slider/pause_black_24dp.svg" alt="pause">
             </span>
           </li>
@@ -383,6 +370,410 @@
 
   <!-- 슬라이드 -->
   <!-- SECTION8 -->
+  <section id="section8">
+    <div class="container">
+      <div class="m_line">&nbsp;</div>
+      <div class="title">
+        <h1>Special Price Offers</h1>
+        <p>스페셜 할인</p>
+      </div>
+
+      <div class="slider-wrap" id="slider-wrap">
+        <div class="slider" id="slider">
+
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img1.jpg" alt="img1">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img2.jpg" alt="img2">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img3.jpg" alt="img3">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img4.jpg" alt="img4">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img5.jpg" alt="img5">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img6.jpg" alt="img6">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img7.jpg" alt="img7">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img8.jpg" alt="img8">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img9.jpg" alt="img9">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img10.jpg" alt="img10">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img11.jpg" alt="img11">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img12.jpg" alt="img12">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="rightBtn" id="rightBtn">
+          <span>
+            <img src="./images/slider/arrow_right_white_36dp.svg" alt="right">
+          </span>
+        </div>
+        <div class="leftBtn" id="leftBtn">
+          <span>
+            <img src="./images/slider/arrow_left_white_36dp.svg" alt="left">
+          </span>
+        </div>
+
+        <div class="sliderBar">
+          <ul class="bar">
+          </ul>
+        </div>
+
+  </section>
+
 
   <!-- SECTION9 -->
   <section id="section9">
@@ -532,6 +923,410 @@
 
   <!-- 슬라이드 -->
   <!-- SECTION12 -->
+  <section id="section12">
+    <div class="container">
+      <div class="m_line">&nbsp;</div>
+      <div class="title">
+        <h1>Special Price Offers</h1>
+        <p>스페셜 할인</p>
+      </div>
+
+      <div class="slider-wrap" id="slider-wrap">
+        <div class="slider" id="slider">
+
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img1.jpg" alt="img1">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img2.jpg" alt="img2">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img3.jpg" alt="img3">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img4.jpg" alt="img4">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img5.jpg" alt="img5">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img6.jpg" alt="img6">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img7.jpg" alt="img7">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img8.jpg" alt="img8">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img9.jpg" alt="img9">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img10.jpg" alt="img10">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img11.jpg" alt="img11">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+          <div class="item">
+            <div class="content">
+              <div class="logo">
+                <img src="./images/section8/logo.png" alt="logo">
+              </div>
+              <div class="img">
+                <img src="./images/section8/img12.jpg" alt="img12">
+              </div>
+              <div class="delibary">
+                <img src="./images/section8/delibary.gif" alt="delibary">
+              </div>
+              <div class="price">
+                <p>1,199,000원</p>
+              </div>
+              <div class="promotion">
+                <p>할인금액 150,000원</p>
+                <span>행사기간 2021/06/28 - 2021/07/11</span>
+              </div>
+              <div class="text">
+                <div class="korea">케틀러 지로 C3 입식 바이크</div>
+                <div class="usa">Kettler Giro C3 Exercise Bike</div>
+              </div>
+              <ul class="star">
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+                <li><img src="./images/section8/star_white.svg" alt="star"></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="rightBtn" id="rightBtn">
+          <span>
+            <img src="./images/slider/arrow_right_white_36dp.svg" alt="right">
+          </span>
+        </div>
+        <div class="leftBtn" id="leftBtn">
+          <span>
+            <img src="./images/slider/arrow_left_white_36dp.svg" alt="left">
+          </span>
+        </div>
+
+        <div class="sliderBar">
+          <ul class="bar">
+          </ul>
+        </div>
+
+  </section>
+
 
   <!-- SECTION13 -->
   <section id="section13">
@@ -829,61 +1624,230 @@
               <li><a href="javascript:void(0)">채용</a></li>
             </ul>
           </div>
+
           <div class="membership">
             <ul>
               <li>
-                <h1>코스트코 소개</h1>
+                <h1>코스트코 멤버십</h1>
               </li>
-              <li><a href="javascript:void(0)">코스트코는?</a></li>
-              <li><a href="javascript:void(0)">지속 가능을 위한 사회적 가치 경영</a></li>
-              <li><a href="javascript:void(0)">커클랜드 시그니춰</a></li>
-              <li><a href="javascript:void(0)">제품분류 & 서비스</a></li>
-              <li><a href="javascript:void(0)">코스트코 커넥션</a></li>
-              <li><a href="javascript:void(0)">채용</a></li>
+              <li><a href="javascript:void(0)">회원가입</a></li>
+              <li><a href="javascript:void(0)">회원권 갱신</a></li>
+              <li><a href="javascript:void(0)">이그제큐티브 멤버십</a></li>
+              <li><a href="javascript:void(0)">온라인등록</a></li>
+              <li><a href="javascript:void(0)">마이페이지</a></li>
+              <li><a href="javascript:void(0)">주문내역</a></li>
+              <li><a href="javascript:void(0)">제휴신용카드</a></li>
             </ul>
           </div>
           <div class="service_center">
             <ul>
               <li>
-                <h1>코스트코 소개</h1>
+                <h1>고객센터</h1>
               </li>
-              <li><a href="javascript:void(0)">코스트코는?</a></li>
-              <li><a href="javascript:void(0)">지속 가능을 위한 사회적 가치 경영</a></li>
-              <li><a href="javascript:void(0)">커클랜드 시그니춰</a></li>
-              <li><a href="javascript:void(0)">제품분류 & 서비스</a></li>
-              <li><a href="javascript:void(0)">코스트코 커넥션</a></li>
-              <li><a href="javascript:void(0)">채용</a></li>
+              <li><a href="javascript:void(0)">FAQ</a></li>
+              <li><a href="javascript:void(0)">문의</a></li>
+              <li><a href="javascript:void(0)">리콜</a></li>
+              <li><a href="javascript:void(0)">사이트의견</a></li>
             </ul>
           </div>
           <div class="store">
             <ul>
               <li>
-                <h1>코스트코 소개</h1>
+                <h1>매장 & 서비스</h1>
               </li>
-              <li><a href="javascript:void(0)">코스트코는?</a></li>
-              <li><a href="javascript:void(0)">지속 가능을 위한 사회적 가치 경영</a></li>
-              <li><a href="javascript:void(0)">커클랜드 시그니춰</a></li>
-              <li><a href="javascript:void(0)">제품분류 & 서비스</a></li>
-              <li><a href="javascript:void(0)">코스트코 커넥션</a></li>
-              <li><a href="javascript:void(0)">채용</a></li>
+              <li><a href="javascript:void(0)">매장안내</a></li>
+              <li><a href="javascript:void(0)">보청기센터</a></li>
+              <li><a href="javascript:void(0)">매장행사 안내</a></li>
+              <li><a href="javascript:void(0)">로드쇼 행사 안내</a></li>
             </ul>
           </div>
           <div class="partners">
             <ul>
               <li>
-                <h1>코스트코 소개</h1>
+                <h1>협력업체 안내</h1>
               </li>
+              <li><a href="javascript:void(0)">상품 공급 문의</a></li>
+              <li><a href="javascript:void(0)">구매 조건 및 운영 원칙</a></li>
+              <li><a href="javascript:void(0)">상품 입점 절차</a></li>
+              <li><a href="javascript:void(0)">공정거래</a></li>
+              <li><a href="javascript:void(0)">동반성장</a></li>
+              <li><a href="javascript:void(0)">코스트코 윤리위반 신고 핫라인</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="information767pxDownBlock">
+
+          <div class="introduce ">
+            <div class="title">
+              <a href="javascript:void(0)">코스트코 소개</a>
+              <span class="cross"></span>
+            </div>
+            <ul>
               <li><a href="javascript:void(0)">코스트코는?</a></li>
-              <li><a href="javascript:void(0)">지속 가능을 위한 사회적 가치 경영</a></li>
               <li><a href="javascript:void(0)">커클랜드 시그니춰</a></li>
               <li><a href="javascript:void(0)">제품분류 & 서비스</a></li>
               <li><a href="javascript:void(0)">코스트코 커넥션</a></li>
               <li><a href="javascript:void(0)">채용</a></li>
             </ul>
+
+          </div>
+
+          <div class="membership ">
+            <div class="title">
+              <a href="javascript:void(0)">코스트코 멤버십</a>
+              <span class="cross"></span>
+            </div>
+            <ul>
+              <li><a href="javascript:void(0)">회원가입</a></li>
+              <li><a href="javascript:void(0)">회원권 갱신</a></li>
+              <li><a href="javascript:void(0)">이그제큐티브 멤버십</a></li>
+              <li><a href="javascript:void(0)">온라인등록</a></li>
+              <li><a href="javascript:void(0)">마이페이지</a></li>
+              <li><a href="javascript:void(0)">주문내역</a></li>
+              <li><a href="javascript:void(0)">제휴신용카드</a></li>
+            </ul>
+          </div>
+
+          <div class="service_center ">
+            <div class="title">
+              <a href="javascript:void(0)">고객센터</a>
+              <span class="cross"></span>
+            </div>
+            <ul>
+              <li><a href="javascript:void(0)">FAQ</a></li>
+              <li><a href="javascript:void(0)">문의</a></li>
+              <li><a href="javascript:void(0)">리콜</a></li>
+              <li><a href="javascript:void(0)">사이트의견</a></li>
+            </ul>
+          </div>
+
+          <div class="store ">
+            <div class="title">
+              <a href="javascript:void(0)">매장 & 서비스</a>
+              <span class="cross"></span>
+            </div>
+            <ul>
+              <li><a href="javascript:void(0)">매장안내</a></li>
+              <li><a href="javascript:void(0)">보청기센터</a></li>
+              <li><a href="javascript:void(0)">벤더</a></li>
+              <li><a href="javascript:void(0)">매장행사 안내</a></li>
+              <li><a href="javascript:void(0)">로드쇼 행사 안내</a></li>
+            </ul>
+          </div>
+
+          <div class="partners">
+            <div class="title">
+              <a href="javascript:void(0)">협력업체 안내</a>
+              <span class="cross"></span>
+            </div>
+            <ul>
+
+
+              <li><a href="javascript:void(0)">상품 공급 문의</a></li>
+              <li><a href="javascript:void(0)">구매 조건 및 운영 원칙</a></li>
+              <li><a href="javascript:void(0)">상품 입점 절차</a></li>
+              <li><a href="javascript:void(0)">공정거래</a></li>
+              <li><a href="javascript:void(0)">동반성장</a></li>
+              <li><a href="javascript:void(0)">코스트코 윤리위반 신고 핫라인</a></li>
+            </ul>
+          </div>
+
+          <div class="country">
+            <div class="title">
+              <a href="javascript:void(0)">한국</a>
+              <span class="cross"></span>
+            </div>
+            <ul>
+              <li><a href="javascript:void(0)">미국</a></li>
+              <li><a href="javascript:void(0)">캐나다</a></li>
+              <li><a href="javascript:void(0)">영국</a></li>
+              <li><a href="javascript:void(0)">멕시코</a></li>
+              <li><a href="javascript:void(0)">대만</a></li>
+              <li><a href="javascript:void(0)">일본</a></li>
+              <li><a href="javascript:void(0)">호주</a></li>
+              <li><a href="javascript:void(0)">아이슬란드</a></li>
+              <li><a href="javascript:void(0)">프랑스</a></li>
+              <li><a href="javascript:void(0)">스페인</a></li>
+              <li><a href="javascript:void(0)">뉴질랜드</a></li>
+            </ul>
+          </div>
+
+          <div class="Languages">
+            <div class="title">
+              <a href="javascript:void(0)">Languages</a>
+              <span class="cross"></span>
+            </div>
+            <ul>
+              <li><a href="javascript:void(0)">English</a></li>
+            </ul>
           </div>
         </div>
 
         <div class="bottom">
+          <div class="terms_of_service">
+            <ul>
+              <li><a href="javascript:void(0)">이용약관</a></li>
+              <li><a href="javascript:void(0)">개인정보처리방침</a></li>
+              <li><a href="javascript:void(0)">영상정보처리기기운영·관리방침</a></li>
+              <li><a href="javascript:void(0)">상표 사용 지침</a></li>
+            </ul>
+          </div>
+          <ul class="icons">
+            <li class="icon">
+              <a href="javascript:void(0)">
+                <img src="./images/footer/img1.png" alt="img1">
+              </a>
+            </li>
+            <li class="icon">
+              <a href="javascript:void(0)">
+                <img src="./images/footer/img2.png" alt="img2">
+              </a>
+            </li>
+            <li class="icon">
+              <a href="javascript:void(0)">
+                <img src="./images/footer/img3.png" alt="img3">
+              </a>
+            </li>
+            <li class="icon">
+              <a href="javascript:void(0)">
+                <img src="./images/footer/img4.png" alt="img4">
+              </a>
+            </li>
+            <li class="icon">
+              <a href="javascript:void(0)">
+                <img src="./images/footer/img5.png" alt="img5">
+              </a>
+            </li>
+          </ul>
+          <div class="buisnessman">
+            <div>
+              <p>(주)코스트코 코리아</p>
+              <p>14347 경기도 광명시 일직로 40 (일직동 163-3) | 대표자 : 조민수 | 사업자 등록번호 : 107-81-63829 | 통신판매업 신고번호 : 제2013-경기광명-0013호
+                | 전화 : 1899-9900 | E-mail : <a href="javascript:void(0)">고객센터 문의 바로가기 ▶ (매장/온라인) </a>| 개인 정보 보호책임자 :
+                신강식(E-mail :
+                webmanager@costcokr.com) | 호스팅제공자 : Google Ireland Ltd. | <a href="javascript:void(0)">사업자정보확인</a>
+              </p>
+              <div class="img">
+                <img src="./images/footer/img6.png" alt="img6">
+                <div>
+                  <p>[인증범위] 코스트코 온라인몰 서비스 운영</p>
+                  <p>[유효기간] 2018.12.27 ~ 2021.12.26</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <strong>KEB 하나은행 구매 안전서비스</strong>
+              <p>회원님은 안전거래를 위해 실시간 계좌이체 결제시 코스트코에서 가입한 KEB 하나은행의 구매안전서비스(채무지급보증)를 이용하실 수 있습니다.</p>
+              <a href="javascript:void(0)">
+                서비스 가입사실 확인
+              </a>
+            </div>
+          </div>
+          <div class="since">
+            <p>© 2021 Costco Wholesale Corporation. All rights reserved.</p>
+          </div>
+
 
         </div>
       </div>
