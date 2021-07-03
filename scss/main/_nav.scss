@@ -9,6 +9,7 @@
       padding: 0 30px;
 
       .menu_bar_wrap {
+        position: relative;
         display: flex;
         padding: 11px 0px;
         .menu_bar {
@@ -70,6 +71,53 @@
           }
           &:hover {
             text-decoration: underline;
+          }
+        }
+        .weather_box {
+          top: 50%;
+          margin-top: -8px;
+          position: absolute;
+          right: 0;
+          & > ul {
+            & > li {
+              font-size: 13px;
+              display: inline-block;
+              &:nth-child(2) {
+                &::before {
+                  content: "";
+                  display: inline-block;
+                  width: 1px;
+                  height: 11px;
+                  margin: 0 3px;
+                  margin-bottom: 3px;
+                  border-left: 1px solid #e4e8eb;
+                }
+              }
+              &:last-child {
+                & > span {
+                  color: #777;
+                  &:hover {
+                    text-decoration: underline;
+                  }
+                }
+              }
+
+              & > img {
+                display: inline-block;
+                width: 18px;
+                filter: invert(58%) sepia(65%) saturate(4681%) hue-rotate(189deg) brightness(98%) contrast(106%);
+              }
+
+              & > span {
+                vertical-align: super;
+                margin: 0 5px;
+                color: #777;
+                &:nth-child(3) {
+                  color: #000;
+                  font-weight: 900;
+                }
+              }
+            }
           }
         }
       }
