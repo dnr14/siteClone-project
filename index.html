@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/main.css">
+  <script src="/js/index.js" defer></script>
   <title>네이버 클론</title>
 </head>
 
@@ -68,8 +69,8 @@
           </ul>
           <a href="javascript:void" class="btn_more">더보기</a>
 
-          <div class="weather_box">
-            <ul>
+          <div class="weather_box" id="weather_box">
+            <ul class="fine_dust">
               <li>
                 <span>미세</span>
                 <img src="/images/nav/smile.png" alt="smile">
@@ -84,7 +85,25 @@
                 <span>용현동</span>
               </li>
             </ul>
+
+            <ul class="weather">
+              <li>
+                <img src="/images/nav/cloudy.svg" alt="cloudy">
+                <span>27.0</span>
+                <span>비</span>
+              </li>
+              <li>
+                <span>22.0</span>
+                <span>/</span>
+                <span>30.0</span>
+              </li>
+              <li>
+                <span>용현동</span>
+              </li>
+            </ul>
+
           </div>
+
         </div>
       </div>
     </div>
@@ -102,10 +121,44 @@
           <div class="news_issue">
             <div class="issue_left">
               <a href="javascript:void(0)">연합뉴스</a>
-              <div class="issue_rolling">
-                <a href="javascript:void(0)">
-                  벤투호, 월드컵 최종예선 이란, UAE, 이라크 등과 A조에서 격돌
-                </a>
+              <div class="issue_rolling" id="issue_rolling">
+
+                <div class="issue_item">
+                  <a href="javascript:void(0)">
+                    내일 전국서 천둥·번개 동반한 소나기…날은 후덥지근
+                  </a>
+                </div>
+
+                <div class="issue_item">
+                  <a href="javascript:void(0)">
+                    최저임금 회의서 민주노총 퇴장…경영계 동결 요구에 반발
+                  </a>
+                </div>
+
+                <div class="issue_item">
+                  <a href="javascript:void(0)">
+                    "대한민국의 자랑"…K-배터리 띄우기 나선 문대통령
+                  </a>
+                </div>
+
+                <div class="issue_item">
+                  <a href="javascript:void(0)">
+                    소설가 이외수 의식회복 후 재활…장남 "아버지 삶의 의지 보여"
+                  </a>
+                </div>
+
+                <div class="issue_item">
+                  <a href="javascript:void(0)">
+                    野, 여가부 존폐 논란 가열…이준석 '불개입 모드'로
+                  </a>
+                </div>
+
+                <div class="issue_item">
+                  <a href="javascript:void(0)">
+                    도쿄올림픽, 도쿄 내 모든 경기장 무관중 결정
+                  </a>
+                </div>
+
               </div>
             </div>
 
@@ -137,95 +190,552 @@
           </div>
         </div>
         <div class="newssview">
-          <div class="newssview_slider_wrap">
-            <div class="slider">
+          <div class="newssview_slider_wrap" id="newssview_slider_wrap">
+            <div class="slider" id="newssview_slider">
               <div class="item">
-                <a href="javascript:void(0)">
-                  <img src="/images/main/005.png" alt="img">
-                  <div class="btn">
-                    <span>구독</span>
-                    <span>기사보기</span>
-                  </div>
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/008.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/009.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/011.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/020.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/021.png" alt="img">
-                </a>
-              </div>
-              <div class="item">
-                <a href="javascript:void(0)">
-                  <img src="/images/main/038.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/056.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/076.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/081.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/117.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/326.png" alt="img">
-                </a>
-              </div>
-              <div class="item">
-                <a href="javascript:void(0)">
-                  <img src="/images/main/327.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/338.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/368.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/816.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/818.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/909.png" alt="img">
-                </a>
-              </div>
-              <div class="item">
-                <a href="javascript:void(0)">
-                  <img src="/images/main/914.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/954.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/387.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/006.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/015.png" alt="img">
-                </a>
-                <a href="javascript:void(0)">
-                  <img src="/images/main/016.png" alt="img">
-                </a>
+                <div class="row">
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/005.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/008.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/009.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/011.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/020.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/021.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="row">
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/038.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/056.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/076.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/081.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/117.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/326.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="row">
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/327.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/338.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/368.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/816.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/818.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/909.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="row">
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/914.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/954.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/387.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/006.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/015.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/016.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                </div>
               </div>
 
+              <div class="item">
+                <div class="row">
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/005.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/008.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/009.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/011.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/020.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/021.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="row">
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/038.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/056.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/076.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/081.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/117.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/326.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="row">
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/327.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/338.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/368.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/816.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/818.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/909.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="row">
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/914.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/954.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/387.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/006.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/015.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/016.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="row">
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/005.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/008.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/009.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/011.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/020.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/021.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="row">
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/038.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/056.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/076.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/081.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/117.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/326.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="row">
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/327.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/338.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/368.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/816.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/818.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/909.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="row">
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/914.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/954.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/387.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/006.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/015.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                  <a href="javascript:void(0)">
+                    <img src="/images/main/016.png" alt="img">
+                    <div class="btn">
+                      <span>구독</span>
+                      <span>기사보기</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
+          <button class="newsRightBtn" id="newsRightBtn">
+            <img src="/images/main/arrow_forward_ios_black_18dp.svg" alt="forward">
+          </button>
+          <button class="newsLeftBtn" id="newsLeftBtn">
+            <img src="/images/main/arrow_back_ios_black_18dp.svg" alt="back">
+          </button>
         </div>
         <div class="themecast">
           <div class="subject_head">
@@ -895,6 +1405,11 @@
               <div class="group_event">
                 <div class="shop_title">
                   <strong class="title">반갑다! 쇼핑뉴스</strong>
+                  <div class="shop_control">
+                    <div class="num_box">1 / 5</div>
+                    <a href="javascript:void(0)"></a>
+                    <a href="javascript:void(0)"></a>
+                  </div>
                 </div>
                 <ul class="list_event">
 
@@ -948,8 +1463,53 @@
                     </a>
                   </li>
 
-
                 </ul>
+
+              </div>
+
+              <div class="group_plus">
+                <div class="shop_category">
+                  <a href="javascript:void(0)">패션</a>
+                  <a href="javascript:void(0)">라이프</a>
+                  <a href="javascript:void(0)">뷰티</a>
+                  <a href="javascript:void(0)">디지털･레저</a>
+                </div>
+
+
+                <div class="btn_ab">
+                  <div class="num_box">1 / 10</div>
+                  <a href="javascript:void(0)"></a>
+                  <a href="javascript:void(0)"></a>
+                </div>
+
+
+                <div class="list_goods_wrap">
+                  <ul class="list_goods">
+
+                    <li class="goods_item">
+                      <a href="javascript:void(0)">
+                        <div class="thumb_box">
+                          <img src="/images/main/goods_img2.jpg" alt="goods_img2">
+                        </div>
+                        <div class="title_box">
+                          <span class="title">다들예쁘대~여름옷최대70%</span>
+                        </div>
+                      </a>
+                    </li>
+
+                    <li class="goods_item">
+                      <a href="javascript:void(0)">
+                        <div class="thumb_box">
+                          <img src="/images/main/goods_img2.jpg" alt="goods_img2">
+                        </div>
+                        <div class="title_box">
+                          <span class="title">다들예쁘대~여름옷최대70%</span>
+                        </div>
+                      </a>
+                    </li>
+
+                  </ul>
+                </div>
 
               </div>
 

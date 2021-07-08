@@ -78,7 +78,45 @@
           margin-top: -8px;
           position: absolute;
           right: 0;
+          height: 21px;
+          overflow: hidden;
+
+          .fine_dust {
+            img {
+              filter: invert(58%) sepia(65%) saturate(4681%) hue-rotate(189deg) brightness(98%) contrast(106%);
+            }
+          }
+
+          .weather {
+            & > li:nth-child(1) {
+              & > span {
+                margin: 0;
+                margin-left: 2px;
+              }
+              & > span:nth-child(2) {
+                font-size: 1rem;
+                color: #000;
+                font-weight: 900;
+              }
+            }
+
+            & > li:nth-child(2) {
+              & > span {
+                margin: 0;
+              }
+
+              & > span:nth-child(1) {
+                color: blue;
+              }
+              & > span:nth-child(3) {
+                color: red;
+              }
+            }
+          }
+
           & > ul {
+            cursor: pointer;
+            transition: 0.5s;
             & > li {
               font-size: 13px;
               display: inline-block;
@@ -96,16 +134,12 @@
               &:last-child {
                 & > span {
                   color: #777;
-                  &:hover {
-                    text-decoration: underline;
-                  }
                 }
               }
 
               & > img {
                 display: inline-block;
                 width: 18px;
-                filter: invert(58%) sepia(65%) saturate(4681%) hue-rotate(189deg) brightness(98%) contrast(106%);
               }
 
               & > span {
@@ -115,6 +149,14 @@
                 &:nth-child(3) {
                   color: #000;
                   font-weight: 900;
+                }
+              }
+            }
+
+            &:hover {
+              & > li:last-child {
+                & > span {
+                  text-decoration: underline;
                 }
               }
             }

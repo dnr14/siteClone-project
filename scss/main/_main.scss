@@ -105,17 +105,23 @@
               float: left;
               width: 310px;
               height: 24px;
+              position: relative;
               overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
-              & > a {
-                display: inline;
-                vertical-align: top;
-                line-height: 24px;
-                font-size: 13px;
-                font-weight: 400;
-                &:hover {
-                  text-decoration: underline;
+              .issue_item {
+                transition: 0.5s;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                width: 100%;
+                & > a {
+                  display: inline;
+                  vertical-align: top;
+                  line-height: 24px;
+                  font-size: 13px;
+                  font-weight: 400;
+                  &:hover {
+                    text-decoration: underline;
+                  }
                 }
               }
             }
@@ -247,79 +253,112 @@
         }
       }
       .newssview {
+        position: relative;
         .newssview_slider_wrap {
           overflow: hidden;
           .slider {
             float: left;
-            width: 750px;
             .item {
-              border-left: 1px solid #e4e8eb;
-              border-right: 1px solid #e4e8eb;
-              border-bottom: 1px solid #e4e8eb;
-              & > a {
-                position: relative;
-                float: left;
-                width: 16.65%;
-                height: 65px;
-                padding: 23px 0 22px 0;
-                box-sizing: border-box;
-                text-align: center;
-                & > img {
-                  display: inline-block;
-                  height: 20px;
-                }
-                .btn {
-                  display: none;
-                  font-size: 0px;
-                  position: absolute;
-                  margin: auto;
-                  height: 20px;
-                  top: 0;
-                  bottom: 0;
-                  right: 0;
-                  left: 0;
-                  & > span {
-                    font-size: 12px;
-                    vertical-align: bottom;
-                    align-items: center;
-                    height: 100%;
-                    padding: 5px 5px;
-                    background-color: #fff;
-                    border: 1px solid #dae1e6;
-                    display: inline-flex;
-                    align-items: center;
-                    position: relative;
-                    top: -5px;
-                    &:hover {
-                      border: 1px solid $naver_black;
+              float: left;
+              width: 750px;
+              transition: 0.2s;
+              .row {
+                border-left: 1px solid #e4e8eb;
+                border-right: 1px solid #e4e8eb;
+                border-bottom: 1px solid #e4e8eb;
+                & > a {
+                  position: relative;
+                  float: left;
+                  width: 16.65%;
+                  height: 65px;
+                  padding: 23px 0 22px 0;
+                  box-sizing: border-box;
+                  text-align: center;
+                  & > img {
+                    display: inline-block;
+                    height: 20px;
+                  }
+                  .btn {
+                    display: none;
+                    font-size: 0px;
+                    position: absolute;
+                    margin: auto;
+                    height: 20px;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    & > span {
+                      font-size: 12px;
+                      vertical-align: bottom;
+                      align-items: center;
+                      height: 100%;
+                      padding: 5px 5px;
+                      background-color: #fff;
+                      border: 1px solid #dae1e6;
+                      display: inline-flex;
+                      align-items: center;
+                      position: relative;
+                      top: -5px;
+                      &:hover {
+                        border: 1px solid $naver_black;
+                      }
+                    }
+                  }
+
+                  &:hover {
+                    background-color: rgba($color: #f7f9fa, $alpha: 0.7);
+                    .btn {
+                      display: block;
                     }
                   }
                 }
 
-                &:hover {
-                  background-color: rgba($color: #f7f9fa, $alpha: 0.7);
-                  .btn {
-                    display: block;
-                  }
+                & > a:nth-child(n + 2) {
+                  border-left: 1px solid #e4e8eb;
+                }
+
+                &::after {
+                  content: "";
+                  display: block;
+                  clear: both;
                 }
               }
-
-              & > a:nth-child(n + 2) {
-                border-left: 1px solid #e4e8eb;
-              }
-
-              &::after {
-                content: "";
-                display: block;
-                clear: both;
+              .row:first-child {
+                & > a {
+                  border-top: 1px solid #e4e8eb;
+                }
               }
             }
-
-            .item:first-child {
-              & > a {
-                border-top: 1px solid #e4e8eb;
-              }
-            }
+          }
+        }
+        .newsLeftBtn,
+        .newsRightBtn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: none;
+          border-radius: 50%;
+          position: absolute;
+          width: 44px;
+          height: 44px;
+          top: 42%;
+          cursor: pointer;
+          z-index: 1;
+          background-color: #fff;
+          box-shadow: 3px 3px 3px rgba($color: #000000, $alpha: 0.1);
+        }
+        .newsRightBtn {
+          right: -3%;
+          img {
+            padding-left: 4px;
+          }
+        }
+        .newsLeftBtn {
+          display: none;
+          left: -3%;
+          img {
+            padding-right: 4px;
           }
         }
       }
@@ -679,8 +718,10 @@
       }
     }
     .column_right {
+      position: sticky;
       width: 350px;
       float: right;
+      top: 0;
       .login_box {
         padding: 16px 16px 12px 17px;
         border: 1px solid #dae1e6;
@@ -1051,6 +1092,33 @@
                 .title {
                   font-size: 13px;
                 }
+                .shop_control {
+                  position: absolute;
+                  top: -6px;
+                  right: 0;
+                  font-size: 0px;
+                  .num_box {
+                    width: 41px;
+                    line-height: 29px;
+                    color: gray;
+                    text-align: center;
+                    vertical-align: middle;
+                    font-size: 12px;
+                    display: inline-block;
+                  }
+
+                  & > a {
+                    vertical-align: middle;
+                    display: inline-block;
+                    border: 1px solid #dae1e6;
+                    &:nth-child(2) {
+                      @include right_btn();
+                    }
+                    &:last-child {
+                      @include left_btn();
+                    }
+                  }
+                }
               }
               .list_event {
                 margin: 13px 5px 0;
@@ -1085,6 +1153,99 @@
                         text-decoration: underline;
                       }
                     }
+                  }
+                }
+              }
+            }
+            .group_plus {
+              position: relative;
+              padding: 55px 0px 30px;
+              margin: 0px 8px;
+              border-top: 1px solid #e4e4e4;
+              .shop_category {
+                position: absolute;
+                top: 20px;
+                left: 5px;
+
+                & > a {
+                  font-size: 13px;
+                  font-weight: 700;
+                  &:first-child {
+                    color: $naver_color;
+                    border-bottom: 2px solid $naver_color;
+                  }
+                  &:nth-child(n + 2) {
+                    margin-left: 13px;
+                  }
+                }
+              }
+              .list_goods_wrap {
+                .list_goods {
+                  font-size: 0px;
+                  margin-right: -5px;
+                  .goods_item {
+                    width: 50%;
+                    display: inline-block;
+                    & > a {
+                      display: block;
+                      margin-right: 2.5px;
+                      margin-left: 2.5px;
+                      .thumb_box {
+                        overflow: hidden;
+                        & > img {
+                          display: block;
+                          max-width: 100%;
+                          width: 100%;
+                          transition: 0.3s;
+                        }
+                      }
+                      .title_box {
+                        margin-top: 9px;
+                        text-align: center;
+                        .title {
+                          font-size: 12px;
+                          font-weight: 700;
+                        }
+                      }
+
+                      &:hover {
+                        img {
+                          transform: scale(1.03);
+                        }
+                        .title {
+                          text-decoration: underline;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .btn_ab {
+                position: absolute;
+                top: 14px;
+                right: 0;
+                text-align: center;
+                font-size: 0px;
+                .num_box {
+                  width: 41px;
+                  line-height: 29px;
+                  color: gray;
+                  text-align: center;
+                  vertical-align: top;
+                  font-size: 12px;
+                  display: inline-block;
+                }
+
+                & > a {
+                  vertical-align: top;
+                  display: inline-block;
+                  border: 1px solid #dae1e6;
+                  &:nth-child(2) {
+                    @include right_btn();
+                  }
+                  &:last-child {
+                    @include left_btn();
                   }
                 }
               }
