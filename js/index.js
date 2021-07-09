@@ -336,3 +336,52 @@ new GoodsInfiniteSlide("bottom_goods_wrap", "bottom_goods_slider", "bottom_goods
   };
 
 })();
+
+
+const scrollToTop = (() => {
+  let timeOut;
+  return () => {
+    if (document.body.scrollTop != 0 || document.documentElement.scrollTop != 0) {
+      window.scrollBy(0, -150);
+      timeOut = setTimeout(scrollToTop, 10);
+    } else {
+      clearTimeout(timeOut);
+    }
+  }
+})();
+
+const optimizeAnimation = (callback) => {
+  let ticking = false;
+  return () => {
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(() => {
+        callback();
+        ticking = false;
+      });
+    }
+  };
+}
+
+let timer = null;
+const upScroll = document.getElementById('up-scroll');
+
+const imgBounceEvent = (e) => {
+  const { currentTarget } = e;
+  currentTarget.style.backgroundColor = `#19ce60`;
+  currentTarget.firstElementChild.style.transition = `${0.5}s`;
+  timer = setInterval(() => {
+    currentTarget.firstElementChild.style.transform = `translateY(-${10}px)`;
+    setTimeout(() => {
+      currentTarget.firstElementChild.style.transform = `translateY(${0}px)`;
+    }, 100);
+  }, 600);
+}
+
+upScroll.addEventListener('mouseover', imgBounceEvent);
+upScroll.addEventListener('click', optimizeAnimation(scrollToTop));
+upScroll.addEventListener('mouseout', (e) => {
+  const { currentTarget } = e;
+  currentTarget.style.backgroundColor = `#FFF`;
+  clearInterval(timer);
+});

@@ -1,6 +1,8 @@
 html { font-family: "Nanum Gothic", sans-serif; }
 
-body { min-width: 1190px; }
+body { min-width: 1190px; position: relative; }
+
+body #up-scroll { position: fixed; width: 24px; height: 24px; padding: 15px; border-radius: 50%; -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1); box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1); cursor: pointer; bottom: 3%; right: 5%; z-index: 1; background-color: #fff; }
 
 a { color: #000; text-decoration: none; outline: none; }
 
