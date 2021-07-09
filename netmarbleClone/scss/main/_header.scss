@@ -1,0 +1,132 @@
+@import "../meida/_media";
+
+#header {
+  display: none;
+  position: fixed;
+  width: 100%;
+  @include _1260px() {
+    display: block;
+    border-bottom: 1px solid #d6d6d6;
+
+    .container {
+      position: relative;
+      & > h1 {
+        top: 40px;
+        left: 0;
+        width: 161px;
+        position: absolute;
+        z-index: 1;
+        img {
+          max-width: 100%;
+        }
+      }
+      #nav {
+        position: relative;
+        display: flex;
+        width: 1260px;
+        height: 100%;
+        padding-left: 218px;
+        background: none;
+        box-sizing: border-box;
+        .flex-container {
+          display: flex;
+          .flex-item {
+            a {
+              text-align: center;
+              box-sizing: border-box;
+              color: #333333;
+              font-size: 1.7rem;
+              font-weight: 900;
+              line-height: 105px;
+              width: 141px;
+              padding: 0 10px;
+              letter-spacing: 0.5px;
+              &:hover {
+                box-sizing: border-box;
+                color: #7f4f21;
+              }
+            }
+          }
+        }
+      }
+      .language {
+        position: absolute;
+        display: flex;
+        top: 36px;
+        right: 0;
+        height: 30px;
+        span {
+          order: 0;
+          width: 30px;
+          height: 30px;
+          & > button {
+            background-image: url("/image/header/searchBTN1440.png");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: none;
+            background-color: transparent;
+            height: 100%;
+            width: 100%;
+            padding: 0;
+            cursor: pointer;
+          }
+        }
+        .global_btn {
+          order: 1;
+          display: flex;
+          align-items: center;
+          position: relative;
+          & > a {
+            width: 57px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            line-height: 28px;
+            color: #bdbdbd;
+            background-color: transparent;
+          }
+          .active {
+            color: #333333;
+          }
+
+          &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 1px;
+            height: 9px;
+            border-left: 1px solid rgba($color: #000000, $alpha: 0.2);
+            top: 11px;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+        }
+      }
+      .depth2 {
+        position: absolute;
+        padding-left: 218px;
+        width: 1260px;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+#header.active {
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    max-width: 1920px;
+    background-color: orange;
+    z-index: -1;
+    opacity: 1;
+  }
+}

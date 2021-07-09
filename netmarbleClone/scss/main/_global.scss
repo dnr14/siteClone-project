@@ -1,0 +1,32 @@
+html {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  color: #333333;
+  line-height: 1.4rem;
+  font-size: 1.4rem;
+  height: 10000px;
+}
+
+img {
+  display: block;
+}
+a {
+  display: inline-block;
+  color: #000;
+  text-decoration: none;
+  outline: none;
+  &:hover,
+  &:active {
+    text-decoration: none;
+    color: #000;
+  }
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+  // background-color: orange;
+}
