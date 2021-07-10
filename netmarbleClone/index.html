@@ -10,12 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/main.js" defer></script>
   <title>넷마블 클론</title>
 </head>
 
 <body>
 
-  <header id="header" class="active">
+  <header id="header">
     <div class="container">
       <h1>
         <a href="javascript:void(0)">
@@ -23,15 +24,49 @@
         </a>
       </h1>
       <nav id="nav">
-        <ul class="flex-container">
+        <ul class="flex-container" id="navbar">
           <li class="flex-item">
             <a href="javascript:void(0)">넷마블 인사이드</a>
+            <ul class="depth2">
+              <li class="depth2-item"><a href="javascript:void(0)">피플&라이프</a></li>
+              <li class="depth2-item"><a href="javascript:void(0)">지타워 탐구생활</a></li>
+            </ul>
           </li>
-          <li class="flex-item"><a href="javascript:void(0)">게임</a></li>
-          <li class="flex-item"><a href="javascript:void(0)">콘텐츠</a></li>
-          <li class="flex-item"><a href="javascript:void(0)">사회공헌</a></li>
-          <li class="flex-item"><a href="javascript:void(0)">뉴스룸</a></li>
-          <li class="flex-item"><a href="javascript:void(0)">넷마블 TV</a></li>
+          <li class="flex-item">
+            <a href="javascript:void(0)">게임</a>
+            <ul class="depth2">
+              <li class="depth2-item"><a href="javascript:void(0)">게임소식</a></li>
+              <li class="depth2-item"><a href="javascript:void(0)">게임 가이드</a></li>
+            </ul>
+          </li>
+          <li class="flex-item">
+            <a href="javascript:void(0)">콘텐츠</a>
+            <ul class="depth2">
+              <li class="depth2-item"><a href="javascript:void(0)">펀&조이</a></li>
+              <li class="depth2-item"><a href="javascript:void(0)">건강 소식지</a></li>
+            </ul>
+          </li>
+          <li class="flex-item">
+            <a href="javascript:void(0)">사회공헌</a>
+            <ul class="depth2">
+              <li class="depth2-item"><a href="javascript:void(0)">현장스케치</a></li>
+              <li class="depth2-item"><a href="javascript:void(0)">나눔 인터뷰</a></li>
+            </ul>
+          </li>
+          <li class="flex-item">
+            <a href="javascript:void(0)">뉴스룸</a>
+            <ul class="depth2">
+              <li class="depth2-item"><a href="javascript:void(0)">보도자료</a></li>
+              <li class="depth2-item"><a href="javascript:void(0)"></a></li>
+            </ul>
+          </li>
+          <li class="flex-item">
+            <a href="javascript:void(0)">넷마블 TV</a>
+            <ul class="depth2">
+              <li class="depth2-item"><a href="javascript:void(0)">오리지널 영상</a></li>
+              <li class="depth2-item"><a href="javascript:void(0)"></a></li>
+            </ul>
+          </li>
         </ul>
       </nav>
       <div class="language">
@@ -42,11 +77,543 @@
         <span>
           <button type="button"></button>
         </span>
-      </div>
-      <div class="depth2">
+        <button type="button" class="menu">
+          <img src="./image/header/menuOPEN.png" alt="menuOPEN">
+        </button>
       </div>
     </div>
   </header>
+
+  <main id="main">
+    <div class="container">
+      <!-- 슬라이드제작 -->
+      <!-- <div></div> -->
+      <!-- 슬라이드제작 -->
+      <!-- 검색 -->
+      <div class="main_search_area">
+        <div class="search_box">
+          <input type="search" placeholder="검색어를 입력해 주세요." maxlength="100" class="search-input">
+          <button type="button" class="search-icon"></button>
+        </div>
+        <div class="search_keword">
+          <div class="title">추천태그</div>
+          <ul class="keyword_list">
+            <li class="list-item">
+              <button type="button">제2의 나라: Cross Worlds</button>
+            </li>
+            <li class="list-item">
+              <button type="button">#마블 퓨처 레볼루션</button>
+            </li>
+            <li class="list-item">
+              <button type="button">#일곱 개의 대죄: 그랜드 크로스</button>
+            </li>
+            <li class="list-item">
+              <button type="button"> #웹툰</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 유튜브 동영상 -->
+      <div class="main_video_area">
+
+        <div class="video_play_area">
+          <p class="title">넷마블 TV</p>
+          <div class="video_cont">
+            <iframe id="video_iframe"
+              src="https://www.youtube-nocookie.com/embed/VH_2cd1bJY8?enablejsapi=1&origin=https%3A%2F%2Fch.netmarble.com&widgetid=1"
+              frameborder="0" width="640" height="360" allowfullscreen="1" allow="accelerometer">
+            </iframe>
+          </div>
+        </div>
+
+        <div class="video_list">
+          <p class="title">넷마블 TV</p>
+          <div class="slide-container">
+            <div class="slide-wrap" id="slide-wrap">
+              <div class="slide">
+
+                <ul class="video_list_inner scroll">
+                  <li class="selected">
+                    <div class="video_thumb">
+                      <div>
+                        <img src="/image/main/yotube/scrollIMG1.jpg" alt="scrollIMG1">
+                      </div>
+                    </div>
+                    <div class="cont_b">
+                      <p>
+                        마블퓨처레볼루션 `최초공개` 미디어쇼케이스
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="video_thumb">
+                      <div>
+                        <img src="/image/main/yotube/scrollIMG2.jpg" alt="scrollIMG2">
+                      </div>
+                    </div>
+                    <div class="cont_b">
+                      <p>
+                        [마블 퓨처 레볼루션] 스토리 영상
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="video_thumb">
+                      <div>
+                        <img src="/image/main/yotube/scrollIMG3.jpg" alt="scrollIMG3">
+                      </div>
+                    </div>
+                    <div class="cont_b">
+                      <p>
+                        [마블 퓨처 레볼루션] 미디어 쇼케이스 현장 공개!
+                      </p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="video_thumb">
+                      <div>
+                        <img src="/image/main/yotube/scrollIMG4.jpg" alt="scrollIMG4">
+                      </div>
+                    </div>
+                    <div class="cont_b">
+                      <p>
+                        다이아몬드 재질 목소리 등장! 사운즈라잌 최종화 제2의 나라편!
+                      </p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="video_thumb">
+                      <div>
+                        <img src="/image/main/yotube/scrollIMG5.jpg" alt="scrollIMG5">
+                      </div>
+                    </div>
+                    <div class="cont_b">
+                      <p>[넷마블 x 짤툰 갓겜컴퍼니 시즌2] 4화 - 버츄얼유튜버</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="video_thumb">
+                      <div>
+                        <img src="/image/main/yotube/scrollIMG6.jpg" alt="scrollIMG6">
+                      </div>
+                    </div>
+                    <div class="cont_b">
+                      <p>[제2의 나라] 유물의 주인은 과연 누구? 유물전장 업데이트</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="video_thumb">
+                      <div>
+                        <img src="/image/main/yotube/scrollIMG7.jpg" alt="scrollIMG7">
+                      </div>
+                    </div>
+                    <div class="cont_b">
+                      <p>[제2의 나라] 이마젠 소개 - 불범</p>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="video_thumb">
+                      <div>
+                        <img src="/image/main/yotube/scrollIMG8.jpg" alt="scrollIMG8">
+                      </div>
+                    </div>
+                    <div class="cont_b">
+                      <p>[제2의 나라] 유물 전장 플레이 가이드</p>
+                    </div>
+                  </li>
+
+                </ul>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- 뉴스 -->
+      <div class="newset_area">
+
+        <div class="inner_wrap">
+
+          <p class="title">최신소식</p>
+          <p class="txt">NEWS</p>
+          <div class="boardList_wrap">
+            <ul class="board_list">
+              <!-- 1 -->
+              <li class="list_item">
+                <a href="javascrip:void(0)">
+                  <div class="thumb_img">
+                    <img src="/image/main/news/newsIMG1.jpg" alt="newsIMG1">
+                  </div>
+                </a>
+                <div class="cont_b">
+                  <div class="resposive_wrap">
+                    <div class="label">
+                      <span><a href="javscript:void(0)">뉴스룸</a></span>
+                      ·
+                      <span><a href="javscript:void(0)">보도자료</a></span>
+                    </div>
+                    <div class="date">2021.07.09</div>
+                  </div>
+                  <a href="javascript:void(0)">
+                    <p class="title">
+                      넷마블문화재단,게임아카데미 부트캠프 1기 참가자 모집
+                    </p>
+                  </a>
+                  <div class="relation_tag">
+                    <div class="tag_list">
+                      <div>
+                        <button type="button">#넷마블문화재단</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 2 -->
+              <li class="list_item">
+                <a href="javascrip:void(0)">
+                  <div class="thumb_img">
+                    <img src="/image/main/news/newsIMG2.png" alt="newsIMG2">
+                  </div>
+                </a>
+                <div class="cont_b">
+                  <div class="resposive_wrap">
+                    <div class="label">
+                      <span><a href="javscript:void(0)">게임</a></span>
+                      ·
+                      <span><a href="javscript:void(0)">게임소식</a></span>
+                    </div>
+                    <div class="date">2021.07.08</div>
+                  </div>
+                  <a href="javascript:void(0)">
+                    <p class="title">제2의 나라의 소통을 책임지는 공식 라이브 방송 ‘제2TV쇼’ 첫 방송 녹화 현장 최초 공개</p>
+                  </a>
+                  <div class="relation_tag">
+                    <div class="tag_list">
+                      <div>
+                        <button type="button">#제2의나라</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 3 -->
+              <li class="list_item">
+                <a href="javascrip:void(0)">
+                  <div class="thumb_img">
+                    <img src="/image/main/news/newsIMG3.png" alt="newsIMG3">
+                  </div>
+                </a>
+                <div class="cont_b">
+                  <div class="resposive_wrap">
+                    <div class="label">
+                      <span><a href="javscript:void(0)">뉴스룸</a></span>
+                      ·
+                      <span><a href="javscript:void(0)">보도자료</a></span>
+                    </div>
+                    <div class="date">2021.07.08</div>
+                  </div>
+                  <a href="javascript:void(0)">
+                    <p class="title">넷마블 '리니지2 레볼루션', 대규모 업데이트 『변신』 실시</p>
+                  </a>
+                  <div class="relation_tag">
+                    <div class="tag_list">
+                      <div>
+                        <button type="button">#리니지2 레볼루션</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 4 -->
+              <li class="list_item">
+                <a href="javascrip:void(0)">
+                  <div class="thumb_img">
+                    <img src="/image/main/news/newsIMG4.jpg" alt="newsIMG4">
+                  </div>
+                </a>
+                <div class="cont_b">
+                  <div class="resposive_wrap">
+                    <div class="label">
+                      <span><a href="javscript:void(0)">뉴스룸</a></span>
+                      ·
+                      <span><a href="javscript:void(0)">보도자료</a></span>
+                    </div>
+                    <div class="date">2021.07.06</div>
+                  </div>
+                  <a href="javascript:void(0)">
+                    <p class="title">넷마블, 온라인 댄스게임 '클럽 엠스타’ 홈가든 시즌9 업데이트 실시</p>
+                  </a>
+                  <div class="relation_tag">
+                    <div class="tag_list">
+                      <div>
+                        <button type="button">#클럽 엠스타</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 5 -->
+              <li class="list_item">
+                <a href="javascrip:void(0)">
+                  <div class="thumb_img">
+                    <img src="/image/main/news/newsIMG5.jpg" alt="newsIMG5">
+                  </div>
+                </a>
+                <div class="cont_b">
+                  <div class="resposive_wrap">
+                    <div class="label">
+                      <span><a href="javscript:void(0)">게임</a></span>
+                      ·
+                      <span><a href="javscript:void(0)">게임가이드</a></span>
+                    </div>
+                    <div class="date">2021.07.06</div>
+                  </div>
+                  <a href="javascript:void(0)">
+                    <p class="title">마음에 깃든 전사 이마젠과 함께하는 모험 ‘제2의 나라’ 초보자 가이드 이마젠편</p>
+                  </a>
+                  <div class="relation_tag">
+                    <div class="tag_list">
+                      <div>
+                        <button type="button">#제2의 나라: Cross Worlds</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 6 -->
+              <li class="list_item">
+                <a href="javascrip:void(0)">
+                  <div class="thumb_img">
+                    <img src="/image/main/news/newsIMG6.jpg" alt="newsIMG6">
+                  </div>
+                </a>
+                <div class="cont_b">
+                  <div class="resposive_wrap">
+                    <div class="label">
+                      <span><a href="javscript:void(0)">콘텐츠</a></span>
+                      ·
+                      <span><a href="javscript:void(0)">편&조이</a></span>
+                    </div>
+                    <div class="date">2021.07.05</div>
+                  </div>
+                  <a href="javascript:void(0)">
+                    <p class="title">[명겜고] 세계 최초 게이머들을 위한 고등학교 “명겜고” 55화</p>
+                  </a>
+                  <div class="relation_tag">
+                    <div class="tag_list">
+                      <div>
+                        <button type="button">#웹툰 #명겜고</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 7 -->
+              <li class="list_item">
+                <a href="javascrip:void(0)">
+                  <div class="thumb_img">
+                    <img src="/image/main/news/newsIMG7.jpg" alt="newsIMG7">
+                  </div>
+                </a>
+                <div class="cont_b">
+                  <div class="resposive_wrap">
+                    <div class="label">
+                      <span><a href="javscript:void(0)">사회공헌</a></span>
+                      ·
+                      <span><a href="javscript:void(0)">현장스케치</a></span>
+                    </div>
+                    <div class="date">2021.07.05</div>
+                  </div>
+                  <a href="javascript:void(0)">
+                    <p class="title">아이들의 잠재력을 발휘시키는 게임교육, 게임음악의 중요성을 알아볼 수 있었던 제9회 넷마블 게임콘서트 현장 속으로!</p>
+                  </a>
+                  <div class="relation_tag">
+                    <div class="tag_list">
+                      <div>
+                        <button type="button">#넷마블문화재단 #게임콘서트</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 8 -->
+              <li class="list_item">
+                <a href="javascrip:void(0)">
+                  <div class="thumb_img">
+                    <img src="/image/main/news/newsIMG8.jpg" alt="newsIMG8">
+                  </div>
+                </a>
+                <div class="cont_b">
+                  <div class="resposive_wrap">
+                    <div class="label">
+                      <span><a href="javscript:void(0)">게임</a></span>
+                      ·
+                      <span><a href="javscript:void(0)">게임가이드</a></span>
+                    </div>
+                    <div class="date">2021.07.05</div>
+                  </div>
+                  <a href="javascript:void(0)">
+                    <p class="title">여름의 평화는 우리가 지킨다! '세븐나이츠2' 신규 영웅 유리&앨리스 등장</p>
+                  </a>
+                  <div class="relation_tag">
+                    <div class="tag_list">
+                      <div>
+                        <button type="button">#세븐나이츠2</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 9 -->
+              <li class="list_item">
+                <a href="javascrip:void(0)">
+                  <div class="thumb_img">
+                    <img src="/image/main/news/newsIMG9.jpg" alt="newsIMG9">
+                  </div>
+                </a>
+                <div class="cont_b">
+                  <div class="resposive_wrap">
+                    <div class="label">
+                      <span><a href="javscript:void(0)">뉴스룸</a></span>
+                      ·
+                      <span><a href="javscript:void(0)">보도자료</a></span>
+                    </div>
+                    <div class="date">2021.07.05</div>
+                  </div>
+                  <a href="javascript:void(0)">
+                    <p class="title">넷마블문화재단, ‘2021 넷마블 온라인 게임소통교육’ 참가자 모집</p>
+                  </a>
+                  <div class="relation_tag">
+                    <div class="tag_list">
+                      <div>
+                        <button type="button">#넷마블문화재단</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 10 -->
+
+              <li class="list_item">
+                <a href="javascrip:void(0)">
+                  <div class="thumb_img">
+                    <img src="/image/main/news/newsIMG10.jpg" alt="newsIMG10">
+                  </div>
+                </a>
+                <div class="cont_b">
+                  <div class="resposive_wrap">
+                    <div class="label">
+                      <span><a href="javscript:void(0)">게임</a></span>
+                      ·
+                      <span><a href="javscript:void(0)">게임가이드</a></span>
+                    </div>
+                    <div class="date">2021.07.02</div>
+                  </div>
+                  <a href="javascript:void(0)">
+                    <p class="title">‘제2의 나라’ 유물 전장을 즐기는 두 가지 방법</p>
+                  </a>
+                  <div class="relation_tag">
+                    <div class="tag_list">
+                      <div>
+                        <button type="button">#제2의 나라: Cross Worlds</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 11 -->
+              <li class="list_item">
+                <a href="javascrip:void(0)">
+                  <div class="thumb_img">
+                    <img src="/image/main/news/newsIMG11.jpg" alt="newsIMG11">
+                  </div>
+                </a>
+                <div class="cont_b">
+                  <div class="resposive_wrap">
+                    <div class="label">
+                      <span><a href="javscript:void(0)">뉴스룸</a></span>
+                      ·
+                      <span><a href="javscript:void(0)">보도자료</a></span>
+                    </div>
+                    <div class="date">2021.07.02</div>
+                  </div>
+                  <a href="javascript:void(0)">
+                    <p class="title">넷마블 '세븐나이츠2', 2021년 상반기 이달의 우수게임 선정</p>
+                  </a>
+                  <div class="relation_tag">
+                    <div class="tag_list">
+                      <div>
+                        <button type="button">#세븐나이츠2</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <!-- 12 -->
+              <li class="list_item">
+                <a href="javascrip:void(0)">
+                  <div class="thumb_img">
+                    <img src="/image/main/news/newsIMG12.jpg" alt="newsIMG12">
+                  </div>
+                </a>
+                <div class="cont_b">
+                  <div class="resposive_wrap">
+                    <div class="label">
+                      <span><a href="javscript:void(0)">뉴스룸</a></span>
+                      ·
+                      <span><a href="javscript:void(0)">보도자료</a></span>
+                    </div>
+                    <div class="date">2021.07.02</div>
+                  </div>
+                  <a href="javascript:void(0)">
+                    <p class="title">넷마블, 2021년 2분기 '대한민국 100대 브랜드' 선정</p>
+                  </a>
+                  <div class="relation_tag">
+                    <div class="tag_list">
+                      <div>
+                        <button type="button">#대한민국 100대 브랜드</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+          <div class="btn_more_area">
+            <button type="button" class="btn_more">
+              <span>최신 기사 더보기</span>
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="bottom_slide_area">
+        <div class="inner_wrap">
+          <div class="bottom_slide_wrap" id="bottom_slide_wrap">
+            <ul class="bottom_slide" id="bottom_slide">
+              <li class="item">
+                <img src="/image/main/bottomSlide/bottomSlideIMG1.jpg" alt="bottomSlideIMG1">
+              </li>
+              <li class="item">
+                <img src="/image/main/bottomSlide/bottomSlideIMG2.jpg" alt="bottomSlideIMG2">
+              </li>
+            </ul>
+          </div>
+          <button id="r" class="r">오른쪽</button>
+          <button id="l" class="l">왼쪾</button>
+        </div>
+      </div>
+
+    </div>
+  </main>
 
 </body>
 

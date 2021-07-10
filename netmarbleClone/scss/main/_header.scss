@@ -1,114 +1,269 @@
 @import "../meida/_media";
 
 #header {
-  display: none;
+  top: 0;
   position: fixed;
-  width: 100%;
-  @include _1260px() {
-    display: block;
-    border-bottom: 1px solid #d6d6d6;
+  display: block;
+  background-color: #fff;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  max-width: 768px;
+  height: 60px;
+  z-index: 10;
 
-    .container {
-      position: relative;
-      & > h1 {
+  @include _1260px() {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #d6d6d6;
+    &::after {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 100%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      max-width: 1920px;
+      background-color: #fff;
+      z-index: -1;
+      opacity: 0;
+      border-top: 1px solid #d6d6d6;
+    }
+  }
+
+  .container {
+    display: block;
+    position: relative;
+    & > h1 {
+      position: absolute;
+      top: 20px;
+      left: 14px;
+      width: 126px;
+      z-index: 1;
+
+      @include _1260px() {
         top: 40px;
         left: 0;
         width: 161px;
-        position: absolute;
         z-index: 1;
-        img {
-          max-width: 100%;
-        }
       }
-      #nav {
-        position: relative;
+
+      img {
+        max-width: 100%;
+      }
+    }
+    #nav {
+      @include _1260px() {
         display: flex;
-        width: 1260px;
-        height: 100%;
-        padding-left: 218px;
-        background: none;
-        box-sizing: border-box;
-        .flex-container {
-          display: flex;
-          .flex-item {
-            a {
-              text-align: center;
-              box-sizing: border-box;
-              color: #333333;
-              font-size: 1.7rem;
-              font-weight: 900;
-              line-height: 105px;
-              width: 141px;
-              padding: 0 10px;
-              letter-spacing: 0.5px;
-              &:hover {
-                box-sizing: border-box;
-                color: #7f4f21;
+      }
+      position: relative;
+      display: none;
+      width: 1260px;
+      height: 100%;
+      padding-left: 218px;
+      background: none;
+      box-sizing: border-box;
+      .flex-container {
+        display: flex;
+        .flex-item {
+          height: 105px;
+          & > a {
+            position: relative;
+            text-align: center;
+            box-sizing: border-box;
+            color: #333333;
+            font-size: 1.7rem;
+            font-weight: 900;
+            line-height: 105px;
+            width: 141px;
+            padding: 0 10px;
+            letter-spacing: 0.5px;
+            &:hover {
+              color: #7f4f21;
+              &::after {
+                display: block;
+              }
+            }
+            &::after {
+              content: "";
+              display: none;
+              width: inherit;
+              position: absolute;
+              height: 1px;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              border-bottom: 3px solid #7f4f21;
+            }
+          }
+          .depth2 {
+            position: relative;
+            display: none;
+            width: 141px;
+            padding-top: 19px;
+
+            box-sizing: border-box;
+            .depth2-item {
+              position: relative;
+              & > a {
+                font-size: 1.4rem;
+                font-weight: 700;
+                letter-spacing: 0.5px;
+                display: block;
+                padding: 0;
+                color: #474747;
+                height: 56px;
+                line-height: 56px;
+                text-align: center;
+                border-left: 1px solid #efefef;
+
+                &:hover {
+                  color: #7f4f21;
+                }
+              }
+            }
+
+            &:hover {
+              &::after {
+                display: block;
+              }
+            }
+
+            &::after {
+              content: "";
+              display: none;
+              width: inherit;
+              position: absolute;
+              height: 1px;
+              top: -4px;
+              left: 0;
+              right: 0;
+              margin: auto;
+              border-bottom: 3px solid #7f4f21;
+              margin-left: -1px;
+              margin-right: -1px;
+            }
+          }
+          .depth2.active {
+            display: block;
+          }
+          &:last-child {
+            .depth2 {
+              .depth2-item {
+                & > a {
+                  border-right: 1px solid #efefef;
+                }
               }
             }
           }
         }
       }
-      .language {
-        position: absolute;
-        display: flex;
+    }
+    .language {
+      position: absolute;
+      display: flex;
+      top: 12px;
+      right: 13px;
+      align-items: center;
+      @include _1260px() {
         top: 36px;
         right: 0;
         height: 30px;
-        span {
+      }
+
+      span {
+        @include _1260px() {
           order: 0;
           width: 30px;
           height: 30px;
-          & > button {
-            background-image: url("/image/header/searchBTN1440.png");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            border: none;
-            background-color: transparent;
+        }
+        & > button {
+          width: 36px;
+          height: 36px;
+          margin-left: 5px;
+          background-image: url("/image/header/searchBTN1440.png");
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-color: transparent;
+          cursor: pointer;
+          @include _1260px() {
             height: 100%;
             width: 100%;
-            padding: 0;
-            cursor: pointer;
+            margin: 0;
+            background-size: 30px auto;
           }
         }
-        .global_btn {
+      }
+      .global_btn {
+        display: flex;
+        align-items: center;
+        position: relative;
+        @include _1260px() {
           order: 1;
-          display: flex;
-          align-items: center;
-          position: relative;
-          & > a {
+          width: auto;
+          height: auto;
+          .active {
+            color: #333333;
+          }
+        }
+
+        & > a {
+          display: block;
+          width: 36px;
+          height: 36px;
+          text-align: center;
+          line-height: 36px;
+          background-color: #f2f2f2;
+          border-radius: 18px;
+          color: #4f4f4f;
+          font-weight: 900;
+          font-size: 1.3rem;
+          &:nth-child(1) {
+            display: none;
+          }
+          @include _1260px() {
             width: 57px;
+            height: auto;
             text-align: center;
             font-size: 1.5rem;
             font-weight: 900;
             line-height: 28px;
             color: #bdbdbd;
             background-color: transparent;
-          }
-          .active {
-            color: #333333;
-          }
+            &:nth-child(1) {
+              display: block;
+            }
 
-          &::after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 1px;
-            height: 9px;
-            border-left: 1px solid rgba($color: #000000, $alpha: 0.2);
-            top: 11px;
-            left: 0;
-            right: 0;
-            margin: auto;
+            &::after {
+              content: "";
+              display: block;
+              position: absolute;
+              width: 1px;
+              height: 9px;
+              border-left: 1px solid rgba($color: #000000, $alpha: 0.2);
+              top: 11px;
+              left: 0;
+              right: 0;
+              margin: auto;
+            }
           }
         }
       }
-      .depth2 {
-        position: absolute;
-        padding-left: 218px;
-        width: 1260px;
-        box-sizing: border-box;
+      .menu {
+        border: none;
+        margin-left: 5px;
+        padding: 0;
+        background-color: transparent;
+        @include _1260px() {
+          display: none;
+        }
+        & > img {
+          min-width: 100%;
+        }
       }
     }
   }
@@ -116,17 +271,7 @@
 
 #header.active {
   &::after {
-    position: absolute;
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    max-width: 1920px;
-    background-color: orange;
-    z-index: -1;
+    height: 156px;
     opacity: 1;
   }
 }
