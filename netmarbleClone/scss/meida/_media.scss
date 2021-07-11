@@ -14,36 +14,3 @@ $desktop1260px: 1260px;
     @content;
   }
 }
-// @mixin _1024px {
-//   @media (min-width: #{$breakpoint-desktop1024px}) {
-//     @content;
-//   }
-// }
-
-// @mixin _767px {
-//   @media (max-width: #{$breakpoint-tablet767px}) {
-//     @content;
-//   }
-// }
-// @mixin _767pxMin {
-//   @media (min-width: #{$breakpoint-tablet767px}) {
-//     @content;
-//   }
-// }
-// @mixin _668px {
-//   @media (max-width: #{$breakpoint-tablet668px}) {
-//     @content;
-//   }
-// }
-
-// @mixin _1024pxMax {
-//   @media (max-width: #{$breakpoint-desktop1024px}) {
-//     @content;
-//   }
-// }
-
-// @mixin _1400 {
-//   @media (min-width: #{$breakpoint-desktop1400px}) {
-//     @content;
-//   }
-// }

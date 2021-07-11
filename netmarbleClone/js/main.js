@@ -60,8 +60,10 @@ class InfiniteSlide {
 
     this.buttonStop = true;
     this.pageIdx = 0;
-    this.time1 = 300;
-    this.time2 = 100;
+    this.setTimeOutTime1 = 200;
+    this.setTimeOutTime2 = 50;
+    this.loopTime = 4000;
+    this.transitionTime = `0.2s`;
 
     if (this.totalPage > 1) {
       const cloneFirstPage = this.pageArray[0].cloneNode(true);
@@ -79,12 +81,13 @@ class InfiniteSlide {
     this.slider.style.width = `${this.pageArray.length * this.pageWidth}px`;
     this.pageArray.forEach(page => page.style.width = `${this.pageWidth}px`);
     this.pageArray.forEach(page => page.style.transform = `translateX(-${(this.pageWidth * (this.pageIdx + 1))}px)`);
+    this.pageArray.forEach(page => page.style.transition = this.transitionTime);
     this.pageIdx++;
 
     this.numBoxNumberChange();
     this.eventHandler();
+    this.setLoop();
   }
-
 
   rightBtnEvent = (e) => {
 
@@ -105,10 +108,10 @@ class InfiniteSlide {
             });
 
             setTimeout(() => {
-              this.pageArray.forEach(page => page.style.transition = "0.2s");
+              this.pageArray.forEach(page => page.style.transition = this.transitionTime);
               this.buttonStop = true;
-            }, this.time2);
-          }, this.time1);
+            }, this.setTimeOutTime2);
+          }, this.setTimeOutTime1);
 
           this.pageIdx = 1;
         }
@@ -139,10 +142,10 @@ class InfiniteSlide {
             });
 
             setTimeout(() => {
-              this.pageArray.forEach(page => page.style.transition = "0.2s");
+              this.pageArray.forEach(page => page.style.transition = this.transitionTime);
               this.buttonStop = true;
-            }, this.time2);
-          }, this.time1);
+            }, this.setTimeOutTime2);
+          }, this.setTimeOutTime1);
 
           this.pageIdx = this.pageArray.length - 2;
         }
@@ -155,27 +158,87 @@ class InfiniteSlide {
 
   }
 
-  eventHandler() {
-    this.rightButtons.forEach(button => button.addEventListener('click', this.rightBtnEvent));
-    this.leftButtons.forEach(button => button.addEventListener('click', this.leftBtnEvent));
-  }
-
+  //페이지 네이션으로 바꿈
   numBoxNumberChange() {
     const pageNum = `<span style="color:#000; font-weight:900">${this.pageArray[this.pageIdx].dataset.pageidex}</span><span> / ${this.totalPage}</span>`;
     this.numBoxs.forEach(numBox => numBox.innerHTML = pageNum);
   }
 
+  eventHandler() {
+    this.rightButtons.forEach(button => button.addEventListener('click', this.rightBtnEvent));
+    this.leftButtons.forEach(button => button.addEventListener('click', this.leftBtnEvent));
+    window.addEventListener('resize', this.optimizeAnimation(this.resize));
+    window.addEventListener('resize', this.optimizeAnimation(this.clean));
 
+  }
 
+  // 1초에 최대 60번 실행
+  // 60 프레임
+  optimizeAnimation = (callback) => {
+    let ticking = false;
+    return (e) => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          callback(e);
+          ticking = false;
+        });
+      }
+    };
+  }
+
+  // 매번 resize시 실행
+  resize = () => {
+
+    // 바텀 슬라이드 이미지 깨짐 때문에 넣은 로직
+    // 이미지가 3개면 다시 개발해야된다.
+    if (window.innerWidth > 1260) {
+      this.pageArray.forEach((page, idx) => {
+        idx % 2 === 0
+          ? page.firstElementChild.src = `/image/main/bottomSlide/bottomSlideIMG259px${2}.jpg`
+          : page.firstElementChild.src = `/image/main/bottomSlide/bottomSlideIMG259px${1}.jpg`;
+      });
+    } else {
+      this.pageArray.forEach((page, idx) => {
+        idx % 2 === 0
+          ? page.firstElementChild.src = `/image/main/bottomSlide/bottomSlideIMG${2}.jpg`
+          : page.firstElementChild.src = `/image/main/bottomSlide/bottomSlideIMG${1}.jpg`;
+      });
+    }
+    this.pageIdx = 0;
+    this.pageIdx++;
+    this.pageWidth = this.sliderWrap.clientWidth;
+    this.pageArray.forEach(page => page.style.transition = "0ms");
+    this.pageArray.forEach(page => page.style.width = `${this.pageWidth}px`);
+    this.pageArray.forEach(page => page.style.transform = `translateX(-${(this.pageWidth * this.pageIdx)}px)`);
+    this.slider.style.width = `${this.pageArray.length * (this.pageWidth + 2)}px`;
+
+  }
+
+  // resize 후 
+  clean = (e) => {
+    const { currentTarget } = e;
+    if (currentTarget.resizeTo) {
+      clearTimeout(currentTarget.resizeTo);
+    }
+    currentTarget.resizeTo = setTimeout(() => {
+      this.pageArray.forEach(page => page.style.transition = this.transitionTime);
+    }, 200);
+
+  }
+
+  setLoop() {
+    this.timer = setInterval(() => this.rightBtnEvent(), this.loopTime);
+  }
 }
 
-new InfiniteSlide("bottom_slide_wrap", "bottom_slide", "r", "l");
+const bottomInfiniteSlide = new InfiniteSlide("bottom_slide_wrap", "bottom_slide", "btn_right", "btn_left");
 
 /*
   해야할것
-  왼쪽 오른쪽 버튼
-  자동 loop
-  resize
+  this.time1
+  this.time2
+  변수명 변경
   페이지네이션 동적 생성
   footer만들기
 */
