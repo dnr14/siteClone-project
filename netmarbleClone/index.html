@@ -8,9 +8,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
   <script src="/js/main.js" defer></script>
+  <script src="/js/bottomSlide.js" defer></script>
+  <script src="/js/topSlide.js" defer></script>
+  <script src="/js/topSlide3d.js" defer></script>
   <title>넷마블 클론</title>
 </head>
 
@@ -87,10 +90,57 @@
 
   <!-- 메인 -->
   <main id="main">
+
+    <!-- 2d Top Slide-->
+    <div class="top_slide_area">
+      <div class="top_slide_container">
+        <div class="top_slide_wrap" id="top_slide_wrap">
+          <ul class="top_slide" id="top_slide">
+            <li class="top_item"></li>
+            <li class="top_item"></li>
+            <li class="top_item"></li>
+          </ul>
+          <button class="top_btn_right"></button>
+          <button class="top_btn_left"></button>
+        </div>
+      </div>
+    </div>
+    <!-- 3d Top Slide -->
+    <div class="top_slide_3d_area">
+      <div class="top_slide_3d_container">
+        <div class="top_slide_3d_wrap" id="top_slide_3d_wrap">
+          <ul class="top_slide_3d" id="top_slide_3d">
+            <li class="top_item_3d">
+              <img src="/image/main/topSlide3d/topSlide3dIMG2.jpg" alt="img2">
+            </li>
+            <li class="top_item_3d">
+              <img src="/image/main/topSlide3d/topSlide3dIMG3.jpg" alt="img3">
+            </li>
+            <li class="top_item_3d">
+              <img src="/image/main/topSlide3d/topSlide3dIMG1.jpg" alt="img1">
+            </li>
+            <li class="top_item_3d">
+              <img src="/image/main/topSlide3d/topSlide3dIMG2.jpg" alt="img2">
+            </li>
+            <li class="top_item_3d">
+              <img src="/image/main/topSlide3d/topSlide3dIMG3.jpg" alt="img3">
+            </li>
+            <li class="top_item_3d">
+              <img src="/image/main/topSlide3d/topSlide3dIMG1.jpg" alt="img1">
+            </li>
+            <li class="top_item_3d">
+              <img src="/image/main/topSlide3d/topSlide3dIMG2.jpg" alt="img2">
+            </li>
+
+          </ul>
+          <button class="top_3d_btn_right"></button>
+          <button class="top_3d_btn_left"></button>
+        </div>
+      </div>
+    </div>
+
     <div class="container">
-      <!-- 슬라이드제작 -->
-      <!-- <div></div> -->
-      <!-- 슬라이드제작 -->
+
       <!-- 검색 -->
       <div class="main_search_area">
         <div class="search_box">
@@ -697,5 +747,6 @@
   </footer>
 
 </body>
+
 
 </html>

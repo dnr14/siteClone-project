@@ -3,12 +3,6 @@ $tablet668px: 668px;
 $desktop1024px: 1024px;
 $desktop1260px: 1260px;
 
-// @mixin _1200px_1400px {
-//   @media (min-width: #{$breakpoint-desktop1200px}) and (max-width: #{$breakpoint-desktop1400px}) {
-//     @content;
-//   }
-// }
-
 @mixin _1260px {
   @media (min-width: #{$desktop1260px}) {
     @content;
