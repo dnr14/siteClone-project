@@ -1,0 +1,72 @@
+$breakpoint-mobile: 335px;
+$breakpoint-tablet668px: 668px;
+$breakpoint-tablet767px: 767px;
+$breakpoint-desktop1400px: 1399px;
+$breakpoint-desktop1200px: 1200px;
+$breakpoint-desktop1024px: 1024px;
+$breakpoint-desktop906px: 906px;
+
+$_30pxisRem: 1.875rem;
+$_25pxisRem: 1.563rem;
+$_20pxisRem: 1.25rem;
+$_10pxisRem: 0.625rem;
+
+@mixin _1200px_1400px {
+  @media (min-width: #{$breakpoint-desktop1200px}) and (max-width: #{$breakpoint-desktop1400px}) {
+    @content;
+  }
+}
+@mixin _1024px_1400px {
+  @media (min-width:#{$breakpoint-desktop1024px}) and (max-width: #{$breakpoint-desktop1400px}) {
+    @content;
+  }
+}
+@mixin _1024px_1200px {
+  @media (min-width:#{$breakpoint-desktop1024px}) and (max-width: #{$breakpoint-desktop1200px}) {
+    @content;
+  }
+}
+@mixin _906px_1024px {
+  @media (min-width: #{$breakpoint-desktop906px}) and (max-width: #{$breakpoint-desktop1024px}) {
+    @content;
+  }
+}
+@mixin _767px_906px {
+  @media (min-width: #{$breakpoint-tablet767px}) and (max-width: #{$breakpoint-desktop906px}) {
+    @content;
+  }
+}
+
+@mixin _1024px {
+  @media (min-width: #{$breakpoint-desktop1024px}) {
+    @content;
+  }
+}
+
+@mixin _767px {
+  @media (max-width: #{$breakpoint-tablet767px}) {
+    @content;
+  }
+}
+@mixin _767pxMin {
+  @media (min-width: #{$breakpoint-tablet767px}) {
+    @content;
+  }
+}
+@mixin _668px {
+  @media (max-width: #{$breakpoint-tablet668px}) {
+    @content;
+  }
+}
+
+@mixin _1024pxMax {
+  @media (max-width: #{$breakpoint-desktop1024px}) {
+    @content;
+  }
+}
+
+@mixin _1400 {
+  @media (min-width: #{$breakpoint-desktop1400px}) {
+    @content;
+  }
+}

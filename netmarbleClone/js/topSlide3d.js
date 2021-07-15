@@ -67,7 +67,7 @@ class _3DInfiniteSlide {
           this.pageIdx = 1;
         }
       }
-      this.paginationDraw();
+      this.paginationRender();
 
     } else {
       if (!e)
@@ -106,7 +106,7 @@ class _3DInfiniteSlide {
           this.pageIdx = (this.totalPage - 4);
         }
       }
-      this.paginationDraw();
+      this.paginationRender();
 
     } else {
       e.preventDefault();
@@ -159,7 +159,7 @@ class _3DInfiniteSlide {
     this.rightBtnEvent();
   }
 
-  paginationDraw() {
+  paginationRender() {
     const pagination = this.sliderWrap.querySelector('#pagination');
     const { children } = pagination;
     const childrenArray = [...children];
@@ -192,7 +192,7 @@ class _3DInfiniteSlide {
     this.slider.style.transition = "0ms";
     this.slider.style.transform = `translate3d(-${this.transformOffset}px, 0px, 0px)`;
     this.setTransform();
-    this.paginationDraw();
+    this.paginationRender();
 
     if (this._resizeTo) {
       clearTimeout(this._resizeTo);

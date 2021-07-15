@@ -68,7 +68,7 @@ class InfiniteSlide {
 
         this.pageIdx = 1;
       }
-      this.paginationDraw();
+      this.paginationRender();
 
     } else {
       e.preventDefault();
@@ -100,7 +100,7 @@ class InfiniteSlide {
         this.pageIdx = this.pageArray.length - 2;
       }
 
-      this.paginationDraw();
+      this.paginationRender();
 
     } else {
       e.preventDefault();
@@ -144,7 +144,7 @@ class InfiniteSlide {
     this.rightBtnEvent();
   }
 
-  paginationDraw() {
+  paginationRender() {
     const pagination = this.sliderWrap.querySelector('#pagination');
     const { children } = pagination;
     const childrenArray = [...children];
@@ -212,7 +212,7 @@ class InfiniteSlide {
     this.pageArray.forEach(page => page.style.width = `${this.pageWidth}px`);
     this.pageArray.forEach(page => page.style.transform = `translateX(-${(this.pageWidth * this.pageIdx)}px)`);
     this.slider.style.width = `${this.pageArray.length * (this.pageWidth + 2)}px`;
-    this.paginationDraw();
+    this.paginationRender();
 
   }
 

@@ -1,0 +1,132 @@
+@import "./media";
+
+#section14 {
+  .container {
+    @include _767px() {
+      padding: 0 10px 0;
+    }
+
+    .content-Box {
+      padding-top: 30px;
+      display: flex;
+      flex-direction: column;
+      .content1 {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        padding-bottom: 15px;
+        @include _767px() {
+          gap: 0;
+          flex-direction: column;
+        }
+        .content__item {
+          cursor: pointer;
+          background-color: #eff8fc;
+          text-align: center;
+          padding: 28px 0 15px 0;
+          flex: 1;
+          @include _767px() {
+            padding: 28px 0 15px 0;
+            margin-bottom: 15px;
+          }
+          .item__title {
+            & > h1 {
+              font-size: 0.9rem;
+            }
+            & > p {
+              margin-top: 3px;
+              font-size: 1.3rem;
+              font-weight: 900;
+            }
+          }
+          .item__img {
+            & > img {
+              margin: 5px auto;
+            }
+          }
+          .item__text {
+            padding-bottom: 15px;
+            & > p {
+              font-size: 0.8rem;
+              font-weight: 800;
+            }
+          }
+
+          &:hover {
+            h1,
+            p {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .content2 {
+        display: flex;
+        flex-direction: column;
+        @include _1024px() {
+          gap: 25px;
+          flex-direction: row;
+        }
+        .content__item {
+          display: flex;
+          margin-bottom: 15px;
+          @include _1024px() {
+            flex: 1;
+          }
+          .item__img {
+            background: #f3f3f3 url("../images/section14/img1.jpg") right top;
+            background-repeat: no-repeat;
+            background-size: contain;
+            padding: 37px 0 20px 25px;
+            height: 160px;
+            width: 100%;
+            box-sizing: border-box;
+            .text {
+              width: 50%;
+              & > h1 {
+                font-size: 0.9rem;
+              }
+              & > p {
+                margin-top: 3px;
+                font-size: 1.4rem;
+                font-weight: 900;
+                &:nth-child(3) {
+                  margin-top: 15px;
+                  font-size: 0.8rem;
+                }
+              }
+            }
+            &:hover {
+              h1,
+              p {
+                text-decoration: underline;
+              }
+            }
+          }
+          &:nth-child(2) {
+            & > .item__img {
+              background: #f3f3f3 url("../images/section14/img2.jpg") right top;
+              background-repeat: no-repeat;
+              background-size: contain;
+              padding: 37px 0 20px 25px;
+              height: 160px;
+              width: 100%;
+              box-sizing: border-box;
+            }
+          }
+          &:nth-child(3) {
+            & > .item__img {
+              background: #f3f3f3 url("../images/section14/img3.jpg") right top;
+              background-repeat: no-repeat;
+              background-size: contain;
+              padding: 37px 0 20px 25px;
+              height: 160px;
+              width: 100%;
+              box-sizing: border-box;
+            }
+          }
+        }
+      }
+    }
+  }
+}

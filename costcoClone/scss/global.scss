@@ -1,0 +1,43 @@
+@import "./media";
+
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera*/
+  }
+}
+
+img {
+  display: block;
+}
+a {
+  text-decoration: none;
+  color: #111;
+  display: block;
+}
+.container {
+  max-width: 1400px;
+  margin: auto;
+  @include _1024px_1400px {
+    max-width: 100%;
+    margin: auto;
+    padding: 0 20px;
+  }
+  @include _906px_1024px() {
+    padding: 0 10px;
+  }
+}
+
+.m_line {
+  display: block;
+  height: 7px;
+  border-top: 1px solid #ccc;
+  background-color: #e6e6e6;
+  content: "";
+  margin: 10px -10px;
+  @include _1024px() {
+    margin: 10px 0;
+    height: 1px;
+  }
+}

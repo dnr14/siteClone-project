@@ -78,7 +78,7 @@ class TopInfiniteSlide {
           this.pageIdx = 1;
         }
       }
-      this.paginationDraw();
+      this.paginationRender();
 
     } else {
       if (!e)
@@ -113,7 +113,7 @@ class TopInfiniteSlide {
           this.pageIdx = this.pageArray.length - 2;
         }
       }
-      this.paginationDraw();
+      this.paginationRender();
 
     } else {
       e.preventDefault();
@@ -158,7 +158,7 @@ class TopInfiniteSlide {
     this.rightBtnEvent();
   }
 
-  paginationDraw() {
+  paginationRender() {
     const pagination = this.sliderWrap.querySelector('#pagination');
     const { children } = pagination;
     const childrenArray = [...children];
@@ -195,7 +195,7 @@ class TopInfiniteSlide {
     this.pageArray.forEach(page => page.style.width = `${this.pageWidth}px`);
     this.pageArray.forEach(page => page.style.transform = `translateX(-${(this.pageWidth)}px)`);
     this.slider.style.width = `${this.pageArray.length * (this.pageWidth)}px`;
-    this.paginationDraw();
+    this.paginationRender();
 
     if (this._resizeTo) {
       clearTimeout(this._resizeTo);

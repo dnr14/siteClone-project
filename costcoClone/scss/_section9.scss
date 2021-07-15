@@ -1,0 +1,16 @@
+@import "./media";
+
+#section9 {
+  .container {
+    @include _767px() {
+      padding: 0 10px 0;
+    }
+    .content {
+      .img {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}

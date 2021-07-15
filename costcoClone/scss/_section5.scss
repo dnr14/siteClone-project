@@ -1,0 +1,16 @@
+@import "./media";
+
+#section5 {
+  .container {
+    @include _767px() {
+      padding: 0 10px 10px;
+    }
+    .content {
+      .img {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
