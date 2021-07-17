@@ -5,11 +5,524 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
   <title>홈플러스</title>
 </head>
 
 <body>
+  <header id="header">
+    <div class="container">
+      <div class="search">
+        <div class="flex-box">
+          <div class="flex-item">
+            <a href="javascript:void(0)">
+              <img src="/images/header/logo.png" alt="logo" class="logo">
+            </a>
+          </div>
+          <div class="flex-item">
+            <div class="search-box">
+              <input type="search" placeholder="검색어를 입력하세요" />
+              <span class="search-icon"></span>
+            </div>
+          </div>
+          <div class="flex-item">
+            <div class="links">
+              <button class="btnLogin"></button>
+              <div class="userWrap">
+                <button class="btnUser"></button>
+                <div class="userLinkList">
+                  <button>주문/배송조회</button>
+                  <button>고객센터</button>
+                  <button>회원정보</button>
+                </div>
+              </div>
+              <button class="btnCart"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav id="nav">
+        <button class="catagori">
+          <span>
+            <i class="icon"></i>
+            카테고리
+          </span>
+        </button>
+        <ul class="navbar-box">
+          <li class="navbar-item"><a href="javascript:void(0)">전단행사</a></li>
+          <li class="navbar-item"><a href="javascript:void(0)">핫새</a></li>
+          <li class="navbar-item"><a href="javascript:void(0)">싸데이</a></li>
+          <li class="navbar-item"><a href="javascript:void(0)">베스트</a></li>
+          <li class="navbar-item"><a href="javascript:void(0)">전문관</a></li>
+          <li class="navbar-item"><a href="javascript:void(0)">기획전</a></li>
+          <li class="navbar-item"><a href="javascript:void(0)">자주구매</a></li>
+          <li class="navbar-item"><a href="javascript:void(0)">택배배송</a></li>
+          <li class="navbar-item"><a href="javascript:void(0)">이벤트/쿠폰</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="mainContent">
+      <div class="iconLinks">
+        <ul>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="/images/main/iconLinks/iconLinks-img1.png" alt="icon" class="icon-img">
+              <div class="txt">
+                <span>즉시배송</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="/images/main/iconLinks/iconLinks-img2.png" alt="icon" class="icon-img">
+              <div class="txt">
+                <span>쿠폰</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="/images/main/iconLinks/iconLinks-img3.png" alt="icon" class="icon-img">
+              <div class="txt">
+                <span>등급혜택</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="/images/main/iconLinks/iconLinks-img4.png" alt="icon" class="icon-img">
+              <div class="txt">
+                <span>첫구매혜택</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="/images/main/iconLinks/iconLinks-img5.png" alt="icon" class="icon-img">
+              <div class="txt">
+                <span>모바일교환권</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="/images/main/iconLinks/iconLinks-img6.png" alt="icon" class="icon-img">
+              <div class="txt">
+                <span>몽블랑제</span>
+                <span>베이커리</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="/images/main/iconLinks/iconLinks-img7.png" alt="icon" class="icon-img">
+              <div class="txt">
+                <span>시그니처</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="/images/main/iconLinks/iconLinks-img8.png" alt="icon" class="icon-img">
+              <div class="txt">
+                <span>간편식</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="/images/main/iconLinks/iconLinks-img9.png" alt="icon" class="icon-img">
+              <div class="txt">
+                <span>베이비키즈</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="/images/main/iconLinks/iconLinks-img10.png" alt="icon" class="icon-img">
+              <div class="txt">
+                <span>산지직송</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="mainContent">
+      <div class="sale-inner">
+        <h2>
+          <img src="/images/main/sale/sale-img1.png" alt="sale-img1">
+        </h2>
+        <div class="btnLinks-wrap">
+          <div class="btnLiks">
+            <button class="btn selected">★MD추천★</button>
+            <button class="btn">신선한</button>
+            <button class="btn">식품♣</button>
+            <button class="btn">간편한</button>
+            <button class="btn">가공.필템◇</button>
+            <button class="btn">생활용품◎</button>
+          </div>
+        </div>
+        <div class="stuffs-wrap">
+          <div class="stuffs-flexbox">
+            <div class="stuffs-item">
+              <div class="thumbWrap">
+                <button>
+                  <span>
+                    <img src="/images/main/sale/sale-img2.png" alt="sale-img2">
+                  </span>
+                  <div class="deliveryFlag">
+                    <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                  </div>
+                </button>
+                <div class="thumbHover">
+                  <div class="inner">
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                      </span>
+                    </a>
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="stuffInfo">
+                <a href="javascript:void(0)">
+                  <p>★사전예약 600개 한정★</p>
+                  <p>[사전예약]레고 슈퍼마리오루이지스타터팩 71387 슈퍼마리오</p>
+                </a>
+                <div class="priceWrap">
+                  <div class="price">
+                    <strong class="priceValue">79,900</strong>원
+                  </div>
+                </div>
+                <div class="prodScoreWrap">
+                  <span>
+                    월30개구매
+                  </span>
+                </div>
+                <div class="benefitList">
+                  <span>신규상품</span>
+                </div>
+              </div>
+            </div>
 
+            <div class="stuffs-item">
+              <div class="thumbWrap">
+                <button>
+                  <span>
+                    <img src="/images/main/sale/sale-img3.png" alt="sale-img3">
+                  </span>
+                  <div class="deliveryFlag">
+                    <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                  </div>
+                  <div class="flagList">
+                    <span class="flag event">함께<br>할인</span>
+                  </div>
+                </button>
+                <div class="thumbHover">
+                  <div class="inner">
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                      </span>
+                    </a>
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="stuffInfo">
+                <a href="javascript:void(0)">
+                  <p>9개 구매시 10,990원</p>
+                  <p>제스프리 킹스 골드키위(뉴질랜드) 개</p>
+                </a>
+                <div class="priceWrap">
+                  <div class="price">
+                    <strong class="priceValue">1,490</strong>원
+                  </div>
+                  <span class="priceQty">
+                    (1개 당<span>1,490</span>원)
+                  </span>
+                </div>
+                <div class="prodScoreWrap">
+                  <i class="icon"></i>
+                  <span>4.7(3,459건)</span>
+                  <span>월12,477개 구매</span>
+                </div>
+                <div class="detailInfoBtm">
+                  <button class="btnProdMore">
+                    <span>행사상품 보기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="stuffs-item">
+              <div class="thumbWrap">
+                <button>
+                  <span>
+                    <img src="/images/main/sale/sale-img7.png" alt="sale-img7">
+                  </span>
+                  <div class="deliveryFlag">
+                    <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                  </div>
+                  <div class="flagList">
+                    <span class="flag event">함께<br>할인</span>
+                    <span class="flag">
+                      <img src="/images/main/sale/event2.png" alt="event2">
+                    </span>
+                  </div>
+                </button>
+                <div class="thumbHover">
+                  <div class="inner">
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                      </span>
+                    </a>
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="stuffInfo">
+                <a href="javascript:void(0)">
+                  <p></p>
+                  <p>썸머 BBQ 스페셜팩 900G</p>
+                </a>
+                <div class="priceWrap">
+                  <div class="orgPrice">
+                    <strong class="priceValue">23,990</strong>원
+                  </div>
+                  <div class="price">
+                    <span class="countDc">25%</span>
+                    <strong class="priceValue">17,990</strong>원
+                  </div>
+                  <span class="priceQty">
+                    (100G 당<span>1,998.9</span>원)
+                  </span>
+                </div>
+                <div class="prodScoreWrap">
+                  <i class="icon"></i>
+                  <span>3.4(7건)</span>
+                  <span>월1,230개 구매</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stuffs-item">
+              <div class="thumbWrap">
+                <button>
+                  <span>
+                    <img src="/images/main/sale/sale-img4.png" alt="sale-img4">
+                  </span>
+                  <div class="deliveryFlag">
+                    <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                  </div>
+                  <div class="flagList">
+                    <span class="flag event">함께<br>할인</span>
+                  </div>
+                </button>
+                <div class="thumbHover">
+                  <div class="inner">
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                      </span>
+                    </a>
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="stuffInfo">
+                <a href="javascript:void(0)">
+                  <p></p>
+                  <p>알알이 큼직하게 차오른 거봉포도 2-3송이(박스)</p>
+                </a>
+                <div class="priceWrap">
+                  <div class="orgPrice">
+                    <strong class="priceValue">24,990</strong>원
+                  </div>
+                  <div class="price">
+                    <span class="countDc">12%</span>
+                    <strong class="priceValue">21,990</strong>원
+                  </div>
+                  <span class="priceQty">
+                  </span>
+                </div>
+                <div class="prodScoreWrap">
+                  <i class="icon"></i>
+                  <span>4.4(2,225건)</span>
+                  <span>월696개 구매</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="stuffs-item">
+              <div class="thumbWrap">
+                <button>
+                  <span>
+                    <img src="/images/main/sale/sale-img5.png" alt="sale-img5">
+                  </span>
+                  <div class="deliveryFlag">
+                    <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                  </div>
+                  <div class="flagList">
+                    <span class="flag event">함께<br>할인</span>
+                    <span class="flag">
+                      <img src="/images/main/sale/event2.png" alt="event2">
+                    </span>
+                  </div>
+
+                </button>
+                <div class="thumbHover">
+                  <div class="inner">
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                      </span>
+                    </a>
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="stuffInfo">
+                <a href="javascript:void(0)">
+                  <p>2개 구매 시 1만원</p>
+                  <p>동원 참치볶음밥 420G</p>
+                </a>
+                <div class="priceWrap">
+                  <div class="price">
+                    <strong class="priceValue">5,990</strong>원
+                  </div>
+                  <span class="priceQty">
+                    (100G 당<span>1,426.2</span>원)
+                  </span>
+                </div>
+                <div class="prodScoreWrap">
+                  <i class="icon"></i>
+                  <span>4(1건)</span>
+                  <span>월221개 구매</span>
+                </div>
+                <div class="detailInfoBtm">
+                  <button class="btnProdMore">
+                    <span>행사상품 보기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="stuffs-item">
+              <div class="thumbWrap">
+                <button>
+                  <span>
+                    <img src="/images/main/sale/sale-img6.png" alt="sale-img6">
+                  </span>
+                  <div class="deliveryFlag">
+                    <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                  </div>
+                </button>
+                <div class="thumbHover">
+                  <div class="inner">
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                      </span>
+                    </a>
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="stuffInfo">
+                <a href="javascript:void(0)">
+                  <p></p>
+                  <p>멸치 어린이용 400G</p>
+                </a>
+                <div class="priceWrap">
+                  <div class="orgPrice">
+                    <strong class="priceValue">15,990</strong>원
+                  </div>
+                  <div class="price">
+                    <span class="countDc">30%</span>
+                    <strong class="priceValue">11,130</strong>원
+                  </div>
+                  <span class="priceQty">
+                    (100G 당<span>2,782.5</span>원)
+                  </span>
+                </div>
+                <div class="prodScoreWrap">
+                  <i class="icon"></i>
+                  <span>4.9(2,007건)</span>
+                  <span>월444개 구매</span>
+                </div>
+              </div>
+            </div>
+
+
+
+
+          </div>
+        </div>
+        <div class="btnWrap">
+          <button>
+            <img src="/images/main/sale/refresh.svg" alt="refresh">
+            <span>
+              <strong>다음 상품</strong>
+              새로보기
+              1
+              <span class="total">
+                / 6
+              </span>
+            </span>
+          </button>
+        </div>
+
+    </section>
+    <section class="mainContent">
+      <div class="oneplus-inner">
+        <h2>
+          <img src="/images/main/onePlus/oneplus-img1.png" alt="oneplus-img1">
+        </h2>
+
+        <div class="btnLinks-wrap">
+          <div class="btnLiks">
+            <button class="btn selected">1+1<button>
+                <button class="btn">천원의 행복</button>
+                <button class="btn">증정혜택</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>

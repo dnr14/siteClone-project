@@ -1,0 +1,23 @@
+html {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 20px;
+}
+body {
+  height: 5000px;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+img {
+  display: block;
+}
+button {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+}

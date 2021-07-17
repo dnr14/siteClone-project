@@ -1,0 +1,450 @@
+#main {
+  .mainContent {
+    width: 1230px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgb(238, 238, 238);
+    //icon
+    .iconLinks {
+      padding: 59px 16px 50px;
+      & > ul {
+        font-size: 0;
+        & > li {
+          display: inline-block;
+          vertical-align: top;
+          width: 100px;
+          & > a {
+            .txt {
+              padding: 0 5px;
+              margin-top: 13px;
+              font-size: 15px;
+              line-height: 1.13;
+              color: rgb(51, 51, 51);
+              text-align: center;
+              & > span {
+                display: block;
+              }
+            }
+          }
+
+          &:not(:first-child) {
+            margin-left: 22px;
+          }
+        }
+      }
+    }
+
+    // sale
+    .sale-inner {
+      padding: 60px 0 70px;
+
+      & > h2 {
+        text-align: center;
+        & > img {
+          display: inline-block;
+        }
+      }
+      .btnLinks-wrap {
+        padding-top: 15px;
+        height: 80px;
+        border-bottom: 1px solid rgb(235, 235, 235);
+        .btnLiks {
+          display: flex;
+          width: 1200px;
+          margin: 0 auto;
+          background-color: #fff;
+          .btn {
+            position: relative;
+            max-width: 240px;
+            height: 80px;
+            width: 100%;
+            font-size: 16px;
+            color: rgb(51, 51, 51);
+
+            &:not(:last-child) {
+              &::after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                background-color: rgb(235, 235, 235);
+                height: 14px;
+                width: 1px;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+              }
+            }
+          }
+          .selected {
+            color: rgb(255, 0, 0);
+            font-weight: 600;
+            &::before {
+              content: "";
+              position: absolute;
+              display: inline-block;
+              height: 3px;
+              background-color: rgb(255, 0, 0);
+              margin: auto;
+              left: 0;
+              right: 0;
+              bottom: 0;
+            }
+          }
+        }
+      }
+      .stuffs-wrap {
+        padding: 40px 0px 70px;
+        .stuffs-flexbox {
+          display: flex;
+          flex-wrap: wrap;
+          .stuffs-item {
+            margin-left: 39px;
+            .thumbWrap {
+              border-radius: 3px;
+              width: 374px;
+              height: 374px;
+              position: relative;
+              & > button {
+                overflow: hidden;
+                & > span {
+                  display: block;
+                  & > img {
+                    transition: 0.2s;
+                  }
+                }
+                .deliveryFlag {
+                  position: absolute;
+                  width: 56px;
+                  height: 56px;
+                  right: 4px;
+                  transition: 0.3s;
+                  opacity: 1;
+                  top: 4px;
+                  & > img {
+                    width: 100%;
+                  }
+                }
+
+                .flagList {
+                  opacity: 1;
+                  position: absolute;
+                  left: 4px;
+                  top: 4px;
+                  transition: 0.2s;
+
+                  .flag {
+                    width: 56px;
+                    height: 56px;
+                    font-size: 16px;
+                    line-height: 1.13;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 4px;
+                    color: rgb(255, 0, 0);
+                    font-weight: bold;
+                    text-align: center;
+                    justify-content: center;
+
+                    & > img {
+                      width: 100%;
+                      height: 100%;
+                    }
+                  }
+                  .event {
+                    padding: 1px 0px 0px;
+                    background: url("/images/main/sale/event.png") 0% 0% / 100% no-repeat;
+                  }
+                }
+              }
+
+              .thumbHover {
+                transition: 0.2s;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background-color: rebeccapurple;
+                height: 50px;
+                background-color: rgba(0, 0, 0, 0.7);
+                opacity: 0;
+                .inner {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  height: 100%;
+
+                  & > a {
+                    display: flex;
+                    justify-content: center;
+                    width: 50px;
+                    height: 50px;
+                    margin: 0 20px;
+                    align-items: center;
+
+                    & > span {
+                      width: 30px;
+                      height: 30px;
+                      font-size: 0;
+                      line-height: 0;
+                    }
+                  }
+                }
+              }
+
+              &:hover {
+                img {
+                  transform: scale(1.05);
+                }
+                .deliveryFlag {
+                  opacity: 0;
+                }
+                .thumbHover {
+                  opacity: 1;
+                }
+                .flagList {
+                  opacity: 0;
+                }
+              }
+            }
+
+            .stuffInfo {
+              width: 374px;
+              margin-top: 18px;
+              & > a {
+                margin-bottom: 5px;
+                font-size: 12px;
+                color: rgb(51, 51, 51);
+                & > p {
+                  line-height: 1.47;
+                  font-size: 14px;
+                  text-overflow: ellipsis;
+                  overflow: hidden;
+                  white-space: normal;
+                  overflow-wrap: break-word;
+                  &:first-child {
+                    font-size: 700;
+                    color: rgb(255, 0, 0);
+                  }
+                  &:last-child {
+                    height: 44px;
+                    line-height: 1.47;
+                  }
+                }
+              }
+              .priceWrap {
+                font-size: 12px;
+                color: rgb(51, 51, 51);
+                .orgPrice {
+                  display: block;
+                  height: 17px;
+                  margin: 6px 0px 7px;
+                  color: rgb(153, 153, 153);
+                  text-decoration: line-through;
+                  .priceValue {
+                    font-size: 15px;
+                    line-height: 15px;
+                    letter-spacing: -0.7px;
+                    font-weight: 900;
+                  }
+                }
+                .price {
+                  display: inline-block;
+                  .countDc {
+                    font-size: 27px;
+                    margin: 7px 5px 10px 0px;
+                    font-weight: 700;
+                    line-height: 0.59;
+                    color: rgb(255, 0, 0);
+                    letter-spacing: -0.68px;
+                  }
+                  .priceValue {
+                    font-size: 27px;
+                    line-height: 26px;
+                    letter-spacing: -0.5px;
+                    font-weight: 900;
+                  }
+                }
+                .priceQty {
+                  padding: 10px 0px 0px 6px;
+                  vertical-align: top;
+                  display: inline-block;
+                  color: rgb(102, 102, 102);
+                  font-size: 12px;
+                }
+              }
+              .prodScoreWrap {
+                margin-top: 11px;
+                font-size: 12px;
+                color: rgb(153, 153, 153);
+                line-height: 18px;
+                .icon {
+                  display: inline-block;
+                  background-image: url("/images/header/spritesheet.png");
+                  background-repeat: no-repeat;
+                  width: 15px;
+                  height: 15px;
+                  background-position: -3365px -5px;
+                  margin-right: 3px;
+                  vertical-align: top;
+                }
+
+                & > span {
+                  &:nth-child(2) {
+                    position: relative;
+                    margin-right: 5px;
+                    padding-right: 5px;
+
+                    &::after {
+                      display: inline-block;
+                      content: "";
+                      width: 1px;
+                      height: 11px;
+                      background-color: rgb(221, 221, 221);
+                      position: absolute;
+                      right: 0;
+                      top: 0;
+                      bottom: 0;
+                      margin: auto;
+                    }
+                  }
+                }
+              }
+
+              .benefitList {
+                margin-top: 3px;
+                font-size: 12px;
+                font-weight: 900;
+                color: rgb(153, 153, 153);
+                line-height: 19px;
+              }
+
+              .detailInfoBtm {
+                .btnProdMore {
+                  width: 100%;
+                  height: 36px;
+                  border-radius: 2px;
+                  border: 1px solid rgb(221, 221, 221);
+                  margin-top: 14px;
+                  & > span {
+                    &::after {
+                      content: "";
+                      display: inline-block;
+                      margin: -2px 0px 0px 4px;
+                      width: 6px;
+                      height: 9px;
+                      background: url("/images/main/sale/right-icon.png") 0px 0px no-repeat;
+                    }
+                  }
+                }
+              }
+            }
+
+            &:first-child,
+            &:nth-child(4) {
+              margin-left: 0px;
+            }
+
+            &:nth-child(n + 4) {
+              margin-top: 60px;
+            }
+          }
+        }
+      }
+      .btnWrap {
+        & > button {
+          width: 840px;
+          height: 70px;
+          font-size: 18px;
+          display: block;
+          color: rgb(51, 51, 51);
+          line-height: 70px;
+          letter-spacing: -0.45px;
+          border-radius: 3px;
+          border: 1px solid rgb(153, 153, 153);
+          background-color: #fff;
+          margin: auto;
+
+          & > img {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 13px;
+          }
+          & > span {
+            vertical-align: middle;
+            & > strong {
+              font-weight: 900;
+              letter-spacing: -2px;
+            }
+            .total {
+              color: rgb(153, 153, 153);
+            }
+          }
+        }
+      }
+    }
+
+    //oneplus
+    .oneplus-inner {
+      padding: 60px 0 70px;
+
+      & > h2 {
+        text-align: center;
+        & > img {
+          display: inline-block;
+        }
+      }
+
+      .btnLinks-wrap {
+        padding-top: 15px;
+        height: 80px;
+        border-bottom: 1px solid rgb(235, 235, 235);
+        .btnLiks {
+          display: flex;
+          width: 1200px;
+          justify-content: center;
+          margin: 0 auto;
+
+          background-color: #fff;
+          .btn {
+            position: relative;
+            max-width: 240px;
+            height: 80px;
+            width: 100%;
+            font-size: 16px;
+            color: rgb(51, 51, 51);
+
+            &:not(:last-child) {
+              &::after {
+                content: "";
+                position: absolute;
+                display: inline-block;
+                background-color: rgb(235, 235, 235);
+                height: 14px;
+                width: 1px;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+              }
+            }
+          }
+          .selected {
+            color: rgb(255, 0, 0);
+            font-weight: 600;
+            &::before {
+              content: "";
+              position: absolute;
+              display: inline-block;
+              height: 3px;
+              background-color: rgb(255, 0, 0);
+              margin: auto;
+              left: 0;
+              right: 0;
+              bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

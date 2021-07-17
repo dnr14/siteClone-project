@@ -1,0 +1,209 @@
+html { font-family: "Nanum Gothic", sans-serif; font-size: 20px; }
+
+body { height: 5000px; }
+
+a { text-decoration: none; display: block; }
+
+img { display: block; }
+
+button { border: none; outline: none; background-color: transparent; padding: 0; cursor: pointer; }
+
+#header { border-bottom: 2px solid #fe0605; }
+
+#header .container { width: 1200px; margin: 0 auto; }
+
+#header .container .search { padding-top: 29px; padding-bottom: 20px; }
+
+#header .container .search .flex-box { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+#header .container .search .flex-box .flex-item .search-box { width: 500px; }
+
+#header .container .search .flex-box .flex-item .search-box { position: relative; border: 1px solid #b7b7b7; height: 45px; width: 564px; border-radius: 30px; padding-right: 80px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+#header .container .search .flex-box .flex-item .search-box > input { width: 100%; border: none; height: 45px; padding: 10px 20px 11px; font-size: 15px; color: #333333; background-color: transparent; outline: none; }
+
+#header .container .search .flex-box .flex-item .search-box .search-icon { position: absolute; width: 24px; height: 24px; top: 0; right: 20px; background-image: url("/images/header/search.svg"); background-size: 24px auto; background-repeat: no-repeat; bottom: 0; margin: auto; cursor: pointer; }
+
+#header .container .search .flex-box .flex-item .links { width: 168px; margin-left: 30px; font-size: 0; }
+
+#header .container .search .flex-box .flex-item .links button { width: 36px; height: 36px; }
+
+#header .container .search .flex-box .flex-item .links .btnLogin { background: url("/images/header/header_spritesheet.png") 0px 0px no-repeat; }
+
+#header .container .search .flex-box .flex-item .links .userWrap { position: relative; display: inline-block; }
+
+#header .container .search .flex-box .flex-item .links .userWrap .btnUser { margin: 0 30px; background: url("/images/header/header_spritesheet.png") 0px -36px no-repeat; }
+
+#header .container .search .flex-box .flex-item .links .userWrap .btnUser:hover { background: url("/images/header/header_spritesheet.png") -36px -36px no-repeat; }
+
+#header .container .search .flex-box .flex-item .links .userWrap .userLinkList { display: none; position: absolute; z-index: 1; border-radius: 2px; padding: 8px 0; width: 103px; background-color: #fff; -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5); top: 46px; }
+
+#header .container .search .flex-box .flex-item .links .userWrap .userLinkList > button { width: 100%; font-size: 11px; display: block; padding: 6px 15px; color: #666666; line-height: 14px; height: 25px; font-size: 900; }
+
+#header .container .search .flex-box .flex-item .links .userWrap .userLinkList > button:hover { background-color: rgba(102, 102, 102, 0.1); color: #fe0605; }
+
+#header .container .search .flex-box .flex-item .links .btnCart { background: url("/images/header/header_spritesheet.png") 0px -72px no-repeat; }
+
+#header .container #nav { position: relative; }
+
+#header .container #nav .catagori { position: absolute; width: 149px; height: 43px; padding: 2px 0 0 25px; background: url("/images/header/spritesheet.png") -1526px -5px no-repeat transparent; text-align: left; }
+
+#header .container #nav .catagori > span { color: #fff; font-size: 15px; }
+
+#header .container #nav .catagori > span .icon { background: url("/images/header/spritesheet.png"); background-repeat: no-repeat; background-position: -1456px -5px; height: 11px; width: 10px; display: inline-block; vertical-align: middle; margin-bottom: 6px; margin-right: 10px; }
+
+#header .container #nav .navbar-box { padding: 0px 0px 0px 149px; display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+#header .container #nav .navbar-box .navbar-item { -webkit-box-flex: 1; -ms-flex: 1; flex: 1; text-align: center; }
+
+#header .container #nav .navbar-box .navbar-item > a { color: #333; padding: 0px 5px; font-size: 15px; line-height: 43px; height: 43px; }
+
+#header .container #nav .navbar-box .navbar-item > a:hover { color: #fe0605; }
+
+#header .container #nav .navbar-box .navbar-item:nth-child(1), #header .container #nav .navbar-box .navbar-item:nth-child(5) { position: relative; }
+
+#header .container #nav .navbar-box .navbar-item:nth-child(1)::before, #header .container #nav .navbar-box .navbar-item:nth-child(5)::before { position: absolute; content: ""; width: 5px; height: 5px; display: inline-block; background-color: red; border-radius: 50%; top: 7px; right: 25px; }
+
+#main .mainContent { width: 1230px; margin: 0 auto; border-bottom: 1px solid #eeeeee; }
+
+#main .mainContent .iconLinks { padding: 59px 16px 50px; }
+
+#main .mainContent .iconLinks > ul { font-size: 0; }
+
+#main .mainContent .iconLinks > ul > li { display: inline-block; vertical-align: top; width: 100px; }
+
+#main .mainContent .iconLinks > ul > li > a .txt { padding: 0 5px; margin-top: 13px; font-size: 15px; line-height: 1.13; color: #333333; text-align: center; }
+
+#main .mainContent .iconLinks > ul > li > a .txt > span { display: block; }
+
+#main .mainContent .iconLinks > ul > li:not(:first-child) { margin-left: 22px; }
+
+#main .mainContent .sale-inner { padding: 60px 0 70px; }
+
+#main .mainContent .sale-inner > h2 { text-align: center; }
+
+#main .mainContent .sale-inner > h2 > img { display: inline-block; }
+
+#main .mainContent .sale-inner .btnLinks-wrap { padding-top: 15px; height: 80px; border-bottom: 1px solid #ebebeb; }
+
+#main .mainContent .sale-inner .btnLinks-wrap .btnLiks { display: -webkit-box; display: -ms-flexbox; display: flex; width: 1200px; margin: 0 auto; background-color: #fff; }
+
+#main .mainContent .sale-inner .btnLinks-wrap .btnLiks .btn { position: relative; max-width: 240px; height: 80px; width: 100%; font-size: 16px; color: #333333; }
+
+#main .mainContent .sale-inner .btnLinks-wrap .btnLiks .btn:not(:last-child)::after { content: ""; position: absolute; display: inline-block; background-color: #ebebeb; height: 14px; width: 1px; right: 0; top: 0; bottom: 0; margin: auto; }
+
+#main .mainContent .sale-inner .btnLinks-wrap .btnLiks .selected { color: red; font-weight: 600; }
+
+#main .mainContent .sale-inner .btnLinks-wrap .btnLiks .selected::before { content: ""; position: absolute; display: inline-block; height: 3px; background-color: red; margin: auto; left: 0; right: 0; bottom: 0; }
+
+#main .mainContent .sale-inner .stuffs-wrap { padding: 40px 0px 70px; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item { margin-left: 39px; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap { border-radius: 3px; width: 374px; height: 374px; position: relative; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap > button { overflow: hidden; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap > button > span { display: block; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap > button > span > img { -webkit-transition: 0.2s; transition: 0.2s; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap > button .deliveryFlag { position: absolute; width: 56px; height: 56px; right: 4px; -webkit-transition: 0.3s; transition: 0.3s; opacity: 1; top: 4px; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap > button .deliveryFlag > img { width: 100%; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap > button .flagList { opacity: 1; position: absolute; left: 4px; top: 4px; -webkit-transition: 0.2s; transition: 0.2s; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap > button .flagList .flag { width: 56px; height: 56px; font-size: 16px; line-height: 1.13; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-bottom: 4px; color: red; font-weight: bold; text-align: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap > button .flagList .flag > img { width: 100%; height: 100%; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap > button .flagList .event { padding: 1px 0px 0px; background: url("/images/main/sale/event.png") 0% 0%/100% no-repeat; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap .thumbHover { -webkit-transition: 0.2s; transition: 0.2s; position: absolute; bottom: 0; left: 0; right: 0; background-color: rebeccapurple; height: 50px; background-color: rgba(0, 0, 0, 0.7); opacity: 0; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap .thumbHover .inner { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; height: 100%; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap .thumbHover .inner > a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 50px; height: 50px; margin: 0 20px; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap .thumbHover .inner > a > span { width: 30px; height: 30px; font-size: 0; line-height: 0; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap:hover img { -webkit-transform: scale(1.05); transform: scale(1.05); }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap:hover .deliveryFlag { opacity: 0; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap:hover .thumbHover { opacity: 1; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .thumbWrap:hover .flagList { opacity: 0; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo { width: 374px; margin-top: 18px; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo > a { margin-bottom: 5px; font-size: 12px; color: #333333; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo > a > p { line-height: 1.47; font-size: 14px; text-overflow: ellipsis; overflow: hidden; white-space: normal; overflow-wrap: break-word; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo > a > p:first-child { font-size: 700; color: red; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo > a > p:last-child { height: 44px; line-height: 1.47; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .priceWrap { font-size: 12px; color: #333333; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .priceWrap .orgPrice { display: block; height: 17px; margin: 6px 0px 7px; color: #999999; text-decoration: line-through; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .priceWrap .orgPrice .priceValue { font-size: 15px; line-height: 15px; letter-spacing: -0.7px; font-weight: 900; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .priceWrap .price { display: inline-block; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .priceWrap .price .countDc { font-size: 27px; margin: 7px 5px 10px 0px; font-weight: 700; line-height: 0.59; color: red; letter-spacing: -0.68px; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .priceWrap .price .priceValue { font-size: 27px; line-height: 26px; letter-spacing: -0.5px; font-weight: 900; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .priceWrap .priceQty { padding: 10px 0px 0px 6px; vertical-align: top; display: inline-block; color: #666666; font-size: 12px; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .prodScoreWrap { margin-top: 11px; font-size: 12px; color: #999999; line-height: 18px; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .prodScoreWrap .icon { display: inline-block; background-image: url("/images/header/spritesheet.png"); background-repeat: no-repeat; width: 15px; height: 15px; background-position: -3365px -5px; margin-right: 3px; vertical-align: top; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .prodScoreWrap > span:nth-child(2) { position: relative; margin-right: 5px; padding-right: 5px; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .prodScoreWrap > span:nth-child(2)::after { display: inline-block; content: ""; width: 1px; height: 11px; background-color: #dddddd; position: absolute; right: 0; top: 0; bottom: 0; margin: auto; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .benefitList { margin-top: 3px; font-size: 12px; font-weight: 900; color: #999999; line-height: 19px; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .detailInfoBtm .btnProdMore { width: 100%; height: 36px; border-radius: 2px; border: 1px solid #dddddd; margin-top: 14px; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item .stuffInfo .detailInfoBtm .btnProdMore > span::after { content: ""; display: inline-block; margin: -2px 0px 0px 4px; width: 6px; height: 9px; background: url("/images/main/sale/right-icon.png") 0px 0px no-repeat; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item:first-child, #main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item:nth-child(4) { margin-left: 0px; }
+
+#main .mainContent .sale-inner .stuffs-wrap .stuffs-flexbox .stuffs-item:nth-child(n + 4) { margin-top: 60px; }
+
+#main .mainContent .sale-inner .btnWrap > button { width: 840px; height: 70px; font-size: 18px; display: block; color: #333333; line-height: 70px; letter-spacing: -0.45px; border-radius: 3px; border: 1px solid #999999; background-color: #fff; margin: auto; }
+
+#main .mainContent .sale-inner .btnWrap > button > img { display: inline-block; vertical-align: middle; margin-right: 13px; }
+
+#main .mainContent .sale-inner .btnWrap > button > span { vertical-align: middle; }
+
+#main .mainContent .sale-inner .btnWrap > button > span > strong { font-weight: 900; letter-spacing: -2px; }
+
+#main .mainContent .sale-inner .btnWrap > button > span .total { color: #999999; }
+
+#main .mainContent .oneplus-inner { padding: 60px 0 70px; }
+
+#main .mainContent .oneplus-inner > h2 { text-align: center; }
+
+#main .mainContent .oneplus-inner > h2 > img { display: inline-block; }
+
+#main .mainContent .oneplus-inner .btnLinks-wrap { padding-top: 15px; height: 80px; border-bottom: 1px solid #ebebeb; }
+
+#main .mainContent .oneplus-inner .btnLinks-wrap .btnLiks { display: -webkit-box; display: -ms-flexbox; display: flex; width: 1200px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin: 0 auto; background-color: #fff; }
+
+#main .mainContent .oneplus-inner .btnLinks-wrap .btnLiks .btn { position: relative; max-width: 240px; height: 80px; width: 100%; font-size: 16px; color: #333333; }
+
+#main .mainContent .oneplus-inner .btnLinks-wrap .btnLiks .btn:not(:last-child)::after { content: ""; position: absolute; display: inline-block; background-color: #ebebeb; height: 14px; width: 1px; right: 0; top: 0; bottom: 0; margin: auto; }
+
+#main .mainContent .oneplus-inner .btnLinks-wrap .btnLiks .selected { color: red; font-weight: 600; }
+
+#main .mainContent .oneplus-inner .btnLinks-wrap .btnLiks .selected::before { content: ""; position: absolute; display: inline-block; height: 3px; background-color: red; margin: auto; left: 0; right: 0; bottom: 0; }
