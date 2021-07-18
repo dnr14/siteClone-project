@@ -1,0 +1,57 @@
+.logocollection_hero_bg{
+    text-align: center;
+    padding-top: 30vh;
+    height: 65vh;
+    margin: 0 auto;
+}
+.logo_grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 15px;
+}
+
+.logo_grid_inner{
+    height: 35vh;
+}
+.logo_img_project{
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    object-position: center;
+}
+
+@media screen and (max-width:768px) {
+    .logo_grid{
+        grid-template-columns: 1fr 1fr;
+        padding: 0 1%;
+    }
+    .logo_grid_colum{
+        grid-column: 1/3;
+    }
+    .logo_img_width{
+        width: 100%;
+    }
+   
+}
+
+/* 반응형 css */
+@media screen and (min-width: 768px) {
+    .logo_grid{
+        grid-template-columns: 1fr 1fr;
+    }
+   
+
+}
+
+@media screen and (min-width: 994px) {
+    .logo_grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .logo_grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
