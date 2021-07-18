@@ -1,0 +1,168 @@
+@import "./variable";
+
+#nav {
+  .wrap {
+    border-bottom: 1px solid #e4e8eb;
+    .container {
+      width: 1130px;
+      margin: 0 auto;
+      padding: 0 30px;
+
+      .menu_bar_wrap {
+        position: relative;
+        display: flex;
+        padding: 11px 0px;
+        .menu_bar {
+          .menu__item:nth-child(n + 2) {
+            margin-left: 12px;
+          }
+
+          .menu__item:nth-child(n + 5) {
+            & > a {
+              font-weight: 900;
+            }
+          }
+
+          .menu__item {
+            display: inline-block;
+            & > a {
+              color: $naver_color;
+              line-height: 30px;
+              font-size: 15px;
+              font-weight: 700;
+            }
+          }
+        }
+        .menu_bar2 {
+          margin-left: 12px;
+          .menu__item:nth-child(n + 2) {
+            margin-left: 12px;
+          }
+          .menu__item:nth-child(6n) {
+            & > a {
+              font-weight: 900;
+            }
+          }
+
+          .menu__item {
+            display: inline-block;
+            & > a {
+              color: $naver_black;
+              line-height: 30px;
+              font-size: 15px;
+              font-weight: 700;
+            }
+          }
+        }
+        .btn_more {
+          margin-left: 17px;
+          line-height: 30px;
+          color: $naver_black;
+          font-size: 13px;
+          &::after {
+            content: "";
+            background-image: url("/images/nav/more_black_18dp.svg");
+            display: inline-block;
+            vertical-align: middle;
+            width: 18px;
+            height: 18px;
+            margin-bottom: 2px;
+            margin-left: 5px;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        .weather_box {
+          top: 50%;
+          margin-top: -8px;
+          position: absolute;
+          right: 0;
+          height: 21px;
+          overflow: hidden;
+
+          .fine_dust {
+            img {
+              filter: invert(58%) sepia(65%) saturate(4681%) hue-rotate(189deg) brightness(98%) contrast(106%);
+            }
+          }
+
+          .weather {
+            & > li:nth-child(1) {
+              & > span {
+                margin: 0;
+                margin-left: 2px;
+              }
+              & > span:nth-child(2) {
+                font-size: 1rem;
+                color: #000;
+                font-weight: 900;
+              }
+            }
+
+            & > li:nth-child(2) {
+              & > span {
+                margin: 0;
+              }
+
+              & > span:nth-child(1) {
+                color: blue;
+              }
+              & > span:nth-child(3) {
+                color: red;
+              }
+            }
+          }
+
+          & > ul {
+            cursor: pointer;
+            transition: 0.5s;
+            & > li {
+              font-size: 13px;
+              display: inline-block;
+              &:nth-child(2) {
+                &::before {
+                  content: "";
+                  display: inline-block;
+                  width: 1px;
+                  height: 11px;
+                  margin: 0 3px;
+                  margin-bottom: 3px;
+                  border-left: 1px solid #e4e8eb;
+                }
+              }
+              &:last-child {
+                & > span {
+                  color: #777;
+                }
+              }
+
+              & > img {
+                display: inline-block;
+                width: 18px;
+              }
+
+              & > span {
+                vertical-align: super;
+                margin: 0 5px;
+                color: #777;
+                &:nth-child(3) {
+                  color: #000;
+                  font-weight: 900;
+                }
+              }
+            }
+
+            &:hover {
+              & > li:last-child {
+                & > span {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
