@@ -11,6 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
   <script src="/js/main.js" defer></script>
+  <script src="/js/mainSlide.js" defer></script>
+  <script src="/js/middleSlide.js" defer></script>
   <title>홈플러스</title>
 </head>
 
@@ -68,6 +70,102 @@
     </div>
   </header>
   <main id="main">
+
+    <section class="mainVisual">
+      <div class="slider-container">
+        <div class="sliderWrap" id="TopsliderWrap">
+          <ul class="slider" id="Topslider">
+            <li class="item">
+              <div>
+                <img src="/images/main/slide/slide-img1.jpeg" alt="slide-img1">
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <img src="/images/main/slide/slide-img2.jpeg" alt="slide-img2">
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <img src="/images/main/slide/slide-img3.jpeg" alt="slide-img3">
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <img src="/images/main/slide/slide-img4.jpeg" alt="slide-img4">
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <img src="/images/main/slide/slide-img5.jpeg" alt="slide-img5">
+              </div>
+            </li>
+            <li class="item">
+              <div>
+                <img src="/images/main/slide/slide-img6.jpeg" alt="slide-img6">
+              </div>
+            </li>
+            <li class="item">
+              <div class="flex-box">
+                <img src="/images/main/slide/flexBox/slide-img1.jpeg" alt="slide-img1">
+                <img src="/images/main/slide/flexBox/slide-img2.jpeg" alt="slide-img2">
+              </div>
+            </li>
+            <li class="item">
+              <div class="flex-box">
+                <img src="/images/main/slide/flexBox/slide-img3.jpeg" alt="slide-img3">
+                <img src="/images/main/slide/flexBox/slide-img4.jpeg" alt="slide-img4">
+              </div>
+            </li>
+            <li class="item">
+              <div class="flex-box">
+                <img src="/images/main/slide/flexBox/slide-img5.jpeg" alt="slide-img5">
+                <img src="/images/main/slide/flexBox/slide-img6.jpeg" alt="slide-img6">
+              </div>
+            </li>
+            <li class="item">
+              <div class="flex-box">
+                <img src="/images/main/slide/flexBox/slide-img7.jpeg" alt="slide-img7">
+                <img src="/images/main/slide/flexBox/slide-img8.jpeg" alt="slide-img8">
+              </div>
+            </li>
+            <li class="item">
+              <div class="flex-box">
+                <img src="/images/main/slide/flexBox/slide-img9.jpeg" alt="slide-img9">
+                <img src="/images/main/slide/flexBox/slide-img10.jpeg" alt="slide-img10">
+              </div>
+            </li>
+            <li class="item">
+              <div class="flex-box">
+                <img src="/images/main/slide/flexBox/slide-img11.jpeg" alt="slide-img11">
+                <img src="/images/main/slide/flexBox/slide-img12.jpeg" alt="slide-img12">
+              </div>
+            </li>
+            <li class="item">
+              <div class="flex-box">
+                <img src="/images/main/slide/flexBox/slide-img13.jpeg" alt="slide-img13">
+                <img src="/images/main/slide/flexBox/slide-img14.jpeg" alt="slide-img14">
+              </div>
+            </li>
+            <li class="item">
+              <div class="flex-box">
+                <img src="/images/main/slide/flexBox/slide-img15.jpeg" alt="slide-img15">
+                <img src="/images/main/slide/flexBox/slide-img16.jpeg" alt="slide-img16">
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="controlInner">
+          <div class="controlBtnArea">
+            <button class="btnPause" id="btnPlayOrPause"></button>
+          </div>
+          <span class="slideTotal" id="pageNumber"></span>
+        </div>
+        <button class="btnNext" id="TopSlideBtnNext"></button>
+        <button class="btnPrev" id="TopSlideBtnPrev"></button>
+      </div>
+    </section>
+
     <section class="mainContent">
       <div class="iconLinks">
         <ul>
@@ -154,6 +252,29 @@
           </li>
         </ul>
       </div>
+    </section>
+    <section class="mainContent">
+      <div class="bannerSlider">
+        <div class="sliderWrap" id="middleSlideWrap">
+          <ul class="slide" id="middleSlide">
+            <li class="item">
+              <img src="/images/main/middleSlide/middle-img1.jpeg" alt="middle-img1">
+            </li>
+            <li class="item">
+              <img src="/images/main/middleSlide/middle-img2.jpeg" alt="middle-img2">
+            </li>
+            <li class="item">
+              <img src="/images/main/middleSlide/middle-img3.jpeg" alt="middle-img3">
+            </li>
+            <li class="item">
+              <img src="/images/main/middleSlide/middle-img4.jpeg" alt="middle-img4">
+            </li>
+          </ul>
+        </div>
+        <button class="btnNext" id="middlebtnNext"></button>
+        <button class="btnPrev" id="middlebtnPrev"></button>
+      </div>
+
     </section>
     <section class="mainContent">
       <div class="sale-inner">
