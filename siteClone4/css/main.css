@@ -1,0 +1,82 @@
+/* GLOBAL */
+html {font-size: 100%;  font-family: 'Nanum Gothic', sans-serif;}
+img { display: block;}
+.inner {  width: 1100px;  margin: auto;}
+header {  position: fixed;  right: 0;  left: 0;  margin: auto;}
+
+
+/* HEADER */
+.logo-box {  color: #FFF;  font-size: 1.5rem;  width: 1000px;  height: 50px;  margin: auto;  display: flex;  justify-content: space-between;  align-items: center;background-color: transparent;  padding-top: 15px;}
+.logo-box .logo {  display: flex;  align-items: center;}
+.logo-box .logo img {  width: 50px;  height: 35px;}
+.logo-box .logo span {  margin-left: 15px;}
+.logo-box .hambuger {  display: block;  border-top: 1px solid #FFF;  height: 30px;  width: 20px;  margin: 5px 10px 0 10px;}
+.logo-box .hambuger::before,
+.logo-box .hambuger::after {  display: block;  content: "";  border-top: 1px solid #FFF;  height: 1px;  width: inherit;  margin-top: 10px;}
+
+/* MAIN */
+.main {  background-color: #505A66;}
+.main .inner {  display: flex;  min-height: 500px;  padding-top: 150px;  padding-bottom: 100px;  gap: 50px;}
+.main .inner .img {  flex: 1;  background-image: url("../images/sky.jpg");  background-position: center;  background-repeat: no-repeat;  background-size: cover;}
+.main .inner .login {  padding-top: 50px;  flex: 1;  font-size: 2rem;  color: #FFF;  font-weight: bold;}
+.main .inner .login li input {  display: block;  margin: 20px 0;  height: 1.875rem;  width: 13.75rem;  padding-left: 10px;  outline: none;  border-radius: 5px;  border: 1px solid #505A66;color: #000;letter-spacing: .1rem;}
+.main .inner .login li button {  display: inline-block;  height: 2rem;  width: 14.7rem;  background-color: #01527E;  outline: none;  border-radius: 5px;  border: none;color: #FFF;cursor: pointer; position: relative;}
+.main .inner .login li button::before {  display: block;  content: "";  width: 0px;  height: 1px;  border-top: 1px solid #FFF;  position: absolute;  top: 0;  bottom: 0;  margin: auto;margin-left: 20px; transition: .5s;}
+.main .inner .login li button:active,
+.main .inner .login li button:hover {  background-color: rgba(1, 82, 126, .7);  border: 1px solid #01527E;}
+.main .inner .login li button:hover::before {  width: 40px;}
+
+/* MAIN-2 */
+.main-2{}
+.main-2 .inner{padding: 50px 0;}
+.main-2 .inner h3{font-size: 2rem; text-align: center; font-weight: bold;letter-spacing: .09rem;padding: 25px 0;}
+.main-2 .inner .btn{text-align: center; padding-top: 50px;} 
+.main-2 .inner .btn button{transition: .5s; height: 40px; width: 150px; letter-spacing: 0.09rem; font-size: 1rem; color: #FFF; font-weight: bold; background-color:#01527E; border: none; border-radius: 5px; cursor: pointer;} 
+.main-2 .inner .btn button:hover{  background-color: rgba(1, 82, 126, .7);border: 1px solid #01527E;}
+.main-2 .inner .context{display: flex;}
+.main-2 .inner .context div{flex: 1; text-align: center; letter-spacing: .09rem; box-sizing: border-box; padding: 15px;}
+.main-2 .inner .context div h1{ font-size: 1.5rem; font-weight: bold; padding: 20px 0; position: relative;}
+.main-2 .inner .context div h1 img{position: absolute; width: 2rem; top: 1.125rem; left: 4.375rem;}
+.main-2 .inner .context div p{ font-size: 1rem; line-height: 1.5rem;} 
+
+
+/* MAIN-3 */
+
+.main-3{background-color: #eeeff4;}
+.main-3 .inner{padding: 100px 0;}
+.main-3 .inner h3{ padding: 25px 0; font-size: 2.5rem; font-weight: bold; text-align: center; letter-spacing: .1rem;}
+.main-3 .inner .content{display: flex; gap: 3.125rem; min-height: 500px; padding: 25px 0;}
+.main-3 .inner .content .img{flex: 1; background-image: url("../images/sky.jpg"); background-position: center; background-size: cover; background-repeat: no-repeat;}
+.main-3 .inner .content .items{ flex: 1;}
+.main-3 .inner .content .items .item{ padding: 0 0 35px 0; position: relative;}
+.main-3 .inner .content .items .item p{ padding: 10px 0; margin-left: 100px; letter-spacing: 0.09rem;}
+.main-3 .inner .content .items .item p:first-child{ font-size: 1.5rem; font-weight: bold;}
+.main-3 .inner .content .items .item img{ position: absolute; width: 3.125rem; top: 5px; left: 20px;}
+
+
+/* MAIN-4 */
+
+.main-4{background-color: #BEBFC3; position: relative;}
+.main-4 .inner{display: flex; padding: 100px 0; gap: 30px; height: 500px;}
+.main-4 .inner div{ flex: 1; text-align: center; padding: 80px 15px; background-color: #FFF; height: 400px; box-sizing: border-box; margin: 50px 0; border-radius: 5px;}
+.main-4 .inner div:nth-child(2){ padding:100px 0; margin: 0; height: 100%;}
+.main-4 .inner div h3{font-size: 1.5rem; font-weight: bold; padding: 15px 0; letter-spacing: 0.15rem;}
+.main-4 .inner div p{padding: 15px 0; line-height: 2rem;}
+.main-4 .inner div img{width: 50px; margin: 30px auto;}
+.main-4 .inner div .btn{transition: .5s; height: 40px; width: 150px; letter-spacing: 0.09rem; font-size: 1rem; color: #FFF; font-weight: bold; background-color:#01527E; border: none; border-radius: 5px; margin-top: 25px; cursor: pointer;} 
+.main-4 .inner div .btn:hover{  background-color: rgba(1, 82, 126, .7);border: 1px solid #01527E;}
+.main-4 .material-icons {position: absolute; top: 0; bottom: 0 ; margin: auto; height: 24px; cursor: pointer; padding: 20px 20px}
+.main-4 .material-icons::before{transition: .5s; display: block; content: " "; position: absolute;  width: 100%;  height: 100%;  top: 0;  left: 0;  right: 0;  margin: auto; border: 1px solid transparent;  border-radius: 50%;}
+.main-4 .material-icons:hover::before{border: 1px solid #000;}
+.main-4 .material-icons.right {right: 50px;}
+.main-4 .material-icons.left {left: 50px;}
+
+
+/* FOOTER */
+footer{background-color: #505A66;}
+footer .inner{display: flex; flex-direction: column; padding: 75px 0; text-align: center; color: #FFF;}
+footer .inner h3{font-size: 2.5rem; font-weight: bold; padding: 25px 0; letter-spacing: 0.09rem;}
+footer .inner p{font-size: 1rem; padding-bottom: 25px; letter-spacing: 0.1rem;}
+footer .inner div{display: flex; width: 40%; margin: auto; height: 50px;}
+footer .inner div input{ flex: 7; padding-left: 20px;font-size: 1rem; letter-spacing: .05rem; outline: none;}
+footer .inner div button{ flex: 3; font-size: 1rem; letter-spacing: .1rem;}
