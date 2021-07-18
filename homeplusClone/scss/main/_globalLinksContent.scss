@@ -1,0 +1,225 @@
+#globalLinks-content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: 4500;
+  .globalLinks-content-inner {
+    display: none;
+    width: 0px;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    background-color: rgb(17, 17, 17);
+    color: rgb(221, 221, 221);
+    .switch {
+      position: absolute;
+      top: calc(50% - 84px);
+      right: 100%;
+      width: 43px;
+      height: 168px;
+      background: url("/images/globalLinksContent/icon_149.png");
+      & > img {
+        display: inline-block;
+      }
+    }
+
+    .greeting {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 29px;
+      height: 180px;
+      box-sizing: border-box;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.15);
+
+      & > p {
+        line-height: 1.6;
+        font-size: 11px;
+        color: rgb(255, 255, 255);
+
+        & > strong {
+          display: block;
+          font-size: 15px;
+          & > button {
+            color: rgb(255, 255, 255);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    .quickList {
+      padding: 30px 15px 0px;
+      .item {
+        &:not(:first-child) {
+          border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        width: 100%;
+        .title {
+          display: flex;
+          align-items: center;
+          margin-bottom: 13px;
+
+          & > span {
+            font-size: 15px;
+          }
+        }
+        .items {
+          margin-bottom: 30px;
+          & > div {
+            position: relative;
+            padding: 15px 10px;
+            line-height: 16px;
+            font-size: 12px;
+            border-radius: 5px 5px 0px 0px;
+            background-color: rgba(255, 255, 255, 0.15);
+            color: rgb(221, 221, 221);
+            min-height: 90px;
+            box-sizing: border-box;
+
+            & > p {
+              margin-bottom: 10px;
+              min-height: 16px;
+              color: rgb(204, 204, 204);
+            }
+
+            & > img {
+              position: absolute;
+              top: 7px;
+              right: 10px;
+              width: 30px;
+              height: 30px;
+            }
+            .content {
+              line-height: 16px;
+            }
+          }
+
+          & > button {
+            line-height: 1;
+            text-align: center;
+            background-color: rgb(73, 73, 73);
+            display: flex;
+            font-size: 12px;
+            height: 30px;
+            align-items: center;
+            border-radius: 0px 0px 5px 5px;
+            color: rgba(255, 255, 255, 0.5);
+            width: 100%;
+            justify-content: center;
+
+            & > img {
+              margin-right: 5px;
+            }
+          }
+        }
+        .title__link {
+          display: flex;
+          width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          padding: 15px 0px;
+          box-sizing: border-box;
+          font-size: 16px;
+          .title {
+            font-size: 14px;
+            margin-bottom: 0;
+            color: rgb(238, 238, 238);
+          }
+        }
+      }
+      .recentItems {
+        .item__title {
+          margin-top: 30px;
+          font-size: 14px;
+          padding-bottom: 12px;
+          color: rgb(238, 238, 238);
+        }
+        & > div {
+          position: relative;
+          width: 100%;
+          padding: 15px 10px;
+          box-sizing: border-box;
+          font-size: 12px;
+          line-height: 16px;
+          border-radius: 5px 5px 0px 0px;
+          background-color: rgba(255, 255, 255, 0.15);
+          color: rgb(221, 221, 221);
+          min-height: 90px;
+
+          & > div {
+            margin: -5px 0px;
+            .recent {
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              width: 100%;
+              height: 100%;
+              color: rgb(153, 153, 153);
+              & > button {
+                margin: 5px;
+                width: 40px;
+                height: 40px;
+                border-radius: 3px;
+                & > span {
+                  display: block;
+                  width: 100%;
+                  height: 100%;
+
+                  & > img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 3px;
+                  }
+                }
+              }
+            }
+          }
+        }
+        & > button {
+          line-height: 1;
+          text-align: center;
+          background-color: rgb(73, 73, 73);
+          display: flex;
+          height: 30px;
+          font-size: 12px;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          border-radius: 0px 0px 5px 5px;
+          color: rgba(255, 255, 255, 0.5);
+        }
+      }
+    }
+
+    .goToTop {
+      margin-top: auto;
+      padding: 10px 0px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      color: rgb(255, 255, 255);
+      background-color: rgba(255, 255, 255, 0.15);
+
+      & > i {
+        background-image: url("/images/header/spritesheet.png");
+        background-repeat: no-repeat;
+        background-position: -2524px -5px;
+        width: 16px;
+        height: 18px;
+        display: inline-block;
+      }
+      & > span {
+        display: block;
+        margin-top: 3px;
+      }
+    }
+  }
+  .active {
+    display: flex;
+    width: 200px;
+  }
+}

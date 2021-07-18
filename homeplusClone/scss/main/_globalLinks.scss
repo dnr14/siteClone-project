@@ -1,0 +1,86 @@
+#globalLinks {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 4500;
+  display: flex;
+  height: 412px;
+  box-sizing: border-box;
+
+  .globalLinks-inner {
+    padding-top: 30px;
+    position: relative;
+    align-self: center;
+    box-sizing: border-box;
+    width: 60px;
+    border-right: none;
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 20px;
+    background-color: rgb(244, 246, 249);
+    height: 100%;
+
+    .switch {
+      position: absolute;
+      top: calc(50% - 23px);
+      right: calc(100% - 23px);
+      align-self: center;
+      width: 46px;
+      height: 46px;
+      z-index: 1;
+    }
+
+    .wingMiniItem {
+      margin-top: 30px;
+      position: relative;
+      text-align: center;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      .iconButton {
+        position: relative;
+        text-align: center;
+        line-height: 1;
+        color: rgb(102, 102, 102);
+
+        & > img {
+          margin: 0 auto 6px;
+          width: 30px;
+          height: 30px;
+          border-radius: 3px;
+          overflow: hidden;
+        }
+
+        & > span {
+          display: block;
+        }
+      }
+
+      .goToTop {
+        padding: 10px 0;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        background-color: rgb(102, 102, 102);
+        font-size: 12px;
+        width: 100%;
+        border-bottom-left-radius: 16px;
+
+        .icon {
+          background-image: url("/images/header/spritesheet.png");
+          background-repeat: no-repeat;
+          width: 16px;
+          height: 18px;
+          background-position: -2524px -5px;
+          display: inline-block;
+        }
+        & > span {
+          margin-top: 5px;
+          display: block;
+        }
+      }
+    }
+  }
+}

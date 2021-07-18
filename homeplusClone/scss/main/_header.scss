@@ -72,6 +72,7 @@
 
               .userLinkList {
                 display: none;
+                margin-top: -10px;
                 position: absolute;
                 z-index: 1;
                 border-radius: 2px;
@@ -95,6 +96,9 @@
                     color: rgb(254, 6, 5);
                   }
                 }
+              }
+              .active {
+                display: block;
               }
             }
             .btnCart {

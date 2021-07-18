@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/main.js" defer></script>
   <title>홈플러스</title>
 </head>
 
@@ -32,9 +33,9 @@
           <div class="flex-item">
             <div class="links">
               <button class="btnLogin"></button>
-              <div class="userWrap">
+              <div class="userWrap" id="userWrap">
                 <button class="btnUser"></button>
-                <div class="userLinkList">
+                <div class="userLinkList" id="userLinkList">
                   <button>주문/배송조회</button>
                   <button>고객센터</button>
                   <button>회원정보</button>
@@ -487,9 +488,6 @@
               </div>
             </div>
 
-
-
-
           </div>
         </div>
         <div class="btnWrap">
@@ -520,9 +518,917 @@
                 <button class="btn">증정혜택</button>
           </div>
         </div>
+
+        <div class="stuffs-wrap">
+          <div class="stuffs-flexbox">
+            <div class="stuffs-item">
+              <div class="thumbWrap">
+                <button>
+                  <span>
+                    <img src="/images/main/onePlus/stuffs-img1.png" alt="stuffs-img1">
+                  </span>
+                  <div class="deliveryFlag">
+                    <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                  </div>
+                  <div class="flagList">
+                    <span class="flag event">1+1</span>
+                  </div>
+                </button>
+                <div class="thumbHover">
+                  <div class="inner">
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                      </span>
+                    </a>
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="stuffInfo">
+                <a href="javascript:void(0)">
+                  <p></p>
+                  <p>동원 덴마크 인포켓 스트링치즈 300G</p>
+                </a>
+                <div class="priceWrap">
+                  <div class="price">
+                    <strong class="priceValue">13,000</strong>원
+                  </div>
+                  <span class="priceQty">
+                    (100G 당<span>433.3</span>원)
+                  </span>
+                </div>
+                <div class="prodScoreWrap">
+                  <i class="icon"></i>
+                  <span>4.5(31건)</span>
+                  <span>월 1,859개 구매</span>
+                </div>
+                <div class="detailInfoBtm">
+                  <button class="btnProdMore">
+                    <span>행사상품 보기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="stuffs-item">
+              <div class="thumbWrap">
+                <button>
+                  <span>
+                    <img src="/images/main/onePlus/stuffs-img2.png" alt="stuffs-img2">
+                  </span>
+                  <div class="deliveryFlag">
+                    <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                  </div>
+                  <div class="flagList">
+                    <span class="flag event">1+1</span>
+                  </div>
+                </button>
+                <div class="thumbHover">
+                  <div class="inner">
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                      </span>
+                    </a>
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="stuffInfo">
+                <a href="javascript:void(0)">
+                  <p></p>
+                  <p>깨끗한나라 데일리에어 키친타올 2겹 150매*6롤</p>
+                </a>
+                <div class="priceWrap">
+                  <div class="price">
+                    <strong class="priceValue">9,900</strong>원
+                  </div>
+                  <span class="priceQty">
+                    (1매 당<span>11.1</span>원)
+                  </span>
+                </div>
+                <div class="prodScoreWrap">
+                  <i class="icon"></i>
+                  <span>4.8(4,929건)</span>
+                  <span>월 4,003개 구매</span>
+                </div>
+                <div class="detailInfoBtm">
+                  <button class="btnProdMore">
+                    <span>행사상품 보기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="stuffs-item">
+              <div class="thumbWrap">
+                <button>
+                  <span>
+                    <img src="/images/main/onePlus/stuffs-img3.png" alt="stuffs-img3">
+                  </span>
+                  <div class="deliveryFlag">
+                    <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                  </div>
+                  <div class="flagList">
+                    <span class="flag event">1+1</span>
+                  </div>
+                </button>
+                <div class="thumbHover">
+                  <div class="inner">
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                      </span>
+                    </a>
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="stuffInfo">
+                <a href="javascript:void(0)">
+                  <p></p>
+                  <p>동원 미니 돈까스 1KG</p>
+                </a>
+                <div class="priceWrap">
+                  <div class="price">
+                    <strong class="priceValue">6,990</strong>원
+                  </div>
+                  <span class="priceQty">
+                    (100G 당<span>699</span>원)
+                  </span>
+                </div>
+                <div class="prodScoreWrap">
+                  <i class="icon"></i>
+                  <span>4.8(4,553건)</span>
+                  <span>월 10,237개 구매</span>
+                </div>
+                <div class="detailInfoBtm">
+                  <button class="btnProdMore">
+                    <span>행사상품 보기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="stuffs-item">
+              <div class="thumbWrap">
+                <button>
+                  <span>
+                    <img src="/images/main/onePlus/stuffs-img4.png" alt="stuffs-img4">
+                  </span>
+                  <div class="deliveryFlag">
+                    <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                  </div>
+                  <div class="flagList">
+                    <span class="flag event">1+1</span>
+                  </div>
+                </button>
+                <div class="thumbHover">
+                  <div class="inner">
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                      </span>
+                    </a>
+                    <a href="javscript:void(0)">
+                      <span>
+                        <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="stuffInfo">
+                <a href="javascript:void(0)">
+                  <p></p>
+                  <p>생과즙 바나나 우유 225ML *4</p>
+                </a>
+                <div class="priceWrap">
+                  <div class="price">
+                    <strong class="priceValue">4,280</strong>원
+                  </div>
+                  <span class="priceQty">
+                    (100G 당<span>475.6</span>원)
+                  </span>
+                </div>
+                <div class="prodScoreWrap">
+                  <i class="icon"></i>
+                  <span>4.8(5,456건)</span>
+                  <span>월 19,619개 구매</span>
+                </div>
+                <div class="detailInfoBtm">
+                  <button class="btnProdMore">
+                    <span>행사상품 보기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="btnWrap">
+          <button>
+            <span>
+              <strong>1+1</strong> 더 많은 상품보기
+              <img src="/images/main/onePlus/ico_more01.png" alt="icon">
+            </span>
+          </button>
+        </div>
+
+
+      </div>
+    </section>
+    <section class="mainContent">
+      <div class="recommend-inner">
+        <div class="recommend-wrap">
+          <h2>
+            <img src="/images/main/recommend/recommend-banner.png" alt="recommend-banner">
+          </h2>
+
+          <div class="btnLinks-wrap">
+            <div class="btnLiks">
+              <button class="btn selected">간편식당☆<button>
+                  <button class="btn">쌀야채가게</button>
+                  <button class="btn">생선가게◆</button>
+                  <button class="btn">치즈목장◇</button>
+            </div>
+          </div>
+
+          <div class="stuffs-wrap">
+            <div class="stuffs-flexbox">
+              <div class="stuffs-item">
+                <div class="thumbWrap">
+                  <button>
+                    <span>
+                      <img src="/images/main/onePlus/stuffs-img1.png" alt="stuffs-img1">
+                    </span>
+                    <div class="deliveryFlag">
+                      <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                    </div>
+                    <div class="flagList">
+                      <span class="flag event">1+1</span>
+                    </div>
+                  </button>
+                  <div class="thumbHover">
+                    <div class="inner">
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                        </span>
+                      </a>
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="stuffInfo">
+                  <a href="javascript:void(0)">
+                    <p></p>
+                    <p>동원 덴마크 인포켓 스트링치즈 300G</p>
+                  </a>
+                  <div class="priceWrap">
+                    <div class="price">
+                      <strong class="priceValue">13,000</strong>원
+                    </div>
+                    <span class="priceQty">
+                      (100G 당<span>433.3</span>원)
+                    </span>
+                  </div>
+                  <div class="prodScoreWrap">
+                    <i class="icon"></i>
+                    <span>4.5(31건)</span>
+                    <span>월 1,859개 구매</span>
+                  </div>
+                  <div class="detailInfoBtm">
+                    <button class="btnProdMore">
+                      <span>행사상품 보기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stuffs-item">
+                <div class="thumbWrap">
+                  <button>
+                    <span>
+                      <img src="/images/main/onePlus/stuffs-img1.png" alt="stuffs-img1">
+                    </span>
+                    <div class="deliveryFlag">
+                      <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                    </div>
+                    <div class="flagList">
+                      <span class="flag event">1+1</span>
+                    </div>
+                  </button>
+                  <div class="thumbHover">
+                    <div class="inner">
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                        </span>
+                      </a>
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="stuffInfo">
+                  <a href="javascript:void(0)">
+                    <p></p>
+                    <p>동원 덴마크 인포켓 스트링치즈 300G</p>
+                  </a>
+                  <div class="priceWrap">
+                    <div class="price">
+                      <strong class="priceValue">13,000</strong>원
+                    </div>
+                    <span class="priceQty">
+                      (100G 당<span>433.3</span>원)
+                    </span>
+                  </div>
+                  <div class="prodScoreWrap">
+                    <i class="icon"></i>
+                    <span>4.5(31건)</span>
+                    <span>월 1,859개 구매</span>
+                  </div>
+                  <div class="detailInfoBtm">
+                    <button class="btnProdMore">
+                      <span>행사상품 보기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stuffs-item">
+                <div class="thumbWrap">
+                  <button>
+                    <span>
+                      <img src="/images/main/onePlus/stuffs-img1.png" alt="stuffs-img1">
+                    </span>
+                    <div class="deliveryFlag">
+                      <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                    </div>
+                    <div class="flagList">
+                      <span class="flag event">1+1</span>
+                    </div>
+                  </button>
+                  <div class="thumbHover">
+                    <div class="inner">
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                        </span>
+                      </a>
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="stuffInfo">
+                  <a href="javascript:void(0)">
+                    <p></p>
+                    <p>동원 덴마크 인포켓 스트링치즈 300G</p>
+                  </a>
+                  <div class="priceWrap">
+                    <div class="price">
+                      <strong class="priceValue">13,000</strong>원
+                    </div>
+                    <span class="priceQty">
+                      (100G 당<span>433.3</span>원)
+                    </span>
+                  </div>
+                  <div class="prodScoreWrap">
+                    <i class="icon"></i>
+                    <span>4.5(31건)</span>
+                    <span>월 1,859개 구매</span>
+                  </div>
+                  <div class="detailInfoBtm">
+                    <button class="btnProdMore">
+                      <span>행사상품 보기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stuffs-item">
+                <div class="thumbWrap">
+                  <button>
+                    <span>
+                      <img src="/images/main/onePlus/stuffs-img1.png" alt="stuffs-img1">
+                    </span>
+                    <div class="deliveryFlag">
+                      <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                    </div>
+                    <div class="flagList">
+                      <span class="flag event">1+1</span>
+                    </div>
+                  </button>
+                  <div class="thumbHover">
+                    <div class="inner">
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                        </span>
+                      </a>
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="stuffInfo">
+                  <a href="javascript:void(0)">
+                    <p></p>
+                    <p>동원 덴마크 인포켓 스트링치즈 300G</p>
+                  </a>
+                  <div class="priceWrap">
+                    <div class="price">
+                      <strong class="priceValue">13,000</strong>원
+                    </div>
+                    <span class="priceQty">
+                      (100G 당<span>433.3</span>원)
+                    </span>
+                  </div>
+                  <div class="prodScoreWrap">
+                    <i class="icon"></i>
+                    <span>4.5(31건)</span>
+                    <span>월 1,859개 구매</span>
+                  </div>
+                  <div class="detailInfoBtm">
+                    <button class="btnProdMore">
+                      <span>행사상품 보기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stuffs-item">
+                <div class="thumbWrap">
+                  <button>
+                    <span>
+                      <img src="/images/main/onePlus/stuffs-img1.png" alt="stuffs-img1">
+                    </span>
+                    <div class="deliveryFlag">
+                      <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                    </div>
+                    <div class="flagList">
+                      <span class="flag event">1+1</span>
+                    </div>
+                  </button>
+                  <div class="thumbHover">
+                    <div class="inner">
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                        </span>
+                      </a>
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="stuffInfo">
+                  <a href="javascript:void(0)">
+                    <p></p>
+                    <p>동원 덴마크 인포켓 스트링치즈 300G</p>
+                  </a>
+                  <div class="priceWrap">
+                    <div class="price">
+                      <strong class="priceValue">13,000</strong>원
+                    </div>
+                    <span class="priceQty">
+                      (100G 당<span>433.3</span>원)
+                    </span>
+                  </div>
+                  <div class="prodScoreWrap">
+                    <i class="icon"></i>
+                    <span>4.5(31건)</span>
+                    <span>월 1,859개 구매</span>
+                  </div>
+                  <div class="detailInfoBtm">
+                    <button class="btnProdMore">
+                      <span>행사상품 보기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stuffs-item">
+                <div class="thumbWrap">
+                  <button>
+                    <span>
+                      <img src="/images/main/onePlus/stuffs-img1.png" alt="stuffs-img1">
+                    </span>
+                    <div class="deliveryFlag">
+                      <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                    </div>
+                    <div class="flagList">
+                      <span class="flag event">1+1</span>
+                    </div>
+                  </button>
+                  <div class="thumbHover">
+                    <div class="inner">
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                        </span>
+                      </a>
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="stuffInfo">
+                  <a href="javascript:void(0)">
+                    <p></p>
+                    <p>동원 덴마크 인포켓 스트링치즈 300G</p>
+                  </a>
+                  <div class="priceWrap">
+                    <div class="price">
+                      <strong class="priceValue">13,000</strong>원
+                    </div>
+                    <span class="priceQty">
+                      (100G 당<span>433.3</span>원)
+                    </span>
+                  </div>
+                  <div class="prodScoreWrap">
+                    <i class="icon"></i>
+                    <span>4.5(31건)</span>
+                    <span>월 1,859개 구매</span>
+                  </div>
+                  <div class="detailInfoBtm">
+                    <button class="btnProdMore">
+                      <span>행사상품 보기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stuffs-item">
+                <div class="thumbWrap">
+                  <button>
+                    <span>
+                      <img src="/images/main/onePlus/stuffs-img1.png" alt="stuffs-img1">
+                    </span>
+                    <div class="deliveryFlag">
+                      <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                    </div>
+                    <div class="flagList">
+                      <span class="flag event">1+1</span>
+                    </div>
+                  </button>
+                  <div class="thumbHover">
+                    <div class="inner">
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                        </span>
+                      </a>
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="stuffInfo">
+                  <a href="javascript:void(0)">
+                    <p></p>
+                    <p>동원 덴마크 인포켓 스트링치즈 300G</p>
+                  </a>
+                  <div class="priceWrap">
+                    <div class="price">
+                      <strong class="priceValue">13,000</strong>원
+                    </div>
+                    <span class="priceQty">
+                      (100G 당<span>433.3</span>원)
+                    </span>
+                  </div>
+                  <div class="prodScoreWrap">
+                    <i class="icon"></i>
+                    <span>4.5(31건)</span>
+                    <span>월 1,859개 구매</span>
+                  </div>
+                  <div class="detailInfoBtm">
+                    <button class="btnProdMore">
+                      <span>행사상품 보기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="stuffs-item">
+                <div class="thumbWrap">
+                  <button>
+                    <span>
+                      <img src="/images/main/onePlus/stuffs-img1.png" alt="stuffs-img1">
+                    </span>
+                    <div class="deliveryFlag">
+                      <img src="/images/main/sale/deliveryFlagimg1.png" alt="deliveryFlagimg1">
+                    </div>
+                    <div class="flagList">
+                      <span class="flag event">1+1</span>
+                    </div>
+                  </button>
+                  <div class="thumbHover">
+                    <div class="inner">
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon1.png" alt="thumicon1">
+                        </span>
+                      </a>
+                      <a href="javscript:void(0)">
+                        <span>
+                          <img src="/images/main/sale/thumicon2.png" alt="thumicon2">
+                        </span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="stuffInfo">
+                  <a href="javascript:void(0)">
+                    <p></p>
+                    <p>동원 덴마크 인포켓 스트링치즈 300G</p>
+                  </a>
+                  <div class="priceWrap">
+                    <div class="price">
+                      <strong class="priceValue">13,000</strong>원
+                    </div>
+                    <span class="priceQty">
+                      (100G 당<span>433.3</span>원)
+                    </span>
+                  </div>
+                  <div class="prodScoreWrap">
+                    <i class="icon"></i>
+                    <span>4.5(31건)</span>
+                    <span>월 1,859개 구매</span>
+                  </div>
+                  <div class="detailInfoBtm">
+                    <button class="btnProdMore">
+                      <span>행사상품 보기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   </main>
+  <footer id="footer">
+    <div class="footerLinks">
+      <div class="footerLinks-inner">
+        <div class="footerLinks-right">
+          <a href="javascript:void(0)">회사소개</a>
+          <a href="javascript:void(0)">공지사항</a>
+          <a href="javascript:void(0)">이용약관</a>
+          <a href="javascript:void(0)"><strong>개인정보처리방침</strong></a>
+          <a href="javascript:void(0)">청소년보호정책</a>
+          <a href="javascript:void(0)">입점·제휴문의</a>
+          <a href="javascript:void(0)">고객의견함</a>
+          <a href="javascript:void(0)">인재채용</a>
+        </div>
+        <div class="footerLinks-left">
+          <a href="javascript:void(0)" class="btnStore">매장찾기</a>
+
+
+          <div class="familySite" id="familySite">
+            <button class="btnFamily">Family Site</button>
+            <div class="familyBox " id="familyBox">
+              <a href="javascript:void(0)">상품권몰</a>
+              <a href="javascript:void(0)">홈플러스 문화센터</a>
+              <a href="javascript:void(0)">공식블로그</a>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="footerContent">
+      <h2 class="footerTitle">홈플러스 주식회사</h2>
+      <dl>
+        <dt>대표이사</dt>
+        <dd>: 이제훈</dd>
+        <dt>주소</dt>
+        <dd>: 서울특별시 강서구 화곡로 398(등촌동)</dd>
+        <dt>사업자등록번호</dt>
+        <dd>: 220-81-60348</dd>
+      </dl>
+      <dl>
+        <dt>통신판매신고번호</dt>
+        <dd>: 2016-서울강서-0451호
+          <a href="javascript:void(0)">사업자 정보확인</a>
+        </dd>
+        <dt>개인정보 및 청소년 보호책임자</dt>
+        <dd>: 김영상</dd>
+      </dl>
+      <p>
+        사이트 내에는 홈플러스㈜에 입점한 개별판매자가 판매하는 상품이 포함되어 있습니다. <br>
+        해당 상품의 경우 홈플러스㈜는 통신판매중개자로서 판매 당사자가 아니며, 상품정보 및 거래 등에 대한 책임을 지지 않습니다.
+      </p>
+      <p class="footerInsurance">
+        <strong>소비자피해보상보험</strong>
+        <a href="javascript:void(0)">서비스 가입사실 확인</a>
+      </p>
+      <p>고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 구매안전서비스 소비자 피해보상보험 서비스를 이용하실 수 있습니다.</p>
+      <p class="copyright">
+        Copyright ©
+        <strong>Homeplus Co., LTD</strong>
+        . All Rights Reserved.
+      </p>
+
+      <div class="footerCs">
+        <div class="csTitle">
+          <h3>고객센터</h3>
+          <span class="tel">1577-3355</span>
+        </div>
+        <ul>
+          <li>업무시간 : 09시 ~ 22시(명절당일 휴무)</li>
+          <li>Email :<a href="javascript:void(0)" class="email">onlinemart@homeplus.co.kr</a></li>
+        </ul>
+
+        <div class="csTitle">
+          <h3>분쟁처리</h3>
+          <span class="tel">1577-3355</span>
+        </div>
+        <ul>
+          <li>업무시간 : 09시 ~ 22시(명절당일 휴무)</li>
+          <li>Email :
+            <a href="javascript:void(0)" class="email">onlinemart@homeplus.co.kr</a>
+            <div>
+              <button>분쟁처리 절차</button>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+    <div class="footerSite">
+      <ul>
+        <li class="siteLogo1"></li>
+        <li class="siteLogo2"></li>
+        <li class="siteLogo3"></li>
+        <li class="siteLogo4"></li>
+        <li class="siteLogo5"></li>
+      </ul>
+
+    </div>
+  </footer>
+
+
+  <div class="globalLinks" id="globalLinks">
+    <div class="globalLinks-inner">
+      <button class="switch" id="switch">
+        <img src="/images/globalLinks/icon_150.png" alt="icon_150">
+      </button>
+      <div class="wingMiniItem">
+        <button class="iconButton">
+          <img src="/images/globalLinks/icon_147.png" alt="icon_147">
+          <span>로그인</span>
+        </button>
+      </div>
+      <div class="wingMiniItem">
+        <button class="iconButton">
+          <img src="/images/globalLinks/icon_139.png" alt="icon_139">
+          <span>배송</span>
+        </button>
+      </div>
+      <div class="wingMiniItem">
+        <button class="iconButton">
+          <img src="/images/globalLinks/icon_152.png" alt="icon_152">
+          <span>장바구니</span>
+        </button>
+      </div>
+      <div class="wingMiniItem">
+        <button class="iconButton">
+          <img src="/images/globalLinks/103420964s0030" alt="icon_152">
+          <span>최근 본</span>
+        </button>
+      </div>
+      <div class="wingMiniItem">
+        <button class="goToTop">
+          <i class="icon"></i>
+          <span>TOP</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="globalLinks-content" id="globalLinks-content">
+    <div class="globalLinks-content-inner" id="gLinksContent">
+      <button class="switch">
+        <img src="/images/globalLinksContent/icon_151.png" alt="축소">
+      </button>
+      <div class="greeting">
+        <img src="/images/globalLinksContent/icon_146.png" alt="icon_146">
+        <p>
+          <strong>
+            <button>로그인</button>하시고
+          </strong>
+          즐거운 쇼핑을 시작해보세요.
+        </p>
+      </div>
+      <ul class="quickList">
+        <li class="item">
+          <div class="title">
+            <span>배송</span>
+          </div>
+          <div class="items">
+            <div>
+              <p>금천점</p>
+              <img src="/images/globalLinksContent/icon_154.png" alt="icon_154">
+              <div class="content">지금 주문하면 내일 11~14시 도착</div>
+            </div>
+            <button>
+              <img src="/images/globalLinksContent/icon_141.png" alt="icon_141">
+              배송가능시간 조회
+            </button>
+          </div>
+        </li>
+        <li class="item">
+          <button class="title__link">
+            <p class="title">장바구니</p>
+            <div>
+              <img src="/images/globalLinksContent/icon_143.png" alt="icon_143">
+            </div>
+          </button>
+        </li>
+        <li class="item recentItems">
+          <p class="item__title">최근 본 상품</p>
+          <div>
+            <div>
+              <div class="recent">
+                <button>
+                  <span>
+                    <img src="/images/globalLinksContent/103420964s0040" alt="103420964s0040">
+                  </span>
+                </button>
+                <button>
+                  <span>
+                    <img src="/images/globalLinksContent/103420964s0040" alt="103420964s0040">
+                  </span>
+                </button>
+                <button>
+                  <span>
+                    <img src="/images/globalLinksContent/103420964s0040" alt="103420964s0040">
+                  </span>
+                </button>
+                <button>
+                  <span>
+                    <img src="/images/globalLinksContent/103420964s0040" alt="103420964s0040">
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button>전체보기</button>
+        </li>
+      </ul>
+      <button class="goToTop">
+        <i></i>
+        <span>TOP</span>
+      </button>
+    </div>
+
+  </div>
+
 </body>
 
 </html>
