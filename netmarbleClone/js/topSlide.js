@@ -1,6 +1,10 @@
 class TopInfiniteSlide {
-
-  constructor(sliderWrapId, sliderId, rightButtonsClassName, leftButtonsClassName) {
+  constructor(
+    sliderWrapId,
+    sliderId,
+    rightButtonsClassName,
+    leftButtonsClassName
+  ) {
     this.sliderWrap = document.getElementById(sliderWrapId);
     this.slider = document.getElementById(sliderId);
     this.rightButtons = document.querySelectorAll(`.${rightButtonsClassName}`);
@@ -15,25 +19,24 @@ class TopInfiniteSlide {
     this.setTimeOutTime1 = 200;
     this.setTimeOutTime2 = 100;
     this.loopTime = 4000;
-    this.transitionTime = `0.2s`;
+    this.transitionTime = `transform 0.2s ease-in`;
     this.current = null;
 
     this.init();
   }
 
   init() {
-
     this.pageArray.forEach((item, idx) => {
-      const img = document.createElement('img');
+      const img = document.createElement("img");
       img.style.maxWidth = `100%`;
       img.src = `/image/main/topSlide/topSlideIMG768px${idx + 1}.jpg`;
       item.appendChild(img);
     });
 
-
     if (this.totalPage > 1) {
       const cloneFirstPage = this.pageArray[0].cloneNode(true);
-      const cloneLastPage = this.pageArray[this.pageArray.length - 1].cloneNode(true);
+      const cloneLastPage =
+        this.pageArray[this.pageArray.length - 1].cloneNode(true);
       this.slider.appendChild(cloneFirstPage);
       this.slider.insertBefore(cloneLastPage, this.pageArray[0]);
       this.pageArray.push(cloneFirstPage);
@@ -41,9 +44,18 @@ class TopInfiniteSlide {
     }
 
     this.slider.style.width = `${this.pageArray.length * this.pageWidth}px`;
-    this.pageArray.forEach(page => page.style.width = `${this.pageWidth}px`);
-    this.pageArray.forEach(page => page.style.transform = `translateX(-${(this.pageWidth * (this.pageIdx + 1))}px)`);
-    this.pageArray.forEach(page => page.style.transition = this.transitionTime);
+    this.pageArray.forEach(
+      (page) => (page.style.width = `${this.pageWidth}px`)
+    );
+    this.pageArray.forEach(
+      (page) =>
+        (page.style.transform = `translateX(-${
+          this.pageWidth * (this.pageIdx + 1)
+        }px)`)
+    );
+    this.pageArray.forEach(
+      (page) => (page.style.transition = this.transitionTime)
+    );
     this.pageIdx++;
 
     this.createPaginaition();
@@ -52,25 +64,28 @@ class TopInfiniteSlide {
   }
 
   rightBtnEvent = (e) => {
-
     if (this.buttonStop) {
-
       if (this.pageIdx < this.pageArray.length - 1) {
-        this.pageArray.forEach(page => page.style.transform = `translateX(-${(this.pageWidth * (this.pageIdx + 1))}px)`);
+        this.pageArray.forEach(
+          (page) =>
+            (page.style.transform = `translateX(-${
+              this.pageWidth * (this.pageIdx + 1)
+            }px)`)
+        );
         this.pageIdx++;
-
-
 
         if (this.pageIdx === this.pageArray.length - 1) {
           this.buttonStop = false;
           setTimeout(() => {
-            this.pageArray.forEach(page => {
+            this.pageArray.forEach((page) => {
               page.style.transition = "0ms";
               page.style.transform = `translateX(-${this.pageWidth}px)`;
             });
 
             setTimeout(() => {
-              this.pageArray.forEach(page => page.style.transition = this.transitionTime);
+              this.pageArray.forEach(
+                (page) => (page.style.transition = this.transitionTime)
+              );
               this.buttonStop = true;
             }, this.setTimeOutTime2);
           }, this.setTimeOutTime1);
@@ -79,33 +94,37 @@ class TopInfiniteSlide {
         }
       }
       this.paginationRender();
-
     } else {
-      if (!e)
-        e.preventDefault();
-
+      if (!e) e.preventDefault();
       return;
     }
-
-  }
+  };
 
   leftBtnEvent = (e) => {
     if (this.buttonStop) {
-
       if (this.pageIdx > 0) {
-        this.pageArray.forEach(page => page.style.transform = `translateX(-${(this.pageWidth * (this.pageIdx - 1))}px)`);
+        this.pageArray.forEach(
+          (page) =>
+            (page.style.transform = `translateX(-${
+              this.pageWidth * (this.pageIdx - 1)
+            }px)`)
+        );
         this.pageIdx--;
 
         if (this.pageIdx === 0) {
           this.buttonStop = false;
           setTimeout(() => {
-            this.pageArray.forEach(page => {
+            this.pageArray.forEach((page) => {
               page.style.transition = "0ms";
-              page.style.transform = `translateX(-${this.pageWidth * (this.pageArray.length - 2)}px)`;
+              page.style.transform = `translateX(-${
+                this.pageWidth * (this.pageArray.length - 2)
+              }px)`;
             });
 
             setTimeout(() => {
-              this.pageArray.forEach(page => page.style.transition = this.transitionTime);
+              this.pageArray.forEach(
+                (page) => (page.style.transition = this.transitionTime)
+              );
               this.buttonStop = true;
             }, this.setTimeOutTime2);
           }, this.setTimeOutTime1);
@@ -114,31 +133,27 @@ class TopInfiniteSlide {
         }
       }
       this.paginationRender();
-
     } else {
       e.preventDefault();
       return;
     }
-
-  }
-
+  };
 
   createPaginaition() {
-    const div = document.createElement('div');
+    const div = document.createElement("div");
     div.id = "pagination";
     const endLeng = Math.round(this.pageArray.length / 2);
     for (let i = 0; i < endLeng; ++i) {
-      const span = document.createElement('span');
-      span.classList.add('bullet');
+      const span = document.createElement("span");
+      span.classList.add("bullet");
       if (i === 0) {
-        span.classList.add('active');
+        span.classList.add("active");
         this.current = span;
       }
 
       span.dataset.tableIdx = i;
-      span.addEventListener('click', this.paginationEvent);
+      span.addEventListener("click", this.paginationEvent);
       div.appendChild(span);
-
     }
 
     this.sliderWrap.appendChild(div);
@@ -149,62 +164,66 @@ class TopInfiniteSlide {
     const { tableIdx } = currentTarget.dataset;
     this.pageIdx = Number(tableIdx);
 
-    if (this.current !== null)
-      this.current.classList.remove('active');
+    if (this.current !== null) this.current.classList.remove("active");
 
-    currentTarget.classList.add('active');
+    currentTarget.classList.add("active");
     this.current = currentTarget;
 
     this.rightBtnEvent();
-  }
+  };
 
   paginationRender() {
-    const pagination = this.sliderWrap.querySelector('#pagination');
+    const pagination = this.sliderWrap.querySelector("#pagination");
     const { children } = pagination;
     const childrenArray = [...children];
 
-    childrenArray.forEach(span => {
+    childrenArray.forEach((span) => {
       const { tableIdx } = span.dataset;
-      if ((this.pageIdx - 1) === Number(tableIdx)) {
-
+      if (this.pageIdx - 1 === Number(tableIdx)) {
         if (this.current !== null) {
-          this.current.classList.remove('active');
+          this.current.classList.remove("active");
         }
 
-        span.classList.add('active');
+        span.classList.add("active");
         this.current = span;
       }
     });
-
   }
 
   eventHandler() {
-    this.rightButtons.forEach(button => button.addEventListener('click', this.rightBtnEvent));
-    this.leftButtons.forEach(button => button.addEventListener('click', this.leftBtnEvent));
-    window.addEventListener('resize', this.optimizeAnimation(this.resize));
+    this.rightButtons.forEach((button) =>
+      button.addEventListener("click", this.rightBtnEvent)
+    );
+    this.leftButtons.forEach((button) =>
+      button.addEventListener("click", this.leftBtnEvent)
+    );
+    window.addEventListener("resize", this.optimizeAnimation(this.resize));
   }
-
 
   // 매번 resize시 실행
   resize = () => {
-
     this.pageIdx = 0;
     this.pageIdx++;
     this.pageWidth = this.sliderWrap.clientWidth;
-    this.pageArray.forEach(page => page.style.transition = "0ms");
-    this.pageArray.forEach(page => page.style.width = `${this.pageWidth}px`);
-    this.pageArray.forEach(page => page.style.transform = `translateX(-${(this.pageWidth)}px)`);
-    this.slider.style.width = `${this.pageArray.length * (this.pageWidth)}px`;
+    this.pageArray.forEach((page) => (page.style.transition = "0ms"));
+    this.pageArray.forEach(
+      (page) => (page.style.width = `${this.pageWidth}px`)
+    );
+    this.pageArray.forEach(
+      (page) => (page.style.transform = `translateX(-${this.pageWidth}px)`)
+    );
+    this.slider.style.width = `${this.pageArray.length * this.pageWidth}px`;
     this.paginationRender();
 
     if (this._resizeTo) {
       clearTimeout(this._resizeTo);
     }
     this._resizeTo = setTimeout(() => {
-      this.pageArray.forEach(page => page.style.transition = this.transitionTime);
+      this.pageArray.forEach(
+        (page) => (page.style.transition = this.transitionTime)
+      );
     }, 200);
-
-  }
+  };
 
   // 1초에 최대 60번 실행
   // 60 프레임
@@ -219,12 +238,16 @@ class TopInfiniteSlide {
         });
       }
     };
-  }
-
+  };
 
   setLoop() {
     this.timer = setInterval(() => this.rightBtnEvent(), this.loopTime);
   }
 }
 
-const topInfiniteSlide = new TopInfiniteSlide("top_slide_wrap", "top_slide", "top_btn_right", "top_btn_left");
+const topInfiniteSlide = new TopInfiniteSlide(
+  "top_slide_wrap",
+  "top_slide",
+  "top_btn_right",
+  "top_btn_left"
+);
