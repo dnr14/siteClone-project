@@ -1,0 +1,28 @@
+html {
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+body {
+  min-width: 1190px;
+  position: relative;
+
+  #up-scroll {
+    position: fixed;
+    width: 24px;
+    height: 24px;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 3px 3px 3px rgba($color: #000000, $alpha: 0.1);
+    cursor: pointer;
+    bottom: 3%;
+    right: 5%;
+    z-index: 1;
+    background-color: #fff;
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  outline: none;
+}
