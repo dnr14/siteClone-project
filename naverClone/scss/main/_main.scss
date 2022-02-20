@@ -11,7 +11,8 @@
     background-repeat: no-repeat;
     width: 15px;
     height: 15px;
-    filter: invert(51%) sepia(0%) saturate(2405%) hue-rotate(183deg) brightness(91%) contrast(86%);
+    filter: invert(51%) sepia(0%) saturate(2405%) hue-rotate(183deg)
+      brightness(91%) contrast(86%);
   }
 }
 
@@ -23,7 +24,7 @@
     display: inline-block;
     margin: 6px 9px;
     vertical-align: top;
-    background-image: url("/images/main/arrow_back_ios_black_18dp.svg");
+    background-image: url("../images/main/arrow_back_ios_black_18dp.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -37,7 +38,7 @@
     display: inline-block;
     margin: 6px 9px;
     vertical-align: top;
-    background-image: url("/images/main/arrow_forward_ios_black_18dp.svg");
+    background-image: url("../images/main/arrow_forward_ios_black_18dp.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,7 +61,7 @@
       width: 750px;
       float: left;
       .veta_top {
-        background-image: url("/images/nav/veta_img.jpg");
+        background-image: url("../images/nav/veta_img.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -96,7 +97,7 @@
                 vertical-align: middle;
                 margin-bottom: 2px;
                 display: inline-block;
-                background-image: url("/images/nav/next_black_18dp.svg");
+                background-image: url("../images/nav/next_black_18dp.svg");
                 width: 18px;
                 height: 18px;
               }
@@ -183,7 +184,7 @@
             vertical-align: middle;
             margin-bottom: 2px;
             margin-left: 3px;
-            background-image: url("/images/nav/next_black_18dp.svg");
+            background-image: url("../images/nav/next_black_18dp.svg");
             width: 18px;
             height: 18px;
           }
@@ -229,20 +230,22 @@
             display: inline-block;
             background-repeat: no-repeat;
             background-position: center;
-            filter: invert(68%) sepia(0%) saturate(2593%) hue-rotate(221deg) brightness(99%) contrast(87%);
+            filter: invert(68%) sepia(0%) saturate(2593%) hue-rotate(221deg)
+              brightness(99%) contrast(87%);
           }
 
           & > a:nth-child(1) {
-            background-image: url("/images/nav/reorder_black_24dp.svg");
+            background-image: url("../images/nav/reorder_black_24dp.svg");
             width: 10px;
             height: 20px;
           }
           & > a:nth-child(2) {
-            background-image: url("/images/nav/grid_view_black_18dp.svg");
-            filter: invert(34%) sepia(81%) saturate(3475%) hue-rotate(198deg) brightness(103%) contrast(105%);
+            background-image: url("../images/nav/grid_view_black_18dp.svg");
+            filter: invert(34%) sepia(81%) saturate(3475%) hue-rotate(198deg)
+              brightness(103%) contrast(105%);
           }
           & > a:nth-child(3) {
-            background-image: url("/images/nav/settings_black_18dp.svg");
+            background-image: url("../images/nav/settings_black_18dp.svg");
           }
         }
 
@@ -415,7 +418,7 @@
                 vertical-align: middle;
                 content: "";
                 display: inline-block;
-                background-image: url("/images/nav/settings_black_18dp.svg");
+                background-image: url("../images/nav/settings_black_18dp.svg");
                 width: 18px;
                 height: 18px;
                 margin-right: 5px;
@@ -424,7 +427,8 @@
               &:hover {
                 text-decoration: underline;
                 &::before {
-                  filter: invert(48%) sepia(94%) saturate(1846%) hue-rotate(159deg) brightness(92%) contrast(101%);
+                  filter: invert(48%) sepia(94%) saturate(1846%)
+                    hue-rotate(159deg) brightness(92%) contrast(101%);
                 }
               }
             }
@@ -743,7 +747,7 @@
                 display: block;
                 margin: 0 auto 5px;
                 background-color: #fff;
-                background-image: url("/images/main/plus.png");
+                background-image: url("../images/main/plus.png");
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -787,7 +791,7 @@
             font-size: 12px;
             color: #404040;
             &:first-child {
-              @include login_img("/images/main/lock.png");
+              @include login_img("../images/main/lock.png");
             }
 
             &:nth-child(2) {
@@ -806,7 +810,7 @@
 
             &:last-child {
               float: right;
-              @include login_img("/images/main/add-user.png");
+              @include login_img("../images/main/add-user.png");
             }
 
             &:hover {
@@ -910,7 +914,7 @@
                   vertical-align: middle;
                   margin-bottom: 3px;
                   margin-right: 2px;
-                  background-image: url("/images/main/naver_logo.webp");
+                  background-image: url("../images/main/naver_logo.webp");
                   background-position: center;
                   background-repeat: no-repeat;
                   background-size: cover;
@@ -922,7 +926,7 @@
                   height: 14px;
                   vertical-align: middle;
                   margin-bottom: 2px;
-                  background-image: url("/images/main/arrow_forward_ios_black_18dp.svg");
+                  background-image: url("../images/main/arrow_forward_ios_black_18dp.svg");
                   background-position: center;
                   background-repeat: no-repeat;
                   background-size: cover;

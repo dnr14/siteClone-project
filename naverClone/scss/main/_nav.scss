@@ -61,7 +61,7 @@
           font-size: 13px;
           &::after {
             content: "";
-            background-image: url("/images/nav/more_black_18dp.svg");
+            background-image: url("../images/nav/more_black_18dp.svg");
             display: inline-block;
             vertical-align: middle;
             width: 18px;
@@ -83,7 +83,8 @@
 
           .fine_dust {
             img {
-              filter: invert(58%) sepia(65%) saturate(4681%) hue-rotate(189deg) brightness(98%) contrast(106%);
+              filter: invert(58%) sepia(65%) saturate(4681%) hue-rotate(189deg)
+                brightness(98%) contrast(106%);
             }
           }
 

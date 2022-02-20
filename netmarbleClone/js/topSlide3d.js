@@ -19,7 +19,7 @@ class _3DInfiniteSlide {
     this.setTimeOutTime1 = 500;
     this.setTimeOutTime2 = 100;
     this.loopTime = 5000;
-    this.transitionTime = `transform 0.5s ease-in`;
+    this.transitionTime = `transform 0.25s ease-in`;
     this.current = null;
     this.throttle;
 
@@ -30,13 +30,9 @@ class _3DInfiniteSlide {
     if (this.totalPage > 1) {
       this.transformOffset = this.pageWidth * 2;
       this.slider.style.transform = `translate3d(-${this.transformOffset}px, 0px, 0px)`;
-      this.pageArray.forEach(
-        (page) => (page.style.transition = this.transitionTime)
-      );
     }
 
     this.slider.style.width = `${this.pageArray.length * this.pageWidth}px`;
-    this.slider.style.transition = this.transitionTime;
     this.pageIdx++;
     this.setTransform();
     this.createPaginaition();
@@ -54,6 +50,7 @@ class _3DInfiniteSlide {
           this.pageWidth * this.pageIdx + this.transformOffset
         }px, 0px , 0px)`;
         this.pageIdx++;
+        this.slider.style.transition = this.transitionTime;
         this.setTransform();
 
         // 이미지를 2개로 변경되면 바꺼야된다.
@@ -67,10 +64,6 @@ class _3DInfiniteSlide {
             this.slider.style.transform = `translate3d(-${this.transformOffset}px, 0px, 0px)`;
 
             setTimeout(() => {
-              this.slider.style.transition = this.transitionTime;
-              this.pageArray.forEach(
-                (page) => (page.style.transition = this.transitionTime)
-              );
               this.buttonStop = true;
             }, this.setTimeOutTime2);
           }, this.setTimeOutTime1);
@@ -95,6 +88,8 @@ class _3DInfiniteSlide {
           this.pageWidth * (this.pageIdx - 2) + this.transformOffset
         }px, 0px, 0px)`;
         this.pageIdx--;
+        this.slider.style.transition = this.transitionTime;
+
         this.setTransform();
 
         if (this.pageIdx === 0) {
@@ -109,10 +104,6 @@ class _3DInfiniteSlide {
             }px, 0px, 0px)`;
 
             setTimeout(() => {
-              this.slider.style.transition = this.transitionTime;
-              this.pageArray.forEach(
-                (page) => (page.style.transition = this.transitionTime)
-              );
               this.buttonStop = true;
             }, this.setTimeOutTime2);
           }, this.setTimeOutTime1);
@@ -216,10 +207,10 @@ class _3DInfiniteSlide {
       clearTimeout(this._resizeTo);
     }
     this._resizeTo = setTimeout(() => {
-      this.slider.style.transition = this.transitionTime;
-      this.pageArray.forEach(
-        (page) => (page.style.transition = this.transitionTime)
-      );
+      // this.slider.style.transition = this.transitionTime;
+      // this.pageArray.forEach(
+      //   (page) => (page.style.transition = this.transitionTime)
+      // );
     }, 500);
   };
 

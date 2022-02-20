@@ -38,7 +38,7 @@
               height: 24px;
               top: 0;
               right: 20px;
-              background-image: url("/images/header/search.svg");
+              background-image: url("../images/header/search.svg");
               background-size: 24px auto;
               background-repeat: no-repeat;
               bottom: 0;
@@ -57,16 +57,19 @@
             }
 
             .btnLogin {
-              background: url("/images/header/header_spritesheet.png") 0px 0px no-repeat;
+              background: url("../images/header/header_spritesheet.png") 0px 0px
+                no-repeat;
             }
             .userWrap {
               position: relative;
               display: inline-block;
               .btnUser {
                 margin: 0 30px;
-                background: url("/images/header/header_spritesheet.png") 0px -36px no-repeat;
+                background: url("../images/header/header_spritesheet.png") 0px -36px
+                  no-repeat;
                 &:hover {
-                  background: url("/images/header/header_spritesheet.png") -36px -36px no-repeat;
+                  background: url("../images/header/header_spritesheet.png") -36px -36px
+                    no-repeat;
                 }
               }
 
@@ -92,7 +95,10 @@
                   font-size: 900;
 
                   &:hover {
-                    background-color: rgba($color: rgb(102, 102, 102), $alpha: 0.1);
+                    background-color: rgba(
+                      $color: rgb(102, 102, 102),
+                      $alpha: 0.1
+                    );
                     color: rgb(254, 6, 5);
                   }
                 }
@@ -102,7 +108,8 @@
               }
             }
             .btnCart {
-              background: url("/images/header/header_spritesheet.png") 0px -72px no-repeat;
+              background: url("../images/header/header_spritesheet.png") 0px -72px
+                no-repeat;
             }
           }
         }
@@ -116,13 +123,14 @@
         width: 149px;
         height: 43px;
         padding: 2px 0 0 25px;
-        background: url("/images/header/spritesheet.png") -1526px -5px no-repeat transparent;
+        background: url("../images/header/spritesheet.png") -1526px -5px
+          no-repeat transparent;
         text-align: left;
         & > span {
           color: #fff;
           font-size: 15px;
           .icon {
-            background: url("/images/header/spritesheet.png");
+            background: url("../images/header/spritesheet.png");
             background-repeat: no-repeat;
             background-position: -1456px -5px;
             height: 11px;

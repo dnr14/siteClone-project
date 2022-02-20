@@ -1,3 +1,7 @@
+body {
+  overflow-x: hidden;
+}
+
 #main {
   .mainVisual {
     padding: 20px 0;
@@ -52,7 +56,7 @@
           .btnPause {
             width: 14px;
             height: 15px;
-            background-image: url("/images/main/slide/slide_spritesheet.png");
+            background-image: url("../images/main/slide/slide_spritesheet.png");
             background-repeat: no-repeat;
           }
           .btnPlay {
@@ -81,13 +85,13 @@
         top: 199px;
       }
       .btnNext {
-        background-image: url("/images/main/slide/slide_spritesheet.png");
+        background-image: url("../images/main/slide/slide_spritesheet.png");
         right: -6px;
         background-position: -43px 0px;
       }
       .btnPrev {
         left: -6px;
-        background-image: url("/images/main/slide/slide_spritesheet.png");
+        background-image: url("../images/main/slide/slide_spritesheet.png");
       }
     }
   }
@@ -124,13 +128,13 @@
         margin: auto;
       }
       .btnNext {
-        background-image: url("/images/main/slide/slide_spritesheet.png");
+        background-image: url("../images/main/slide/slide_spritesheet.png");
         right: -6px;
         background-position: -43px 0px;
       }
       .btnPrev {
         left: -6px;
-        background-image: url("/images/main/slide/slide_spritesheet.png");
+        background-image: url("../images/main/slide/slide_spritesheet.png");
       }
     }
 
@@ -283,7 +287,8 @@
                   }
                   .event {
                     padding: 1px 0px 0px;
-                    background: url("/images/main/sale/event.png") 0% 0% / 100% no-repeat;
+                    background: url("../images/main/sale/event.png") 0% 0% /
+                      100% no-repeat;
                   }
                 }
               }
@@ -410,7 +415,7 @@
                 line-height: 18px;
                 .icon {
                   display: inline-block;
-                  background-image: url("/images/header/spritesheet.png");
+                  background-image: url("../images/header/spritesheet.png");
                   background-repeat: no-repeat;
                   width: 15px;
                   height: 15px;
@@ -461,7 +466,8 @@
                       margin: -2px 0px 0px 4px;
                       width: 6px;
                       height: 9px;
-                      background: url("/images/main/sale/right-icon.png") 0px 0px no-repeat;
+                      background: url("../images/main/sale/right-icon.png") 0px
+                        0px no-repeat;
                     }
                   }
                 }
@@ -633,7 +639,8 @@
                   }
                   .event {
                     padding: 1px 0px 0px;
-                    background: url("/images/main/sale/event.png") 0% 0% / 100% no-repeat;
+                    background: url("../images/main/sale/event.png") 0% 0% /
+                      100% no-repeat;
                   }
                 }
               }
@@ -760,7 +767,7 @@
                 line-height: 18px;
                 .icon {
                   display: inline-block;
-                  background-image: url("/images/header/spritesheet.png");
+                  background-image: url("../images/header/spritesheet.png");
                   background-repeat: no-repeat;
                   width: 15px;
                   height: 15px;
@@ -804,7 +811,8 @@
                       margin: -2px 0px 0px 4px;
                       width: 6px;
                       height: 9px;
-                      background: url("/images/main/sale/right-icon.png") 0px 0px no-repeat;
+                      background: url("../images/main/sale/right-icon.png") 0px
+                        0px no-repeat;
                     }
                   }
                 }
@@ -979,7 +987,8 @@
                     }
                     .event {
                       padding: 1px 0px 0px;
-                      background: url("/images/main/sale/event.png") 0% 0% / 100% no-repeat;
+                      background: url("../images/main/sale/event.png") 0% 0% /
+                        100% no-repeat;
                     }
                   }
                 }
@@ -1106,7 +1115,7 @@
                   line-height: 18px;
                   .icon {
                     display: inline-block;
-                    background-image: url("/images/header/spritesheet.png");
+                    background-image: url("../images/header/spritesheet.png");
                     background-repeat: no-repeat;
                     width: 15px;
                     height: 15px;
@@ -1150,7 +1159,8 @@
                         margin: -2px 0px 0px 4px;
                         width: 6px;
                         height: 9px;
-                        background: url("/images/main/sale/right-icon.png") 0px 0px no-repeat;
+                        background: url("../images/main/sale/right-icon.png")
+                          0px 0px no-repeat;
                       }
                     }
                   }

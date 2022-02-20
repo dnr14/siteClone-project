@@ -29,7 +29,7 @@ class TopInfiniteSlide {
     this.pageArray.forEach((item, idx) => {
       const img = document.createElement("img");
       img.style.maxWidth = `100%`;
-      img.src = `/image/main/topSlide/topSlideIMG768px${idx + 1}.jpg`;
+      img.src = `./images/main/topSlide/topSlideIMG768px${idx + 1}.jpg`;
       item.appendChild(img);
     });
 

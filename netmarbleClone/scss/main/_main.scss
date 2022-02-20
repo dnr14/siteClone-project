@@ -47,7 +47,7 @@
         }
         .top_btn_right {
           right: 10px;
-          background-image: url("/image/main/bottomSlide/btnNEXT.png");
+          background-image: url("../images/main/bottomSlide/btnNEXT.png");
           background-size: 27px auto;
           @include _1260px {
             right: 120px;
@@ -56,7 +56,7 @@
 
         .top_btn_left {
           left: 10px;
-          background-image: url("/image/main/bottomSlide/btnPREV.png");
+          background-image: url("../images/main/bottomSlide/btnPREV.png");
           background-size: 27px auto;
           background-position: center;
           @include _1260px {
@@ -115,7 +115,7 @@
         }
         .top_3d_btn_right {
           right: 10px;
-          background-image: url("/image/main/bottomSlide/btnNEXT.png");
+          background-image: url("../images/main/bottomSlide/btnNEXT.png");
           background-size: 40px auto;
           @include _1260px {
             right: -150px;
@@ -124,7 +124,7 @@
 
         .top_3d_btn_left {
           left: 10px;
-          background-image: url("/image/main/bottomSlide/btnPREV.png");
+          background-image: url("../images/main/bottomSlide/btnPREV.png");
           background-size: 40px auto;
           @include _1260px {
             left: -150px;
@@ -177,7 +177,7 @@
       .search-icon {
         width: 30px;
         height: 30px;
-        background-image: url("/image/main/searchMain.png");
+        background-image: url("../images/main/searchMain.png");
         padding: 0;
         border: none;
         background-color: transparent;
@@ -426,7 +426,7 @@
                     content: "";
                     width: 30px;
                     height: 30px;
-                    background: url("/image/main/yotube/btn_videoPLAY.svg");
+                    background: url("../images/main/yotube/btn_videoPLAY.svg");
                     z-index: 1;
                     left: 50%;
                     top: 50%;
@@ -478,7 +478,11 @@
         height: 100%;
         top: 0;
         left: 0;
-        background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(39, 39, 39, 0.2) 100%);
+        background: linear-gradient(
+          270deg,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(39, 39, 39, 0.2) 100%
+        );
         z-index: 4;
         @include _1260px() {
           display: none;
@@ -492,7 +496,11 @@
         height: 100%;
         top: 0;
         right: 0;
-        background: linear-gradient(270deg, rgba(39, 39, 39, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(
+          270deg,
+          rgba(39, 39, 39, 0.2) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
         z-index: 4;
         @include _1260px() {
           display: none;
@@ -736,7 +744,7 @@
               height: 7px;
               top: 5px;
               right: 0;
-              background-image: url("/image/main/news/btn_moreIMG.png");
+              background-image: url("../images/main/news/btn_moreIMG.png");
               background-size: 11px auto;
             }
           }
@@ -815,7 +823,7 @@
         }
         .btn_right {
           right: 10px;
-          background-image: url("/image/main/bottomSlide/btnNEXT.png");
+          background-image: url("../images/main/bottomSlide/btnNEXT.png");
           background-size: 27px auto;
           @include _1260px {
             right: 120px;
@@ -824,7 +832,7 @@
 
         .btn_left {
           left: 10px;
-          background-image: url("/image/main/bottomSlide/btnPREV.png");
+          background-image: url("../images/main/bottomSlide/btnPREV.png");
           background-size: 27px auto;
           background-position: center;
           @include _1260px {
@@ -984,7 +992,7 @@
               height: 66px;
               display: block;
               cursor: pointer;
-              background-image: url("/image/main/subscribe/ico_character_on.gif");
+              background-image: url("../images/main/subscribe/ico_character_on.gif");
               background-size: 66px auto;
               background-position: center;
             }
