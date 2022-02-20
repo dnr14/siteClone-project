@@ -2,7 +2,7 @@
 
 <p align=center style="color:#b9b9b9">프로젝트 기간 2021.06.04 ~ 2021.07.23</p>
 
-## 🔥 개요
+### 🔥 개요
 
 - HTML, CSS, Javascript 실력을 향상하기 위해서 클론 사이트 프로젝트를 진행하였습니다.
 
