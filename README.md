@@ -10,25 +10,25 @@
 
 - 제목 클릭 시 사이트를 구경할 수 있습니다.
 
-1. [코스트코](https://dnr14.github.io/costcoClone)
+1. [코스트코](https://dnr14.github.io/sites/costcoClone)
 
-2. [홈플러스](https://dnr14.github.io/homeplusClone)
+2. [홈플러스](https://dnr14.github.io/sites/homeplusClone)
 
-3. [이케아](https://dnr14.github.io/ikeaClone)
+3. [이케아](https://dnr14.github.io/sites/ikeaClone)
 
-4. [네이버](https://dnr14.github.io/naverClone)
+4. [네이버](https://dnr14.github.io/sites/naverClone)
 
-5. [넷마블](https://dnr14.github.io/netmarbleClone)
+5. [넷마블](https://dnr14.github.io/sites/netmarbleClone)
 
-6. [오버워치 선택창](https://dnr14.github.io/overwatchClone)
+6. [오버워치 선택창](https://dnr14.github.io/sites/overwatchClone)
 
-7. [스타벅스](https://dnr14.github.io/starbucksClone)
+7. [스타벅스](https://dnr14.github.io/sites/starbucksClone)
 
-8. [이름 모르는 사이트1](https://dnr14.github.io/unknownSiteClone1)
+8. [이름 모르는 사이트1](https://dnr14.github.io/sites/unknownSiteClone1)
 
-9. [이름 모르는 사이트2](https://dnr14.github.io/unknownSiteClone2)
+9. [이름 모르는 사이트2](https://dnr14.github.io/sites/unknownSiteClone2)
 
-10. [이름 모르는 사이트3](https://dnr14.github.io/unknownSiteClone3)
+10. [이름 모르는 사이트3](https://dnr14.github.io/sites/unknownSiteClone3)
 
 > #### ⚙ 사이트 실행 해보기
 
