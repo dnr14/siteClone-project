@@ -404,6 +404,7 @@ header .badges .badge {
   background-color: #333;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .notice .notice-line .inner .inner__left h2 {
