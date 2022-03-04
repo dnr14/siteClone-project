@@ -1,6 +1,6 @@
-# 1. 📚 클론 사이트 프로젝트
+<h1 align=center > 📚 클론 사이트 프로젝트 </h1>
 
-<p align=center style="color:#b9b9b9">프로젝트 기간 2021.06.04 ~ 2021.07.23</p>
+<p align=center style="color:#b9b9b9">📆 프로젝트 기간 2021.06.04 ~ 2021.07.23</p>
 
 ### 🔥 개요
 
